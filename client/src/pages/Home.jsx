@@ -1,12 +1,13 @@
 import React from "react";
 import Navbar from "../components/Navbar";
+import heroBg from '../assets/images/hero-bg.jpg'
 
 const Home = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative h-screen bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('/assets/images/hero-bg.jpg')" }}>
-        <div className="absolute inset-0 bg-black "></div>
+      <section className="relative h-screen bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url(${heroBg})` }}>
+        <div className="absolute inset-0 "></div>
 
         {/* Navbar Positioned at the Top */}
         <Navbar />
