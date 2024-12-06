@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import heroBg from '../assets/images/hero-bg.jpg'
+import xploreLogo from '../assets/images/xplore-logo.jpeg'
 
 const Home = () => {
   return (
@@ -13,7 +14,7 @@ const Home = () => {
         <Navbar />
 
         <div className="relative z-10 flex flex-col items-center justify-center text-center text-white h-full">
-          <img src="/assets/images/logo.png" alt="Xplore 24" className="w-48 mb-4" />
+          {/* <img src={xploreLogo} alt="Xplore 24" className="w-48 mb-4" /> */}
           <h1 className="text-5xl font-bold uppercase">Xplore 24</h1>
           <p className="text-xl mt-2">National Level Multi-Fest</p>
           <p className="mt-4 text-lg">GCE Kannur | 6, 7, 8 Feb 2025</p>
