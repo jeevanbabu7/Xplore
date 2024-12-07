@@ -5,15 +5,12 @@ import About from "./pages/About";
 // import Workshops from "./pages/Workshops";
 // import ContactUs from "./pages/ContactUs";
 import "./styles/globals.css";
+import AppRoutes from "./routes/AppRoutes";
 
 const App = () => {
   return (
     <div className="bg-black text-white">
-      <Home />
-      <About />
-      {/* <Events />
-      <Workshops />
-      <ContactUs /> */}
+     <AppRoutes />
     </div>
   );
 };
