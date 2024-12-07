@@ -7,13 +7,13 @@ const Navbar = () => {
 
   return (
     <div className="flex items-center md:gap-2 ">
-      <nav className="border-solid border-2 rounded-bl-2xl rounded-br-2xl border-grey-500 text-white fixed top-0 left-0 w-full px-8 z-10 flex items-center md:gap-52 justify-between mt-2 mr-1 ml-1">
+      <nav className="border-solid border-[.5px] rounded-bl-2xl rounded-br-2xl border-grey-500 text-white fixed top-0 left-0 w-full px-8 z-10 flex items-center md:gap-52 justify-between mt-2 mr-1 ml-1 z-50">
       <div className="logo">
         <img src='./xplore_logo.png' alt="Xplore 24 Logo" className="w-16 h-12" />
       </div>
-        <section className="MOBILE-MENU flex lg:hidden">
+        <section className="MOBILE-MENU flex lg:hidden z-50">
           <div
-            className="HAMBURGER-ICON space-y-2 relative right-0"
+            className="HAMBURGER-ICON space-y-2 relative right-0 z-50"
             onClick={() => setIsNavOpen((prev) => !prev)} 
           >
             <span className="block h-0.5 w-8 animate-pulse bg-gray-600"></span>
@@ -39,7 +39,7 @@ const Navbar = () => {
                 <line x1="6" y1="6" x2="18" y2="18" />
               </svg>
             </div>
-            <ul className="MENU-LINK-MOBILE-OPEN flex flex-col items-center justify-between min-h-[250px] font-bold">
+            <ul className="MENU-LINK-MOBILE-OPEN flex flex-col items-center justify-between min-h-[250px] font-bold z-50">
             {NAV_LINKS.map((link) => (
               <li key={link.name} className="relative group cursor-pointer">
                 <a
@@ -48,7 +48,7 @@ const Navbar = () => {
                 >
                   {link.name}
                 </a>
-                <span className="absolute left-0 bottom-[-18px] w-0 h-1  bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+                <span className="absolute left-0 bottom-[-18px] w-0 h-1  bg-[#fe41e4] transition-all duration-300 group-hover:w-full"></span>
               </li>
             ))}
             </ul>
@@ -73,7 +73,7 @@ const Navbar = () => {
                 >
                   {link.name}
                 </a>
-                <span className="absolute left-0 bottom-[-18px] w-0 h-1  bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+                <span className="absolute left-0 bottom-[-18px] w-0 h-1  bg-[#fe41e4] transition-all duration-300 group-hover:w-full"></span>
               </li>
             ))}
           </div>
