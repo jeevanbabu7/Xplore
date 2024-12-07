@@ -67,7 +67,7 @@ const ContactPage = () => {
         </section>
 
         {/* FAQ Section */}
-        <section className="w-full mb-16 mt-12 px-5">
+        <section className="w-full mb-16 mt-20 px-5">
           <h2 className="text-3xl font-bold text-white mb-4">Frequently Asked Questions</h2>
           <div className="space-y-6">
             {/* FAQ Item 1 */}
