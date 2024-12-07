@@ -10,8 +10,10 @@ const AppRoutes = () => (
     <Navbar />
 
     <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/about" element={<About />} />
+      <Route element={<Navbar />}>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+      </Route>
       {/* Define other routes as needed */}
       {/* <Route path="/events" element={<Events />} />
       <Route path="/workshops" element={<Workshops />} />
