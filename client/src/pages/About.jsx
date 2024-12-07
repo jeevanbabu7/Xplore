@@ -15,7 +15,6 @@ const AboutPage = () => {
           <p className="text-lg lg:text-xl text-gray-300 mb-6 leading-relaxed tracking-wide drop-shadow-sm">
             Welcome to Xplore 25, the premier Techno-Management-Cultural Festival of the Government College of Engineering, Kaluni (GCEK). Building on the vibrant legacy of Xplore, the event is a grand confluence of technology, management, and culture, offering a platform for innovation, collaboration, and celebration.
           </p>
-          <button>XPLORE MORE</button>
         </section>
 
     {/*Legacy */}
@@ -52,7 +51,7 @@ const AboutPage = () => {
               <p className="text-lg lg:text-xl text-gray-300 mb-6 leading-relaxed tracking-wide drop-shadow-sm">
                 Xplore 24 will feature an exciting lineup of events, including hackathons, robotics competitions, and coding challenges for tech enthusiasts, alongside management games and entrepreneurial workshops to foster leadership skills. Cultural performances in music, dance, and drama will add a creative flair, making it a vibrant and diverse platform for innovation, learning, and celebration.
               </p>
-              <button className="w-[30%] text-white font-bold border-2 border-blue-400 bg-transparent py-2 px-6 rounded-full hover:bg-blue-400 hover:text-black transition-all duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-neon-blue focus:ring-opacity-50 text-lg">
+              <button className="min-w-[150px] w-[30%] sm:w-[50%] md:w-[30%] text-white font-bold border-2 border-blue-400 bg-transparent py-3 px-6 rounded-full hover:bg-blue-400 hover:text-black transition-all duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-50 text-lg">
                 XPLORE MORE
               </button>
 
@@ -69,7 +68,7 @@ const AboutPage = () => {
               <p className="text-lg lg:text-xl text-gray-300 mb-6 leading-relaxed tracking-wide drop-shadow-sm">
                 Xplore 24 will feature workshops tailored to span all branches of engineering, providing hands-on learning experiences for students of Civil, EEE, ECE, CSE, and Mechanical Engineering. From advanced topics like structural modeling, smart grids, IoT, and machine learning to practical skills in 3D printing, robotics, and renewable energy systems, these sessions aim to bridge academic concepts with industry applications. 
               </p>
-              <button className="w-[30%] text-white font-bold border-2 border-blue-400 bg-transparent py-2 px-6 rounded-full hover:bg-blue-400 hover:text-black transition-all duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-neon-blue focus:ring-opacity-50 text-lg">
+              <button className="min-w-[150px] w-[30%] sm:w-[50%] md:w-[30%] text-white font-bold border-2 border-blue-400 bg-transparent py-3 px-6 rounded-full hover:bg-blue-400 hover:text-black transition-all duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-50 text-lg">
                 XPLORE MORE
               </button>
             </div>
