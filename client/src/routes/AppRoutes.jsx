@@ -5,6 +5,7 @@ import About from "../pages/About";
 import Events from "../pages/Events";
 import Workshops from "../pages/Workshops";
 import Details from "../components/Details";
+import ContactPage from "../pages/Contact";
 // Import other pages if necessary
 
 const AppRoutes = () => (
@@ -19,11 +20,9 @@ const AppRoutes = () => (
         <Route path="/events" element={<Events />} />
         <Route path="/:type/:eventId" element={<Details />} />
         <Route path="/workshops" element={<Workshops />} />
+        <Route path="/contact-us" element={<ContactPage/>} /> 
       </Route>
-      {/* Define other routes as needed */}
-      {/* 
-      <
-      <Route path="/contact-us" element={<ContactUs />} /> */}
+      
     </Routes>
   </Router>
 );
