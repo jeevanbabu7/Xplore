@@ -7,13 +7,19 @@ const PageHeader = ({ title, color, headerLeft }) => {
 
   return (
     <header className="relative py-12 px-8 lg:py-16 lg:px-16 flex items-center shadow-lg rounded-lg overflow-hidden">
-        {/* Left-side image */}
-        <div className="absolute left-0 top-0 h-32 w-32 bg-no-repeat bg-center bg-contain" style={{ backgroundImage: `url(${headerImg})` }} />
+      {/* Container with grid layout */}
+      <div className={`flex ${isMobile ? 'flex-col' : 'flex-row'} items-center justify-between w-full`}>
+        {/* Left-side image, hidden on mobile */}
+        {!isMobile && (
+          <div className="h-32 w-32 bg-no-repeat bg-center bg-contain" 
+            style={{ backgroundImage: `url(${headerImg})` }} />
+        )}
 
         {/* Title */}
-        <h1 className={`relative text-white font-extrabold ml-auto mr-4 ${isMobile ? 'text-5xl' : 'text-6xl'} tracking-tight`}>
-            {title}
+        <h1 className={`text-white font-extrabold ${isMobile ? 'text-4xl' : 'text-6xl'} tracking-tight text-center lg:text-left`}>
+          {title}
         </h1>
+      </div>
     </header>
   );
 };
