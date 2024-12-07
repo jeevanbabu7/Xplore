@@ -11,12 +11,7 @@ const AppRoutes = () => (
     <Routes>
       <Route element={<Navbar />}>
         <Route path="/" element={<Home />} />
-        {/* <Route path="/about" element={<About />} />
-        <Route path="/events" element={<Events />} />
-        <Route path="/workshops" element={<Workshops />} />
-        <Route path="/contact-us" element={<ContactUs />} /> */}
       </Route>
-      <Route path="/" element={<Home />} />
       <Route path="/about" element={<About />} />
       {/* <Route path="/events" element={<Events />} />
       <Route path="/workshops" element={<Workshops />} />
