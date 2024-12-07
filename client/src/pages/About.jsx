@@ -33,7 +33,7 @@ const AboutPage = () => {
   const workshopsAnimation = useSectionAnimation();
 
   return (
-    <div className="bg-gradient-to-b from-[#2c0c0c] to-black text-white pb-10">
+    <div className="bg-gradient-to-b from-blue-950 via-black to-black text-white pb-10">
       {/* Header */}
       <div className="bg-gradient-to-b from-[#2c0c0c] to-black text-white">
         <div className="relative">
