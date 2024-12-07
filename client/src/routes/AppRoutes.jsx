@@ -5,6 +5,7 @@ import About from "../pages/About";
 import Events from "../pages/Events";
 import Workshops from "../pages/Workshops";
 import EventDetails from "../pages/EventDetails";
+import WorkshopDetails from "../pages/WorkshopDetails";
 // Import other pages if necessary
 
 const AppRoutes = () => (
@@ -18,6 +19,7 @@ const AppRoutes = () => (
         <Route path="/about" element={<About />} />
         <Route path="/events" element={<Events />} />
         <Route path="/:type/:eventId" element={<EventDetails />} />
+        <Route path="/:type/:eventId" element={<WorkshopDetails />} />
         <Route path="/workshops" element={<Workshops />} />
       </Route>
       {/* Define other routes as needed */}
