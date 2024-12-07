@@ -1,4 +1,4 @@
-export default eventData = [
+export const eventData = [
     {
         name: "AR VR Expo",
         description: "Augmented Reality and Virtual Reality Expo",

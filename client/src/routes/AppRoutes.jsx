@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "../pages/Home";
 import Navbar from "../components/Navbar";
 import About from "../pages/About";
+import Events from "../pages/Events";
 // Import other pages if necessary
 
 const AppRoutes = () => (
@@ -13,9 +14,10 @@ const AppRoutes = () => (
       <Route element={<Navbar />}>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
+        <Route path="/events" element={<Events />} />
       </Route>
       {/* Define other routes as needed */}
-      {/* <Route path="/events" element={<Events />} />
+      {/* 
       <Route path="/workshops" element={<Workshops />} />
       <Route path="/contact-us" element={<ContactUs />} /> */}
     </Routes>
