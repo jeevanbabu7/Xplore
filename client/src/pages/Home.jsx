@@ -8,11 +8,11 @@ const Home = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative h-screen bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url(${heroBg})` }}>
+      <section className="absolute w-full h-screen bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url(${heroBg})` }}>
         <div className="absolute inset-0 "></div>
 
         {/* Navbar Positioned at the Top */}
-        <Navbar />
+        {/* <Navbar /> */}
 
         <div className="h-screen mt-16 flex flex-col text-white">
           <div className="w-full flex flex-col justify-center items-center pt-20 sm:pt-52 md:pt-10 z-30">
