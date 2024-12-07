@@ -1,3 +1,5 @@
+import event1 from '../assets/images/event1.png'
+
 export const eventData = [
     {
         name: "AR VR Expo",
@@ -5,7 +7,7 @@ export const eventData = [
         date: "2022-06-01",
         time: "10:00",
         location: "CCF",
-        image: "ar-vr-expo.jpg",
+        image: event1,
     },
     {
         name: "AR VR Expo",
@@ -13,7 +15,7 @@ export const eventData = [
         date: "2022-06-01",
         time: "10:00",
         location: "CCF",
-        image: "ar-vr-expo.jpg",
+        image: event1,
     },
     {
         name: "AR VR Expo",
@@ -21,7 +23,7 @@ export const eventData = [
         date: "2022-06-01",
         time: "10:00",
         location: "CCF",
-        image: "ar-vr-expo.jpg",
+        image: event1,
     },
     {
         name: "AR VR Expo",
@@ -29,7 +31,7 @@ export const eventData = [
         date: "2022-06-01",
         time: "10:00",
         location: "CCF",
-        image: "ar-vr-expo.jpg",
+        image: event1,
     }
 ];
 
