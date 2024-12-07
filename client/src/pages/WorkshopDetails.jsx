@@ -9,7 +9,7 @@ const WorkshopDetails = () => {
     const { eventId, type } = useParams();
 
     // Determine the data source based on the type (event or workshop)
-    const data = type === "workshop" ? eventData : workshopData;
+    const data = type === "event" ? eventData : workshopData;
 
     // Find the specific event/workshop by its name
     const item = data.find((e) => e.name.replace(/\s+/g, "-").toLowerCase() === eventId);
