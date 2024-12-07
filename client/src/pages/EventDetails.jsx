@@ -40,22 +40,22 @@ const EventDetails = () => {
         <div className="min-h-screen bg-gradient-to-b from-red-950 via-black to-black text-white flex flex-col items-center py-0 h-full">
             {/* Event Banner */}
             <div
-                className="w-full h-38 md:h-[280px] bg-cover bg-center bg-no-repeat"
+                className="w-full bg-cover bg-center bg-no-repeat md:h-[280px] h-[180px] bg-cove"
                 style={{
                     backgroundImage: `url(${eventBanner})`, // Use the imported path
-                    top: 0,
+                    height: '280px', // Default height for larger screens
                 }}
             ></div>
 
             {/* Event Content */}
-            <div className="flex items-center max-w-4xl p-8 mt-8">
+            <div className="flex flex-col md:flex-row items-center max-w-4xl p-8 mt-8 w-full">
                 {/* Left Content */}
                 <animated.div
                     style={contentAnimation} // Entry animation for the left content
-                    className="flex flex-col items-center mb-12 space-y-6 mr-8"
+                    className="flex flex-col items-center mb-12 space-y-6 mr-8 w-full md:w-1/2"
                 >
-                    <h1 className="text-5xl font-bold text-center text-white mb-4">{item.name}</h1>
-                    <p className="text-2xl text-center text-gray-300 mb-6">{item.description}</p>
+                    <h1 className="text-4xl md:text-5xl font-bold text-center text-white mb-4">{item.name}</h1>
+                    <p className="text-lg md:text-2xl text-center text-gray-300 mb-6">{item.description}</p>
                     <div className="flex flex-col items-center space-y-2">
                         <p className="text-base text-gray-400">
                             <strong>Date:</strong> {item.date}
@@ -75,7 +75,7 @@ const EventDetails = () => {
                 {/* Image */}
                 <animated.div
                     style={imageAnimation} // Entry animation for the image
-                    className="flex-shrink-0 w-72 h-auto rounded-lg shadow-lg"
+                    className="flex-shrink-0 w-full md:w-72 h-auto rounded-lg shadow-lg mt-6 md:mt-0"
                 >
                     <img
                         src={event1} // Use the imported path
