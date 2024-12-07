@@ -1,9 +1,18 @@
 import React from "react";
+import Home from "./pages/Home";
+import About from "./pages/About";
+// import Events from "./pages/Events";
+// import Workshops from "./pages/Workshops";
+// import ContactUs from "./pages/ContactUs";
+import "./styles/globals.css";
 import AppRoutes from "./routes/AppRoutes";
-import "./styles/globals.css"; 
 
 const App = () => {
-  return <AppRoutes />;
+  return (
+    <div className="bg-black text-white">
+     <AppRoutes />
+    </div>
+  );
 };
 
 export default App;
