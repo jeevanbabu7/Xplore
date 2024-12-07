@@ -1,9 +1,10 @@
 import React from "react";
 import Navbar from "../components/Navbar";
-import heroBg from '../assets/images/hero-bg.jpg'
+import heroBg from '../assets/images/hero-bg.png'
 import xploreLogo from '../assets/images/xplore-logo.jpeg'
-
+import { useNavigate } from "react-router-dom";
 const Home = () => {
+  const navigate = useNavigate();
   return (
     <div>
       {/* Hero Section */}
@@ -13,18 +14,24 @@ const Home = () => {
         {/* Navbar Positioned at the Top */}
         <Navbar />
 
-        <div className="relative z-10 flex flex-col items-center justify-center text-center text-white h-full">
-          {/* <img src={xploreLogo} alt="Xplore 24" className="w-48 mb-4" /> */}
-          <h1 className="text-5xl font-bold uppercase">Xplore 24</h1>
-          <p className="text-xl mt-2">National Level Multi-Fest</p>
-          <p className="mt-4 text-lg">GCE Kannur | 6, 7, 8 Feb 2025</p>
-          <a
-            href="/register"
-            className="mt-8 px-6 py-3 border-2 border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white transition-all rounded-lg"
-          >
-            Register Now
-          </a>
+        <div className="h-screen mt-16 flex flex-col text-white">
+          <div className="w-full flex flex-col justify-center items-center pt-20 sm:pt-52 md:pt-10 z-40">
+          
+            <img src='./hero.png' className="w-[60%] sm:w-[50%] md:w-[45%]" />
+            <p className="text-2xl sm:text-4xl font-bold text-center">
+              NATIONAL LEVEL MULTI-FEST
+            </p>
+          </div>
+
+          <div className="flex md:justify-start md:pl-32 sm:justify-center z-50">
+            <img src='./register_btn.png' className="w-52 h-10 sm:w-48 mt-10 cursor-pointer" onClick={() => {navigate}}
+              alt="Register Now"
+            />
+          </div>
         </div>
+
+
+
       </section>
     </div>
   );
