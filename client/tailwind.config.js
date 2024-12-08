@@ -12,6 +12,8 @@ export default {
     //   // 'lg': '1440px',
     // },
   },
-  plugins: [],
+  plugins: [
+    require('daisyui'),
+  ],
 }
 

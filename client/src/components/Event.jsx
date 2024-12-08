@@ -28,7 +28,7 @@ const Event = ({ eventDetails, type }) => {
 
   return (
     <animated.div
-      className="relative h-[260px] w-[300px] rounded-lg overflow-hidden flex flex-col justify-center items-center"
+      className="relative h-[260px] w-[300px] rounded-lg overflow-hidden flex flex-col justify-center items-center flex-shrink-0"
       style={cardAnimation} // Entry animation applied to outer div
     >
       <animated.div
