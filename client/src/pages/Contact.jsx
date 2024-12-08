@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { FaTwitter, FaDiscord, FaLinkedin, FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
 import contactBanner from '../assets/images/contact-banner.png'
+import { useNavigate } from 'react-router-dom';
 
 const ContactPage = () => {
+  const navigate = useNavigate();
   // State for toggling visibility of the FAQ content
   const [activeIndex, setActiveIndex] = useState(null);
 
@@ -216,6 +218,7 @@ const ContactPage = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-2 text-sm font-medium hover:underline"
+                onClick={() => navigate("/get-directions")}
               >
                 Get Directions
               </a>
