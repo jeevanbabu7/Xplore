@@ -35,11 +35,11 @@ const AboutPage = () => {
   const workshopsAnimation = useSectionAnimation();
 
   return (
-    <div className="bg-gradient-to-b from-blue-950 via-black to-black text-white pb-10">
+    <div className="bg-gradient-to-b from-blue-950 via-black to-black text-white pb-10 z-50 backdrop-blur-0">
       {/* Header */}
       <div className="bg-gradient-to-b from-[#2c0c0c] to-black text-white">
         <div className="relative">
-          <img src={aboutbanner} alt="" />
+          <img src={aboutbanner} alt=""  className="md:h-56 w-full"/>
           <animated.img
             ref={refHeader}
             src={headerLeft}
@@ -54,7 +54,7 @@ const AboutPage = () => {
       </div>
 
       {/* About Us */}
-      <div className="px-8 lg:px-16 py-12 lg:py-16 min-h-screen">
+      <div className="px-8 lg:px-16 py-12 lg:py-16 min-h-screen z-50" > 
         <animated.section ref={aboutAnimation.ref} style={aboutAnimation.styles} className="mb-12 lg:mb-16">
           <h2 className="text-3xl lg:text-4xl font-bold mb-4">About Us</h2>
           <p className="text-lg lg:text-xl text-gray-300 mb-6 leading-relaxed tracking-wide drop-shadow-sm">
