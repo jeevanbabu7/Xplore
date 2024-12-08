@@ -4,6 +4,7 @@ import { useSpring, animated } from "@react-spring/web";
 import { eventData, workshopData } from "../utils/eventData";
 import workshopBanner from '../assets/images/workshop-banner.png';
 import workshop1 from '../assets/images/workshop1.png';
+import { FaTwitter, FaDiscord, FaLinkedin } from 'react-icons/fa';
 
 const WorkshopDetails = () => {
     const { eventId, type } = useParams();
@@ -37,25 +38,25 @@ const WorkshopDetails = () => {
     });
 
     return (
-        <div className="min-h-screen bg-gradient-to-b from-purple-950 via-black to-black text-white flex flex-col items-center py-0 h-full">
-            {/* Event Banner */}
+        <div className="min-h-screen bg-gradient-to-b from-purple-950 via-black to-black text-white flex flex-col items-center">
+            {/* Workshop Banner */}
             <div
-                className="w-full bg-cover bg-center bg-no-repeat md:h-[280px] h-[180px] bg-cove"
+                className="w-full bg-cover bg-center bg-no-repeat"
                 style={{
-                    backgroundImage: `url(${workshopBanner})`, // Use the imported path
-                    height: '280px', // Default height for larger screens
+                    backgroundImage: `url(${workshopBanner})`,
+                    height: "250px", // Fixed banner height (adjust as needed)
                 }}
             ></div>
 
-            {/* Event Content */}
-            <div className="flex flex-col md:flex-row items-center max-w-4xl p-8 mt-8 w-full">
+            {/* Workshop Content */}
+            <div className="flex flex-col md:flex-row items-center max-w-4xl px-4 md:px-8 pt-8 md:pt-10 w-full flex-grow">
                 {/* Left Content */}
                 <animated.div
-                    style={contentAnimation} // Entry animation for the left content
+                    style={contentAnimation}
                     className="flex flex-col items-center mb-12 space-y-6 mr-8 w-full md:w-1/2"
                 >
-                    <h1 className="text-4xl md:text-5xl font-bold text-center text-white mb-4">{item.name}</h1>
-                    <p className="text-lg md:text-2xl text-center text-gray-300 mb-6">{item.description}</p>
+                    <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center text-white mb-4">{item.name}</h1>
+                    <p className="text-lg md:text-2xl text-center text-gray-300 mb-4">{item.description}</p>
                     <div className="flex flex-col items-center space-y-2">
                         <p className="text-base text-gray-400">
                             <strong>Date:</strong> {item.date}
@@ -74,15 +75,28 @@ const WorkshopDetails = () => {
 
                 {/* Image */}
                 <animated.div
-                    style={imageAnimation} // Entry animation for the image
+                    style={imageAnimation}
                     className="flex-shrink-0 w-full md:w-72 h-auto rounded-lg shadow-lg mt-6 md:mt-0"
                 >
                     <img
-                        src={workshop1} // Use the imported path
+                        src={workshop1}
                         alt={item.name}
                         className="w-full h-auto rounded-lg shadow-xl object-cover"
                     />
                 </animated.div>
+            </div>
+
+            {/* Social Icons */}
+            <div className="flex justify-center mt-auto mb-4 w-full">
+                <a href="#" className="text-white hover:text-gray-400 mx-2 text-base">
+                    <FaTwitter />
+                </a>
+                <a href="#" className="text-white hover:text-gray-400 mx-2 text-base">
+                    <FaDiscord />
+                </a>
+                <a href="#" className="text-white hover:text-gray-400 mx-2 text-base">
+                    <FaLinkedin />
+                </a>
             </div>
         </div>
     );

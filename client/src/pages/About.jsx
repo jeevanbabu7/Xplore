@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import PageHeader from "../components/PageHeader";
 import eventImg from "../assets/images/events-img.png";
 import workshopImg from "../assets/images/workshop-img.png";
@@ -8,6 +9,7 @@ import { useSpring, animated } from "@react-spring/web";
 import { useInView } from "react-intersection-observer";
 
 const AboutPage = () => {
+  const navigate = useNavigate();
   const [refHeader, inViewHeader] = useInView({ triggerOnce: true, threshold: 0.2 });
 
   const rotationAnimation = useSpring({
@@ -33,7 +35,7 @@ const AboutPage = () => {
   const workshopsAnimation = useSectionAnimation();
 
   return (
-    <div className="bg-gradient-to-b from-[#2c0c0c] to-black text-white pb-10">
+    <div className="bg-gradient-to-b from-blue-950 via-black to-black text-white pb-10">
       {/* Header */}
       <div className="bg-gradient-to-b from-[#2c0c0c] to-black text-white">
         <div className="relative">
@@ -95,7 +97,9 @@ const AboutPage = () => {
                 coding challenges for tech enthusiasts, alongside management games and entrepreneurial workshops to
                 foster leadership skills.
               </p>
-              <button className="min-w-[150px] w-[30%] sm:w-[50%] md:w-[30%] text-white font-bold border-2 border-blue-400 bg-transparent py-3 px-6 rounded-full hover:bg-blue-400 hover:text-black transition-all duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-50 text-lg">
+              <button 
+                onClick={() => navigate("/events")}
+                className="min-w-[150px] w-[30%] sm:w-[50%] md:w-[30%] text-white font-bold border-2 border-blue-400 bg-transparent py-3 px-6 rounded-full hover:bg-blue-400 hover:text-black transition-all duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-50 text-lg">
                 XPLORE MORE
               </button>
             </div>
@@ -113,7 +117,9 @@ const AboutPage = () => {
                 Xplore 24 will feature workshops tailored to span all branches of engineering, providing hands-on
                 learning experiences for students of Civil, EEE, ECE, CSE, and Mechanical Engineering.
               </p>
-              <button className="min-w-[150px] w-[30%] sm:w-[50%] md:w-[30%] text-white font-bold border-2 border-blue-400 bg-transparent py-3 px-6 rounded-full hover:bg-blue-400 hover:text-black transition-all duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-50 text-lg">
+              <button 
+                onClick={() => navigate("/workshops")}
+                className="min-w-[150px] w-[30%] sm:w-[50%] md:w-[30%] text-white font-bold border-2 border-blue-400 bg-transparent py-3 px-6 rounded-full hover:bg-blue-400 hover:text-black transition-all duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-50 text-lg">
                 XPLORE MORE
               </button>
             </div>
