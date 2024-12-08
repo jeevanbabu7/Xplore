@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaTwitter, FaDiscord, FaLinkedin } from 'react-icons/fa';
+import { FaTwitter, FaDiscord, FaLinkedin, FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
 import contactBanner from '../assets/images/contact-banner.png'
 
 const ContactPage = () => {
@@ -152,8 +152,80 @@ const ContactPage = () => {
           </div>
         </section>
 
+
+        {/* Contact Details */}
+        <section className="w-full mt-12 px-5">
+          <h2 className="text-4xl font-bold text-white mb-10 text-center">
+            Get in Touch
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* General Inquiries */}
+            <div className="group flex flex-col items-center justify-center bg-gradient-to-r from-slate-900 to-slate-950 text-white p-8 rounded-lg shadow-xl transition-transform transform hover:-translate-y-2 hover:shadow-2xl">
+              <div className="bg-yellow-500 p-4 rounded-full">
+                <FaEnvelope className="text-3xl text-black group-hover:text-white transition-colors" />
+              </div>
+              <h3 className="mt-4 text-xl font-semibold group-hover:text-yellow-500 transition-colors">
+                General Inquiries
+              </h3>
+              <a
+                href="mailto:general@xplore25.com"
+                className="mt-2 text-sm font-medium hover:underline"
+              >
+                general@xplore25.com
+              </a>
+              <a
+                href="tel:+123456789"
+                className="mt-1 text-sm font-medium hover:underline"
+              >
+                +1 234 567 89
+              </a>
+            </div>
+
+            {/* Technical Support */}
+            <div className="group flex flex-col items-center justify-center bg-gradient-to-r from-slate-900 to-slate-950 text-white p-8 rounded-lg shadow-xl transition-transform transform hover:-translate-y-2 hover:shadow-2xl">
+              <div className="bg-yellow-500 p-4 rounded-full">
+                <FaPhone className="text-3xl text-black group-hover:text-white transition-colors" />
+              </div>
+              <h3 className="mt-4 text-xl font-semibold group-hover:text-yellow-500 transition-colors">
+                Technical Support
+              </h3>
+              <a
+                href="mailto:support@xplore25.com"
+                className="mt-2 text-sm font-medium hover:underline"
+              >
+                support@xplore25.com
+              </a>
+              <a
+                href="tel:+987654321"
+                className="mt-1 text-sm font-medium hover:underline"
+              >
+                +9 876 543 21
+              </a>
+            </div>
+
+            {/* Venue */}
+            <div className="group flex flex-col items-center justify-center bg-gradient-to-r from-slate-900 to-slate-950 text-white p-8 rounded-lg shadow-xl transition-transform transform hover:-translate-y-2 hover:shadow-2xl">
+              <div className="bg-yellow-500 p-4 rounded-full">
+                <FaMapMarkerAlt className="text-3xl text-black group-hover:text-white transition-colors" />
+              </div>
+              <h3 className="mt-4 text-xl font-semibold group-hover:text-yellow-500 transition-colors">
+                Venue
+              </h3>
+              <a
+                href="https://goo.gl/maps/example"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-2 text-sm font-medium hover:underline"
+              >
+                Get Directions
+              </a>
+            </div>
+          </div>
+        </section>
+
+
         {/* Social Icons */}
-        <div className="flex justify-center w-full mb-8">
+        <div className="mt-12 mb-6 flex justify-center w-full">
           <a href="#" className="text-white hover:text-gray-400 mx-2">
             <FaTwitter />
           </a>
