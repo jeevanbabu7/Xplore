@@ -58,7 +58,7 @@ const AboutPage = () => {
         <animated.section ref={aboutAnimation.ref} style={aboutAnimation.styles} className="mb-12 lg:mb-16">
           <h2 className="text-3xl lg:text-4xl font-bold mb-4">About Us</h2>
           <p className="text-lg lg:text-xl text-gray-300 mb-6 leading-relaxed tracking-wide drop-shadow-sm">
-            Welcome to Xplore 25, the premier Techno-Management-Cultural Festival of the Government College of Engineering, Kaluni (GCEK). Building on the vibrant legacy of Xplore, the event is a grand confluence of technology, management, and culture, offering a platform for innovation, collaboration, and celebration.
+            Welcome to Xplore 25, the premier Techno-Management-Cultural Festival of the Government College of Engineering, Kannur (GCEK). Building on the vibrant legacy of Xplore, the event is a grand confluence of technology, management, and culture, offering a platform for innovation, collaboration, and celebration.
           </p>
         </animated.section>
 
