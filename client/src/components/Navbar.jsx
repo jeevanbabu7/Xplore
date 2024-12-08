@@ -16,17 +16,18 @@ const Navbar = () => {
       NAV_LINKS.forEach((section) => {
         const element = document.getElementById(section.id);
         if (element) {
-          const { offsetTop, offsetHeight } = element;
+          const { top, height } = element.getBoundingClientRect();
+          const windowHeight = window.innerHeight;
       
-          const sectionHeight = Math.max(offsetHeight, window.innerHeight * 0.1);
-          const thresholdStart = offsetTop - sectionHeight * 0.2;
-          const thresholdEnd = offsetTop + sectionHeight - sectionHeight * 0.2;
+          const isInView =
+            top <= windowHeight * 0.5 && top + height >= windowHeight * 0.5;
       
-          if (scrollPosition >= thresholdStart && scrollPosition < thresholdEnd) {
+          if (isInView) {
             setActiveLink(section.id);
           }
         }
       });
+      
         
       
     };
