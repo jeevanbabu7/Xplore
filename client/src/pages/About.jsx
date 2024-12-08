@@ -39,7 +39,7 @@ const AboutPage = () => {
       {/* Header */}
       <div className="bg-gradient-to-b from-[#2c0c0c] to-black text-white">
         <div className="relative">
-          <img src={aboutbanner} alt="" />
+          <img src={aboutbanner} alt=""  className="md:h-56 w-full"/>
           <animated.img
             ref={refHeader}
             src={headerLeft}
