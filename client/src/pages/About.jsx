@@ -52,7 +52,7 @@ const AboutPage = () => {
       </div>
 
       {/* About Us */}
-      <div className="px-8 lg:px-16 py-12 lg:py-16 min-h-screen">
+      <div className="px-8 lg:px-16 py-12 lg:py-16 min-h-screen" > 
         <animated.section ref={aboutAnimation.ref} style={aboutAnimation.styles} className="mb-12 lg:mb-16">
           <h2 className="text-3xl lg:text-4xl font-bold mb-4">About Us</h2>
           <p className="text-lg lg:text-xl text-gray-300 mb-6 leading-relaxed tracking-wide drop-shadow-sm">
