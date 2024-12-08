@@ -1,5 +1,5 @@
 import React from "react";
-import heroBg from '../assets/images/hero-bg.png'
+import heroBg from '../assets/images/hero-bg3.jpg'
 import { useNavigate } from "react-router-dom";
 import AboutPage from "./About";
 import date from "../assets/images/date-img.png";
