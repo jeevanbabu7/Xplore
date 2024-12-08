@@ -9,8 +9,8 @@ const ref = useRef(null);
     offset: ["start start", "end start"]
   });
 
-  const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
-  const textY = useTransform(scrollYProgress, [0, 1], ["0%", "200%"]);
+  const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "200%"]);
+  const textY = useTransform(scrollYProgress, [0, 1], ["0%", "300%"]);
 
   return (
     <section
