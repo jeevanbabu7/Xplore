@@ -6,9 +6,40 @@ const Navbar = () => {
 
   const [isNavOpen, setIsNavOpen] = useState(false); 
   const [isScrolled, setIsScrolled] = useState(false);
-  const [activeLink, setActiveLink] = useState(window.location.pathname);
+  const [activeLink, setActiveLink] = useState("home");
   console.log(activeLink);
   
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY + window.innerHeight / 2;
+
+      NAV_LINKS.forEach((section) => {
+        const element = document.getElementById(section.id);
+        if (element) {
+          const { offsetTop, offsetHeight } = element;
+      
+          const sectionHeight = Math.max(offsetHeight, window.innerHeight * 0.1);
+          const thresholdStart = offsetTop - sectionHeight * 0.2;
+          const thresholdEnd = offsetTop + sectionHeight - sectionHeight * 0.2;
+      
+          if (scrollPosition >= thresholdStart && scrollPosition < thresholdEnd) {
+            setActiveLink(section.id);
+          }
+        }
+      });
+        
+      
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const scrollToSection = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   
   useEffect(() => {
     const handleScroll = () => {
@@ -66,12 +97,16 @@ const Navbar = () => {
               {NAV_LINKS.map((link) => (
                 <li key={link.name} className="relative group cursor-pointer">
                   <a
-                    href={link.path}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      console.log("hiii");
+                      scrollToSection(link.id);
+                    }}
                     className="hover:text-yellow-400 transition-all uppercase text-sm tracking-wide transition"
                   >
                     {link.name}
                   </a>
-                  <span className={`absolute left-0 bottom-[-18px] h-1  bg-[#fe41e4] transition-all duration-300 group-hover:w-full ${activeLink == link.path ? 'w-full': 'w-0'}`}></span>
+                  <span className={`absolute left-0 bottom-[-18px] h-1  bg-[#fe41e4] transition-all duration-300 group-hover:w-full ${activeLink == link.id ? 'w-full': 'w-0'}`}></span>
                 </li>
               ))}
               </ul>
@@ -91,12 +126,15 @@ const Navbar = () => {
               {NAV_LINKS.map((link) => (
                 <li key={link.name} className="relative group cursor-pointer">
                 <a
-                  href={link.path}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      scrollToSection(link.id);
+                    }}
                   className="hover:text-yellow-400 transition-all uppercase text-sm tracking-wide transition"
                 >
                   {link.name}
                 </a>
-                <span className={`absolute left-0 bottom-[-18px] h-1  bg-[#fe41e4] transition-all duration-300  ${activeLink == link.path ? 'w-full': 'w-0'}`}></span>
+                <span className={`absolute left-0 bottom-[-18px] h-1  bg-[#fe41e4] transition-all duration-300  ${activeLink == link.id ? 'w-full': 'w-0'}`}></span>
               </li>
               ))}
             </div>

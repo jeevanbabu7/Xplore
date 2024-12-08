@@ -1,10 +1,10 @@
 // src/constants/navLinks.js
 
 export const NAV_LINKS = [
-    { name: "Home", path: "/" },
-    { name: "About Xplore", path: "/about" },
-    { name: "Events", path: "/events" },
-    { name: "Workshops", path: "/workshops" },
-    { name: "Contact Us", path: "/contact-us" },
+    { name: "Home", path: "/", id: "home" },
+    { name: "About Xplore", path: "/about", id: "about" },
+    { name: "Events", path: "/events", id: "events" },
+    { name: "Workshops", path: "/workshops", id: "workshops" },
+    { name: "Contact Us", path: "/contact-us", id: "contact" },
   ];
   
