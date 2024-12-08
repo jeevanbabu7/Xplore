@@ -15,9 +15,9 @@ const Home = () => {
       >
         <div className="absolute inset-0"></div>
 
-        <div className="h-screen mt-16 flex flex-col text-white relative gap-20 md:gap-10 lg: gap-10">
+        <div className="h-screen mt-16 flex flex-col text-white relative md:gap-10 lg: gap-10">
           <div className="w-full flex flex-col justify-center items-center pt-20 sm:pt-52 md:pt-10 z-30">
-            <img src="./hero.png" className="w-[60%] sm:w-[50%] md:w-[45%]" alt="Hero" />
+            <img src="./logo.png" className="w-[40%] sm:w-[70%] md:w-[35%]" alt="Hero" />
             <p className="text-2xl sm:text-4xl font-bold text-center">
               NATIONAL LEVEL MULTI-FEST
             </p>
