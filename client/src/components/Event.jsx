@@ -29,10 +29,11 @@ const Event = ({ eventDetails, type }) => {
   return (
     <animated.div
       className="relative h-[260px] w-[300px] rounded-lg overflow-hidden flex flex-col justify-center items-center flex-shrink-0"
-      style={cardAnimation} // Entry animation applied to outer div
+      style={cardAnimation} 
+      id='events'
     >
       <animated.div
-        style={hoverAnimation} // Hover animation applied to inner div
+        style={hoverAnimation} 
         onMouseEnter={() => setHovering(true)}
         onMouseLeave={() => setHovering(false)}
         className="relative w-[276px] h-[236px]"

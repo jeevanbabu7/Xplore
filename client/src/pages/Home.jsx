@@ -9,7 +9,7 @@ const Home = () => {
   const navigate = useNavigate();
 
   return (
-    <div>
+    <div id="home">
   {/* Hero Section */}
       <ParallaxLayer  />
       <section className="-mt-16 z-50">

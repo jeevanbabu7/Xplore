@@ -5,7 +5,9 @@ import {workshopData} from '../utils/eventData.js'
 const Workshops = () => {
   return (
     <>
-        <section className="w-full h-32 lg:h-48 md:h-48 md:h-[280px] bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url(${workshopBanner})` }}>
+        <section className="w-full h-32 lg:h-48 md:h-48 md:h-[280px] bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url(${workshopBanner})` }}
+          id="workshops"  
+        >
          
         </section>
         <div
