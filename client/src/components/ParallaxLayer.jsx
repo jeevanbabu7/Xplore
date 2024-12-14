@@ -30,12 +30,12 @@ const ref = useRef(null);
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{
-              duration: 1, // Time for fade-in
-              ease: "easeOut", // Smooth easing
+              duration: 1,
+              ease: "easeOut", 
             }}
           />
             <motion.p
-              className="text-2xl sm:text-4xl font-bold z-10 flex space-x-1"
+              className="text-xl sm:text-3xl font-bold z-10 flex space-x-1"
             >
               {textArray.map((char, index) => (
                 <motion.span
@@ -43,8 +43,8 @@ const ref = useRef(null);
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{
-                    delay: index * 0.05, // Delays each letter
-                    duration: 0.05, // Duration for each letter animation
+                    delay: index * 0.05, 
+                    duration: 0.05, 
                   }}
                 >
                   {char === " " ? "\u00A0" : char} {/* Preserve spaces */}

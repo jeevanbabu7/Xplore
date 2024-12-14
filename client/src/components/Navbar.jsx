@@ -61,8 +61,8 @@ const Navbar = () => {
   return (
 
     <>
-      <div className="flex items-center md:gap-2">
-        <nav className={`${isScrolled ? "backdrop-blur-xl" : ""} border-solid border-[.5px] rounded-bl-2xl rounded-br-2xl border-grey-500 text-white fixed top-0 left-0 w-full px-8 z-10 flex items-center md:gap-52 justify-between mt-2 mr-1 ml-1 z-50`}>
+      <div className={`${isScrolled ? "backdrop-blur-xl" : "backdrop-blur-xl"}flex items-center md:gap-2`}>
+        <nav className={`"backdrop-blur-xl border-solid border-[.5px] rounded-bl-2xl rounded-br-2xl border-grey-500 text-white fixed top-0 left-0 w-full px-8 z-10 flex items-center md:gap-52 justify-between mt-2 mr-1 ml-1 z-50`}>
         <div className="logo">
           <img src='./xplore_logo.png' alt="Xplore 24 Logo" className="w-16 h-12" />
         </div>
@@ -76,7 +76,7 @@ const Navbar = () => {
               <span className="block h-0.5 w-8 animate-pulse bg-gray-600"></span>
             </div>
 
-            <div className={`${isNavOpen ? "showMenuNav" : "hideMenuNav"} backdrop-blur-sm`}> 
+            <div className={`${isNavOpen ? "showMenuNav" : "hideMenuNav"} backdrop-blur-lg z-50`}> 
               <div
                 className="CROSS-ICON absolute top-0 right-0 px-8 py-8"
                 onClick={() => setIsNavOpen(false)} 
@@ -94,13 +94,12 @@ const Navbar = () => {
                   <line x1="6" y1="6" x2="18" y2="18" />
                 </svg>
               </div>
-              <ul className="MENU-LINK-MOBILE-OPEN flex flex-col items-center justify-between min-h-[250px] font-bold z-50">
+              <ul className="MENU-LINK-MOBILE-OPEN flex flex-col items-center justify-between min-h-[250px] font-bold z-50 backdrop-blur-xl">
               {NAV_LINKS.map((link) => (
                 <li key={link.name} className="relative group cursor-pointer">
                   <a
                     onClick={(e) => {
                       e.preventDefault();
-                      console.log("hiii");
                       scrollToSection(link.id);
                     }}
                     className="hover:text-yellow-400 transition-all uppercase text-sm tracking-wide transition"
@@ -155,21 +154,18 @@ const Navbar = () => {
           display: none;
         }
         .showMenuNav {
-          display: block;
-          position: absolute;
-          width: 100%;
-          height: 100vh;
-          top: 0;
-          left: 0;
-          background: white;
-          z-index: 10;
-          display: flex;
-          flex-direction: column;
-          justify-content: space-evenly;
-          align-items: center;
-          background:none;
-          
-        }
+            position: absolute;
+            width: 100%;
+            height: 100vh;
+            top: 0;
+            left: 0;
+            z-index: 50;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center; 
+            will-change: backdrop-filter; 
+          }
       `}</style>
       </div>
 
