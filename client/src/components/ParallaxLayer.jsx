@@ -62,7 +62,40 @@ const ref = useRef(null);
               <div className="modal-action">
                 <form method="dialog" className='flex flex-row gap-10'>
                   {/* if there is a button in form, it will close the modal */}
-                  <button className="btn btn-success">Register</button>
+                  {/* <button className="btn btn-success">Register</button> */}
+                  <button
+                    style={{
+                      "--yellow": "#F5C629",
+                      fontSize: "15px",
+                      padding: "0.7em 2.7em",
+                      letterSpacing: "0.06em",
+                      fontFamily: "inherit",
+                      borderRadius: "0.6em",
+                      overflow: "hidden",
+                      transition: "all 0.3s",
+                      lineHeight: "1.4em",
+                      border: "2px solid var(--yellow)",
+                      background:
+                        "linear-gradient(to right, rgba(245, 198, 41, 0.1) 1%, transparent 40%, transparent 60%, rgba(245, 198, 41, 0.1) 100%)",
+                      color: "var(--yellow)",
+                      boxShadow:
+                        "inset 0 0 10px rgba(245, 198, 41, 0.4), 0 0 9px 3px rgba(245, 198, 41, 0.1)",
+                      position: "relative",
+                      cursor: "pointer",
+                    }}
+                    onMouseOver={(e) => {
+                      e.target.style.color = "#FFE37A";
+                      e.target.style.boxShadow =
+                        "inset 0 0 10px rgba(245, 198, 41, 0.6), 0 0 9px 3px rgba(245, 198, 41, 0.2)";
+                    }}
+                    onMouseOut={(e) => {
+                      e.target.style.color = "var(--yellow)";
+                      e.target.style.boxShadow =
+                        "inset 0 0 10px rgba(245, 198, 41, 0.4), 0 0 9px 3px rgba(245, 198, 41, 0.1)";
+                    }}
+                  >
+                    Register
+                  </button>
                   <button className="btn">Close</button>
                 </form>
               </div>
