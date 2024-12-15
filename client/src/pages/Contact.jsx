@@ -17,7 +17,7 @@ const ContactPage = () => {
       id='contact'
     >
       <div
-        className="w-full h-32 md:h-[280px] bg-cover bg-center bg-no-repeat"
+        className="w-full h-32 md:h-[200px] bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage: `url(${contactBanner})`, // Use the imported path
           // Default height for larger screens

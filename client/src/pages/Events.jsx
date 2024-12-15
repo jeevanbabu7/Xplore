@@ -16,7 +16,7 @@ const Events = () => {
     <>
       {/* Animated Banner Section */}
       <animated.section
-        className="w-full h-32 md:h-[280px] bg-cover bg-center bg-no-repeat"
+        className="w-full h-32 md:h-[200px] bg-cover bg-center bg-no-repeat"
         style={{
           ...bannerAnimation,
           backgroundImage: `url(${eventBanner})`,
