@@ -6,11 +6,11 @@ export default {
   ],
   theme: {
     extend: {},
-    // screens: {
-    //   // 'sm': '576px',
-    //   // 'md': '960px',
-    //   // 'lg': '1440px',
-    // },
+    screens: {
+      'sm': '640px',
+      'md': '768px',
+      'lg': '1024px',
+    },
   },
   plugins: [
     require('daisyui'),
