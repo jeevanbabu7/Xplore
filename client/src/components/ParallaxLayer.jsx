@@ -22,20 +22,20 @@ const ref = useRef(null);
         {/* <div className="absolute inset-0"></div> */}
 
         <motion.div className="h-screen mt-16 flex flex-col text-white relative md:gap-5 lg: gap-1" style={{y:textY}}>
-          <div className="w-full flex flex-col items-center pt-20 sm:pt-52 md:pt-2 z-10">
+          <div className="w-full flex flex-col items-center pt-10 sm:pt-52 md:pt-2 z-10">
           <motion.img
             src="./logo.png"
-            className="w-[80%] sm:w-[80%] md:w-[35%]"
+            className="sm:w-[80%] md:w-[35%]"
             alt="Hero"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{
-              duration: 1,
+              duration: 2,
               ease: "easeOut", 
             }}
           />
             <motion.p
-              className="text-xl sm:text-3xl font-bold z-10 flex space-x-1"
+              className="sm:text-5xl md:text-md lg:text-lg font-bold z-10 flex"
             >
               {textArray.map((char, index) => (
                 <motion.span
@@ -54,11 +54,25 @@ const ref = useRef(null);
           </div>
 
           <div className="w-full flex flex-col sm:justify-center items-center sm:flex-row pl-10 pr-10 flex-wrap md:gap-10 lg:gap-10 gap-20 py-8 md:justify-between lg:justify-between">
+
+          <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle">
+            <div className="modal-box">
+              <h3 className="font-bold text-lg">Hello!</h3>
+              <p className="py-4">Press ESC key or click the button below to close</p>
+              <div className="modal-action">
+                <form method="dialog" className='flex flex-row gap-10'>
+                  {/* if there is a button in form, it will close the modal */}
+                  <button className="btn btn-success">Register</button>
+                  <button className="btn">Close</button>
+                </form>
+              </div>
+            </div>
+          </dialog>
             <img
-              src="./register_btn.png"
+              src="./call-btn.png"
               className="w-52 h-10 sm:w-48 cursor-pointer animate-bounce transition-all ease-in-out duration-1500"
-              onClick={() => navigate('/about')}
               alt="Register Now"
+              onClick={()=>document.getElementById('my_modal_5').showModal()}
             />
             <img
               src={date}

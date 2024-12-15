@@ -24,7 +24,7 @@ const ContactPage = () => {
         }}
       ></div>
 
-      <div className="w-full max-w-4xl px-8 py-6 flex flex-col items-center">
+      <div className="w-full max-w-4xl py-6 flex flex-col items-center">
         {/* Get in Touch Section */}
         <section className="py-8 md:py-16 w-full">
           <div className="container mx-auto flex flex-col md:flex-row items-center justify-between px-4">

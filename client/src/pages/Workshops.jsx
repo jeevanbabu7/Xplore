@@ -13,8 +13,10 @@ const Workshops = () => {
         <div
   style={{
     background: 'linear-gradient(45deg, rgba(75,0,130,0.6) 0%, rgba(0,0,0,1) 90%)',
+    whiteSpace: "nowrap", 
+    overflowX: "auto", 
   }}
-  className="w-full md:h-screen lg:screen overflow-auto p-10 flex flex-row md:flex-wrap justify-center gap-20 pl-80 md:pl-0 lg:pl-0 "
+  className="w-full md:h-screen lg:screen flex flex-row gap-20 pl-8 md:pl-16 lg:pl-32 pt-32"
 >
   {workshopData.map((event, index) => {
     return <Event key={index} eventDetails={event} type="workshop" />;
