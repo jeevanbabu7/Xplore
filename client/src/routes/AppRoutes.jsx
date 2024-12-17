@@ -11,9 +11,6 @@ import GetDirections from "../pages/Directions";
 
 const AppRoutes = () => (
   <Router>
-    {/* Navbar placed here will be rendered on all pages */}
-    <Navbar />
-
     <Routes>
       <Route element={<Navbar />}>
         <Route path="/" element={<Home />} />

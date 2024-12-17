@@ -14,7 +14,7 @@ const ContactPage = () => {
 
   return (
     <div className="flex flex-col items-center w-full h-full bg-gradient-to-b from-red-900 via-black to-black"
-      id='contact'
+
     >
       <div
         className="w-full h-32 md:h-[200px] bg-cover bg-center bg-no-repeat"

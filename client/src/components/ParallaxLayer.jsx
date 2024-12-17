@@ -1,68 +1,86 @@
-import React, { useRef } from 'react'
-import heroBg from '../assets/images/hero-bg3.jpg';
+import React, { useEffect, useRef } from "react";
+import heroBg from "../assets/images/hero-bg3.jpg";
 import date from "../assets/images/date-img.png";
-import {motion, useScroll, useTransform} from 'framer-motion';
+import { motion, useScroll, useTransform } from "framer-motion";
+import { eventData } from "../utils/eventData.js";
+import Card from "./Card.jsx";
+
 const ParallaxLayer = () => {
-const ref = useRef(null);
-  const {scrollYProgress} = useScroll({
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["start start", "end start"]
+    offset: ["start start", "end start"],
   });
-  const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "200%"]);
-  const textY = useTransform(scrollYProgress, [0, 1], ["0%", "300%"]);
- 
-  
-  const text = "NATIONAL LEVEL MULTI-FEST"; 
-  const textArray = text.split(""); 
+
+  const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
+  const textY = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
+  const logoScale = useTransform(scrollYProgress, [0, 1.5], [1, 2]); 
+
+  const text = "NATIONAL LEVEL MULTI-FEST";
+  const textArray = text.split("");
+
+  const containerRef = useRef(null);
+
+  useEffect(() => {
+    const container = containerRef.current;
+
+    // Clone the card list for seamless scrolling
+    if (container) {
+      const clonedNode = container.cloneNode(true);
+      clonedNode.setAttribute("aria-hidden", "true");
+      container.parentNode.appendChild(clonedNode);
+    }
+  }, []);
+
   return (
     <section
-        className="relative -top-16 w-full h-screen bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${heroBg})`, y: backgroundY }}
+      ref={ref}
+      className="relative -top-16 w-full h-screen bg-cover bg-center bg-no-repeat"
+      style={{ backgroundImage: `url(${heroBg})`, y: backgroundY }}
+    >
+      <motion.div
+        className="mt-16 h-screen flex flex-col text-white"
+      
       >
-        {/* <div className="absolute inset-0"></div> */}
-
-        <motion.div className="h-screen mt-16 flex flex-col text-white relative md:gap-5 lg: gap-1" style={{y:textY}}>
-          <div className="w-full flex flex-col items-center pt-10 sm:pt-52 md:pt-2 z-10">
+        {/* Logo and Text Section */}
+        <div className="flex-grow flex flex-col justify-center items-center pt-5 sm:pt-52 md:pt-2 z-10" >
           <motion.img
             src="./logo.png"
-            className="sm:w-[80%] md:w-[35%]"
+            className="sm:w-[80%] md:w-[35%] mb-2 z-0"
             alt="Hero"
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: 0, scale: 1 }}
+            animate={{ opacity: 1, scale: 1.2 }}
+            style={{ scale: logoScale}}
             transition={{
-              duration: 2,
-              ease: "easeOut", 
+              duration: 0.5,
+              ease: "easeOut",
             }}
           />
-            <motion.p
-              className="sm:text-5xl md:text-md lg:text-lg font-bold z-10 flex"
-            >
-              {textArray.map((char, index) => (
-                <motion.span
-                  key={index}
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{
-                    delay: index * 0.05, 
-                    duration: 0.05, 
-                  }}
-                >
-                  {char === " " ? "\u00A0" : char} {/* Preserve spaces */}
-                </motion.span>
-              ))}
-            </motion.p>
-          </div>
+          <motion.p className="sm:text-5xl md:text-md lg:text-lg font-bold z-10 flex -mt-10 mb-5 md:-mt-20">
+            {textArray.map((char, index) => (
+              <motion.span
+                key={index}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{
+                  delay: index * 0.05,
+                  duration: 0.05,
+                }}
+              >
+                {char === " " ? "\u00A0" : char} {/* Preserve spaces */}
+              </motion.span>
+            ))}
+          </motion.p>
+        </div>
 
-          <div className="w-full flex flex-col sm:justify-center items-center sm:flex-row pl-10 pr-10 flex-wrap md:gap-10 lg:gap-10 gap-20 py-8 md:justify-between lg:justify-between">
-
+        {/* Images and Modal Section */}
+        <div className="flex-grow flex flex-col md:justify-between sm:justify-center items-center sm:flex-row px-10 gap-8 md:gap-10 lg:gap-10 flex-wrap ">
           <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle">
             <div className="modal-box">
               <h3 className="font-bold text-lg">Hello!</h3>
               <p className="py-4">Press ESC key or click the button below to close</p>
               <div className="modal-action">
-                <form method="dialog" className='flex flex-row gap-10'>
-                  {/* if there is a button in form, it will close the modal */}
-                  {/* <button className="btn btn-success">Register</button> */}
+                <form method="dialog" className="flex flex-row gap-10">
                   <button
                     style={{
                       "--yellow": "#F5C629",
@@ -101,22 +119,46 @@ const ref = useRef(null);
               </div>
             </div>
           </dialog>
-            <img
-              src="./call-btn.png"
-              className="w-52 h-10 sm:w-48 cursor-pointer animate-bounce transition-all ease-in-out duration-1500"
-              alt="Register Now"
-              onClick={()=>document.getElementById('my_modal_5').showModal()}
-            />
-            <img
-              src={date}
-              className="w-52 h-10 sm:w-48 cursor-pointer"
-              onClick={() => navigate('/about')}
-              alt="Date"
-            />
-          </div>
-        </motion.div>
-      </section>
-  )
-}
+          <img
+            src="./call-btn.png"
+            className="w-52 h-10 sm:w-48 cursor-pointer animate-bounce transition-all ease-in-out duration-1500"
+            alt="Register Now"
+            onClick={() => document.getElementById("my_modal_5").showModal()}
+          />
+          <img
+            src={date}
+            className="w-52 h-10 sm:w-48 cursor-pointer"
+            onClick={() => navigate("/about")}
+            alt="Date"
+          />
+        </div>
 
-export default ParallaxLayer
+        {/* Bottom Section */}
+        <div
+          className="relative flex overflow-hidden w-full h-52 backdrop-blur-3xl pb-80"
+          style={{
+            maskImage: "linear-gradient(to right, transparent, black 10%, black 90%, transparent)",
+            WebkitMaskImage: "linear-gradient(to right, transparent, black 10%, black 90%, transparent)",
+          }}
+        >
+          <ul
+            ref={containerRef}
+            className="flex animate-infinite-scroll space-x-6"
+          >
+            {eventData.map((event, index) => (
+              <li key={index} className="flex-shrink-0">
+                <div className="flex-grow h-52 flex items-center justify-center backdrop-blur-2xl">
+                  <Card event={event} />
+                </div>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </motion.div>
+
+
+    </section>
+  );
+};
+
+export default ParallaxLayer;
