@@ -10,7 +10,7 @@ const Workshops = () => {
       <section
         className="w-full h-[20vh] md:h-[25vh] bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${workshopBanner})` }}
-        id="workshops"
+  
       ></section>
 
       {/* Workshop List */}

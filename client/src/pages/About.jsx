@@ -36,7 +36,6 @@ const AboutPage = () => {
 
   return (
     <div className="bg-gradient-to-b from-blue-950 via-black to-black text-white pb-10 z-50 backdrop-blur-0"
-      id="about"
     >
       {/* Header */}
       <div className="bg-gradient-to-b from-[#2c0c0c] to-black text-white">

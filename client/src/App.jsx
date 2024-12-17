@@ -9,7 +9,7 @@ import AppRoutes from "./routes/AppRoutes";
 
 const App = () => {
   return (
-    <div className="bg-black text-white">
+    <div className="bg-black text-white ">
      <AppRoutes />
     </div>
   );
