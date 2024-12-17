@@ -7,6 +7,7 @@ import Workshops from "../pages/Workshops";
 import Details from "../components/Details";
 import ContactPage from "../pages/Contact";
 import GetDirections from "../pages/Directions";
+import AmbassadorForm from "../pages/AmbassadorForm";
 // Import other pages if necessary
 
 const AppRoutes = () => (
@@ -20,6 +21,7 @@ const AppRoutes = () => (
         <Route path="/workshops" element={<Workshops />} />
         <Route path="/contact-us" element={<ContactPage/>} /> 
         <Route path="/get-directions" element={<GetDirections/>} /> 
+        <Route path="/ambassador-form" element={<AmbassadorForm />} />
       </Route>
       
     </Routes>
