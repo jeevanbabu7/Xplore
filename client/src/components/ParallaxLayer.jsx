@@ -4,8 +4,10 @@ import date from "../assets/images/date-img.png";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { eventData } from "../utils/eventData.js";
 import Card from "./Card.jsx";
+import { useNavigate } from "react-router-dom";
 
 const ParallaxLayer = () => {
+  const navigate = useNavigate();
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -38,6 +40,81 @@ const ParallaxLayer = () => {
       className="relative -top-16 w-full h-screen bg-cover bg-center bg-no-repeat"
       style={{ backgroundImage: `url(${heroBg})`, y: backgroundY }}
     >
+
+      <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle backdrop-blur-sm">
+        <div className="modal-box bg-gradient-to-br from-[#dd3d05]  via-[#1f1426] via-[#120d18] via-[#010101] to-[#010101]
+">
+          <div className="text-center">
+            <h3 className="font-bold text-3xl">Become a campus ambassador</h3>
+          </div>
+          <div className="divider"></div>
+
+          <div className="modal-action flex flex-col gap-5">
+            <div className="w-full flex flex-col gap-5">
+              <div className="w-full">
+                <p className="text-xl font-extrabold">What you will do: </p>
+                <div className="w-full font-semibold text=slate-200">
+                  <ol>
+                    <li>1. Share all posters and links on your social media and groups</li>
+                    <li>2. Put up posters we send you on your notice boards</li>
+                    <li>3. Encourage students of your college to participate in Xplore'24</li>
+                  </ol>
+                </div>
+              </div>
+              <div className="w-full">
+                <p className="text-xl font-extrabold">Benefits: </p>
+                <div className="w-full font-semibold text-slate-200">
+                  <ol>
+                    <li>1. Exclusive perks (cash prizes , goodies and certificates worth ktu points).</li>
+                    <li>2. Gain leadership and networking skills.</li>
+                    <li>3. Connect your campus to the most happening tech event of the year.</li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+
+            <form method="dialog" className="flex flex-row gap-10">
+              <button
+              className="animate-pulse font-extrabold"
+                style={{
+                  "--yellow": "#F5C629",
+                  fontSize: "15px",
+                  padding: "0.7em 2.7em",
+                  letterSpacing: "0.06em",
+                  fontFamily: "inherit",
+                  borderRadius: "0.6em",
+                  overflow: "hidden",
+                  transition: "all 0.3s",
+                  lineHeight: "1.4em",
+                  border: "2px solid var(--yellow)",
+                  background:
+                    "linear-gradient(to right, rgba(245, 198, 41, 0.1) 1%, transparent 40%, transparent 60%, rgba(245, 198, 41, 0.1) 100%)",
+                  color: "var(--yellow)",
+                  boxShadow:
+                    "inset 0 0 10px rgba(245, 198, 41, 0.4), 0 0 9px 3px rgba(245, 198, 41, 0.1)",
+                  position: "relative",
+                  cursor: "pointer",
+                }}
+                onMouseOver={(e) => {
+                  e.target.style.color = "#FFE37A";
+                  e.target.style.boxShadow =
+                    "inset 0 0 10px rgba(245, 198, 41, 0.6), 0 0 9px 3px rgba(245, 198, 41, 0.2)";
+                }}
+                onMouseOut={(e) => {
+                  e.target.style.color = "var(--yellow)";
+                  e.target.style.boxShadow =
+                    "inset 0 0 10px rgba(245, 198, 41, 0.4), 0 0 9px 3px rgba(245, 198, 41, 0.1)";
+                }}
+                onClick={() => navigate("./ambassador-form")}
+              >
+                Register
+              </button>
+              <button className="btn bg-[#802516] text-white font-bold">Close</button>
+            </form>
+          </div>
+        </div>
+      </dialog>
+
       <motion.div
         className="mt-16 h-screen flex flex-col text-white"
       
@@ -75,50 +152,7 @@ const ParallaxLayer = () => {
 
         {/* Images and Modal Section */}
         <div className="flex-grow flex flex-col md:justify-between sm:justify-center items-center sm:flex-row px-10 gap-8 md:gap-10 lg:gap-10 flex-wrap ">
-          <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle">
-            <div className="modal-box">
-              <h3 className="font-bold text-lg">Hello!</h3>
-              <p className="py-4">Press ESC key or click the button below to close</p>
-              <div className="modal-action">
-                <form method="dialog" className="flex flex-row gap-10">
-                  <button
-                    style={{
-                      "--yellow": "#F5C629",
-                      fontSize: "15px",
-                      padding: "0.7em 2.7em",
-                      letterSpacing: "0.06em",
-                      fontFamily: "inherit",
-                      borderRadius: "0.6em",
-                      overflow: "hidden",
-                      transition: "all 0.3s",
-                      lineHeight: "1.4em",
-                      border: "2px solid var(--yellow)",
-                      background:
-                        "linear-gradient(to right, rgba(245, 198, 41, 0.1) 1%, transparent 40%, transparent 60%, rgba(245, 198, 41, 0.1) 100%)",
-                      color: "var(--yellow)",
-                      boxShadow:
-                        "inset 0 0 10px rgba(245, 198, 41, 0.4), 0 0 9px 3px rgba(245, 198, 41, 0.1)",
-                      position: "relative",
-                      cursor: "pointer",
-                    }}
-                    onMouseOver={(e) => {
-                      e.target.style.color = "#FFE37A";
-                      e.target.style.boxShadow =
-                        "inset 0 0 10px rgba(245, 198, 41, 0.6), 0 0 9px 3px rgba(245, 198, 41, 0.2)";
-                    }}
-                    onMouseOut={(e) => {
-                      e.target.style.color = "var(--yellow)";
-                      e.target.style.boxShadow =
-                        "inset 0 0 10px rgba(245, 198, 41, 0.4), 0 0 9px 3px rgba(245, 198, 41, 0.1)";
-                    }}
-                  >
-                    Register
-                  </button>
-                  <button className="btn">Close</button>
-                </form>
-              </div>
-            </div>
-          </dialog>
+          
           <img
             src="./call-btn.png"
             className="w-52 h-10 sm:w-48 cursor-pointer animate-bounce transition-all ease-in-out duration-1500"
