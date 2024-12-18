@@ -5,7 +5,6 @@ import ParallaxLayer from "../components/ParallaxLayer";
 import Events from "./Events";
 import Workshops from "./Workshops";
 import ContactPage from "./Contact";
-import { VelocityScroll } from "@/components/magicui/scroll-based-velocity";
  
 
 const Home = () => {
