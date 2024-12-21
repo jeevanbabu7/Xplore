@@ -27,7 +27,7 @@ const Home = () => {
       <ParallaxLayer />
       <section className="z-50 mt-5">
       <ReactLenis root options={lenisOptions}>
-          <div id="about">
+          <div id="about" className="shadow-top-only">
             <AboutPage />
           </div>
           <div id="events">
