@@ -128,14 +128,20 @@ const Navbar = () => {
                 <a
                     onClick={(e) => {
                       e.preventDefault();
-                      if(window.location.pathname == '/')       scrollToSection(link.id);
-                      else navigate(link.path);
+                      if(window.location.pathname == '/') {
+                        scrollToSection(link.id);
+                        setActiveLink(link.id);
+                      }
+                      else{
+                        navigate(link.path);
+                        setActiveLink(link.path);
+                      }
                     }}
                   className="hover:text-yellow-400 transition-all uppercase text-sm tracking-wide transition"
                 >
                   {link.name}
                 </a>
-                <span className={`absolute left-0 bottom-[-18px] h-1  bg-[#fe41e4] transition-all duration-300  ${activeLink == link.id ? 'w-full': 'w-0'}`}></span>
+                <span className={`absolute left-0 bottom-[-18px] h-1  bg-[#fe41e4] transition-all duration-300  ${(activeLink == link.id || activeLink == link.path)? 'w-full': 'w-0'}`}></span>
               </li>
               ))}
             </div>
