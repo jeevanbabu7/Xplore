@@ -38,8 +38,14 @@ const ParallaxLayer = () => {
     <section
       ref={ref}
       className="relative -top-16 w-full h-screen bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: `url(${heroBg})`, y: backgroundY }}
+     
     >
+      <div
+         style={{ backgroundImage: `url('./Hero_bg.png')`, y: backgroundY , opacity: 0.35}}
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+      >
+
+      </div>
 
       <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle backdrop-blur-sm">
         <div className="modal-box bg-gradient-to-br from-[#dd3d05]  via-[#1f1426] via-[#120d18] via-[#010101] to-[#010101]
