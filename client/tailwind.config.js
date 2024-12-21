@@ -1,21 +1,15 @@
 /** @type {import('tailwindcss').Config} */ 
 export default {
     darkMode: ["class"],
-    content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
+    content: ["./index.html", "./src/**/*.{ts,tsx,js,jsx}"],
   theme: {
   	extend: {
-		boxShadow: {
-			'top-only': '0 -4px 6px -1px rgba(100, 100, 100, 0.5)'
-		}
-		,
-  		animation: {
-  			'infinite-scroll': 'infinite-scroll 20s linear infinite',
-		
+  		boxShadow: {
+  			'top-only': '0 -4px 6px -1px rgba(100, 100, 100, 0.5)'
   		},
-		
+  		animation: {
+  			'infinite-scroll': 'infinite-scroll 20s linear infinite'
+  		},
   		keyframes: {
   			'infinite-scroll': {
   				from: {
@@ -24,9 +18,7 @@ export default {
   				to: {
   					transform: 'translateX(-100%)'
   				}
-  			},
-	
-
+  			}
   		},
   		scrollbar: {
   			thin: '2px'
