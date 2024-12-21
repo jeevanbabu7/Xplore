@@ -8,8 +8,10 @@ export default {
   theme: {
   	extend: {
   		animation: {
-  			'infinite-scroll': 'infinite-scroll 20s linear infinite'
+  			'infinite-scroll': 'infinite-scroll 20s linear infinite',
+		
   		},
+		
   		keyframes: {
   			'infinite-scroll': {
   				from: {
@@ -18,7 +20,9 @@ export default {
   				to: {
   					transform: 'translateX(-100%)'
   				}
-  			}
+  			},
+	
+
   		},
   		scrollbar: {
   			thin: '2px'

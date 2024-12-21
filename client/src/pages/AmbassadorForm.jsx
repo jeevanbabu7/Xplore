@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { v4 as uuidv4 } from 'uuid';
+import { FaCopy } from "react-icons/fa";
 
 const AmbassadorForm = () => {
   const [formData, setFormData] = useState({
@@ -50,7 +51,33 @@ const AmbassadorForm = () => {
     });
     console.log(formData);
   }
+  const handleCopyClick = async (text) => {
+      try {
+          await window.navigator.clipboard.writeText(text);
+          toast.success('Copied to clipboard!');
+      } catch (err) {
+          console.error(
+              "Unable to copy to clipboard.",
+              err
+          );
+          toast.error('Unable to copy to clipboard!');
+      }
+  };
 
+  const contactData = [
+    {
+      name: "Sooryadeep A V",
+      number: "+91 6282431171"
+    },
+    {
+      name: "Rishana Rahman",
+      number: "+91 7560910408"
+    },
+    {
+      name: "Anna V Mariya",
+      number: "+91 9037033138"
+    }
+  ];
   return (
     <div className="flex flex-col items-center w-full h-full bg-gradient-to-b from-red-900 via-black to-black mt-16">
       <div className="w-full py-6 flex flex-col items-center">
@@ -59,6 +86,23 @@ const AmbassadorForm = () => {
             <div className="md:w-1/2 mb-8 md:mb-0 md:mr-10 md:-mt-96">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Join the Team!</h2>
               <p className="text-gray-400 text-lg mb-10">Lead the way, build connections, and make unforgettable memories. Your fest, your impact!</p>
+              <div className="mockup-window bg-[#0A0202]  w-full shadow-lg shadow-[#832117]">
+                <div className=" flex justify-start px-4 py-2 bg-[#0A0202]">
+                  <p className='font-extrabold text-2xl'>Contact </p>
+                </div>
+                
+                <div className="bg-[#0A0202] flex flex-col gap-5 justify-start px-10 py-2">
+                  {contactData.map((contact) => {
+                    return (
+                      <p className="font-bold flex items-center ">
+                        {contact.name}: {contact.number} <FaCopy className="ml-2 cursor-pointer" onClick={() => handleCopyClick(contact.number)}/>
+                      </p>
+                    )
+                  })}
+                  
+                </div>
+                
+              </div>
             </div>
             <div className="md:w-1/2 flex flex-col space-y-4 w-full">
               <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 w-full">
