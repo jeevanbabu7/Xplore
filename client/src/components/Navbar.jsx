@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { NAV_LINKS } from "../utils/constants";
-import { Outlet } from "react-router-dom";
+import { Outlet, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
 
   const [isNavOpen, setIsNavOpen] = useState(false); 
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeLink, setActiveLink] = useState("home");
-  console.log(activeLink);
+  const navigate = useNavigate();
   
   useEffect(() => {
     const handleScroll = () => {
@@ -64,7 +64,7 @@ const Navbar = () => {
       <div className={`flex items-center md:gap-2`}>
       <nav className={`backdrop-blur-xl border-solid border-[.5px] rounded-bl-2xl rounded-br-2xl border-grey-500 text-white fixed top-0 left-0 w-full px-8 z-10 flex items-center md:gap-52 justify-between mt-2 mr-1 ml-1 z-50`}>
         <div className="logo">
-          <img src='./xplore_logo.png' alt="Xplore 24 Logo" className="w-16 h-12" />
+          <img src='./xplore_logo.png' alt="Xplore 24 Logo" className="w-16 h-12" onClick={() => navigate("/")}/>
         </div>
           <section className="MOBILE-MENU flex lg:hidden z-50">
             <div
@@ -128,7 +128,8 @@ const Navbar = () => {
                 <a
                     onClick={(e) => {
                       e.preventDefault();
-                      scrollToSection(link.id);
+                      if(window.location.pathname == '/')       scrollToSection(link.id);
+                      else navigate(link.path);
                     }}
                   className="hover:text-yellow-400 transition-all uppercase text-sm tracking-wide transition"
                 >
