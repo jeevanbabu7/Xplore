@@ -8,7 +8,9 @@ export default {
   			'top-only': '0 -4px 6px -1px rgba(100, 100, 100, 0.5)'
   		},
   		animation: {
-  			'infinite-scroll': 'infinite-scroll 20s linear infinite'
+  			'infinite-scroll': 'infinite-scroll 20s linear infinite',
+  			'background-position-spin': 'background-position-spin 3000ms infinite alternate',
+			'mesh': 'mesh 10s infinite ease-in-out'
   		},
   		keyframes: {
   			'infinite-scroll': {
@@ -18,7 +20,37 @@ export default {
   				to: {
   					transform: 'translateX(-100%)'
   				}
-  			}
+  			},
+  			'background-position-spin': {
+  				'0%': {
+  					backgroundPosition: 'top center'
+  				},
+  				'100%': {
+  					backgroundPosition: 'bottom center'
+  				}
+  			},
+			  'mesh': {
+				'0%': {
+				  backgroundPosition: '0% 50%',
+				  transform: 'scale(1)',
+				},
+				'25%': {
+				  backgroundPosition: '50% 0%',
+				  transform: 'scale(1.1)',
+				},
+				'50%': {
+				  backgroundPosition: '100% 50%',
+				  transform: 'scale(1)',
+				},
+				'75%': {
+				  backgroundPosition: '50% 100%',
+				  transform: 'scale(1.1)',
+				},
+				'100%': {
+				  backgroundPosition: '0% 50%',
+				  transform: 'scale(1)',
+				},
+			  }
   		},
   		scrollbar: {
   			thin: '2px'
