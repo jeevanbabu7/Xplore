@@ -18,7 +18,7 @@ const ParallaxLayer = () => {
 
   const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "60%"]);
   const textY = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
-  const logoScale = useTransform(scrollYProgress, [0, 1.5], [1, 5]); 
+  const logoScale = useTransform(scrollYProgress, [0, 1.5], [1, 2]); 
 
   const containerRef = useRef(null);
 
