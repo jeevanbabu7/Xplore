@@ -6,6 +6,7 @@ import Events from "./Events";
 import Workshops from "./Workshops";
 import ContactPage from "./Contact";
 import { ReactLenis } from "@studio-freight/react-lenis";
+
  
 
 const Home = () => {

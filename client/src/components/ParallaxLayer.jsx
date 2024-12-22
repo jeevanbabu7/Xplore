@@ -5,6 +5,8 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { eventData } from "../utils/eventData.js";
 import Card from "./Card.jsx";
 import { useNavigate } from "react-router-dom";
+import TypingAnimation from "../components/ui/typing-animation";
+
 
 const ParallaxLayer = () => {
   const navigate = useNavigate();
@@ -16,10 +18,7 @@ const ParallaxLayer = () => {
 
   const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "60%"]);
   const textY = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
-  const logoScale = useTransform(scrollYProgress, [0, 1.5], [1, 2]); 
-
-  const text = "NATIONAL LEVEL MULTI-FEST";
-  const textArray = text.split("");
+  const logoScale = useTransform(scrollYProgress, [0, 1.5], [1, 5]); 
 
   const containerRef = useRef(null);
 
@@ -124,10 +123,12 @@ const ParallaxLayer = () => {
       
       >
         {/* Logo and Text Section */}
-        <div className="flex-grow flex flex-col justify-center items-center pt-5 sm:pt-52 md:pt-2 z-10" >
+        <motion.div className="flex-grow flex flex-col justify-center items-center pt-5 sm:pt-52 md:pt-2 text-center" 
+          style={{ y: textY }}
+        >
           <motion.img
             src="./logo.png"
-            className="sm:w-[80%] md:w-[35%] mb-2 z-0"
+            className="sm:w-[80%] md:w-[35%] mb-2 z-50"
             alt="Hero"
             initial={{ opacity: 0, scale: 1 }}
             animate={{ opacity: 1, scale: 1.2 }}
@@ -137,22 +138,10 @@ const ParallaxLayer = () => {
               ease: "easeOut",
             }}
           />
-          <motion.p className="sm:text-5xl md:text-md lg:text-lg font-bold z-10 flex -mt-10 mb-5 md:-mt-20">
-            {textArray.map((char, index) => (
-              <motion.span
-                key={index}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{
-                  delay: index * 0.05,
-                  duration: 0.05,
-                }}
-              >
-                {char === " " ? "\u00A0" : char} {/* Preserve spaces */}
-              </motion.span>
-            ))}
+          <motion.p className="sm:text-5xl md:text-md lg:text-lg font-bold z-0 flex -mt-10 mb-5 md:-mt-20">
+            <TypingAnimation>NATIONAL LEVEL MULTI-FEST</TypingAnimation>
           </motion.p>
-        </div>
+        </motion.div>
 
         {/* Images and Modal Section */}
         <div className="flex-grow flex flex-col md:justify-between sm:justify-center items-center sm:flex-row px-10 gap-8 md:gap-10 lg:gap-10 flex-wrap ">
@@ -161,11 +150,12 @@ const ParallaxLayer = () => {
             src="./call-btn.png"
             className="w-52 h-10 sm:w-48 cursor-pointer animate-bounce transition-all ease-in-out duration-1500"
             alt="Register Now"
+            
             onClick={() => document.getElementById("my_modal_5").showModal()}
           />
           <img
             src={date}
-            className="w-52 h-10 sm:w-48 cursor-pointer"
+            className="w-52 h-10 sm:w-48 cursor-pointer z-40"
             onClick={() => navigate("/about")}
             alt="Date"
           />
@@ -185,7 +175,7 @@ const ParallaxLayer = () => {
           >
             {eventData.map((event, index) => (
               <li key={index} className="flex-shrink-0">
-                <div className="flex-grow h-52 flex items-center justify-center backdrop-blur-2xl">
+                <div className="flex-grow h-52 flex items-center justify-center backdrop-blur-2xl z-0">
                   <Card event={event} />
                 </div>
               </li>
