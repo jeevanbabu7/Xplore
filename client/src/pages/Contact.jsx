@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { FaTwitter, FaDiscord, FaLinkedin, FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
+import { FaTwitter, FaDiscord, FaLinkedin, FaEnvelope, FaPhone, FaMapMarkerAlt, FaInstagram, FaWhatsapp } from 'react-icons/fa';
 import contactBanner from '../assets/images/contact-banner.png'
 import { useNavigate } from 'react-router-dom';
+import SocialIcons from '../components/SocialIcons.jsx';
 
 const ContactPage = () => {
   const navigate = useNavigate();
@@ -20,7 +21,7 @@ const ContactPage = () => {
         className="w-full h-32 md:h-[200px] bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage: `url(${contactBanner})`, // Use the imported path
-          // Default height for larger screens
+     
         }}
       ></div>
 
@@ -230,17 +231,7 @@ const ContactPage = () => {
 
 
         {/* Social Icons */}
-        <div className="mt-12 mb-6 flex justify-center w-full">
-          <a href="#" className="text-white hover:text-gray-400 mx-2">
-            <FaTwitter />
-          </a>
-          <a href="#" className="text-white hover:text-gray-400 mx-2">
-            <FaDiscord />
-          </a>
-          <a href="#" className="text-white hover:text-gray-400 mx-2">
-            <FaLinkedin />
-          </a>
-        </div>
+        <SocialIcons />
       </div>
     </div>
   );
