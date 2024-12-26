@@ -4,6 +4,11 @@ export default {
     content: ["./index.html", "./src/**/*.{ts,tsx,js,jsx}"],
   theme: {
   	extend: {
+		fontFamily: {
+			pixelify: ['"Pixelify Sans"', 'sans-serif'],
+			silkscreen: ['"Silkscreen"', 'cursive'],
+			work: ['"Work Sans"', 'sans-serif'],
+		},
   		boxShadow: {
   			'top-only': '0 -4px 6px -1px rgba(100, 100, 100, 0.5)'
   		},

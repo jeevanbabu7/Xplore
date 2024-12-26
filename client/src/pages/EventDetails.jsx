@@ -5,6 +5,7 @@ import { eventData, workshopData } from "../utils/eventData";
 import eventBanner from '../assets/images/event-banner.png';
 import event1 from '../assets/images/event1.png';
 import { FaTwitter, FaDiscord, FaLinkedin } from 'react-icons/fa';
+import SocialIcons from "../components/SocialIcons";
 
 const EventDetails = () => {
     const { eventId, type } = useParams();
@@ -86,17 +87,7 @@ const EventDetails = () => {
             </div>
 
             {/* Social Icons */}
-            <div className="flex justify-center mt-auto mb-4 w-full">
-                <a href="#" className="text-white hover:text-gray-400 mx-2 text-base">
-                    <FaTwitter />
-                </a>
-                <a href="#" className="text-white hover:text-gray-400 mx-2 text-base">
-                    <FaDiscord />
-                </a>
-                <a href="#" className="text-white hover:text-gray-400 mx-2 text-base">
-                    <FaLinkedin />
-                </a>
-            </div>
+            <SocialIcons />
         </div>
     );
 };

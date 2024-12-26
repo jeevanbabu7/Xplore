@@ -138,7 +138,7 @@ const ParallaxLayer = () => {
               ease: "easeOut",
             }}
           />
-          <motion.p className="sm:text-5xl md:text-md lg:text-lg font-bold z-0 flex -mt-10 mb-5 md:-mt-20">
+          <motion.p className="sm:text-5xl md:text-md lg:text-lg font-bold z-0 flex -mt-10 mb-5 md:-mt-20 font-">
             <TypingAnimation>NATIONAL LEVEL MULTI-FEST</TypingAnimation>
           </motion.p>
         </motion.div>

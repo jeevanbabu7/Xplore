@@ -6,7 +6,8 @@ import Events from "./Events";
 import Workshops from "./Workshops";
 import ContactPage from "./Contact";
 import { ReactLenis } from "@studio-freight/react-lenis";
-
+import { VelocityScroll } from "../components/ui/scroll-based-velocity";
+ 
  
 
 const Home = () => {
@@ -31,6 +32,11 @@ const Home = () => {
           <div id="about" className="shadow-top-only">
             <AboutPage />
           </div>
+          <VelocityScroll
+            text="XPLORE'24"
+            default_velocity={5}
+            className="font-display text-center text-4xl font-bold tracking-[-0.02em]  drop-shadow-sm  md:text-7xl md:leading-[5rem] md:tracking-[-0.03em] md:drop-shadow-lg bg-black"
+          />
           <div id="events">
             <Events />
           </div>
