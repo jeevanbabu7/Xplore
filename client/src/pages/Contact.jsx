@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaTwitter, FaDiscord, FaLinkedin, FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
+import { FaTwitter, FaDiscord, FaLinkedin, FaEnvelope, FaPhone, FaMapMarkerAlt, FaInstagram, FaWhatsapp } from 'react-icons/fa';
 import contactBanner from '../assets/images/contact-banner.png'
 import { useNavigate } from 'react-router-dom';
 
@@ -20,7 +20,7 @@ const ContactPage = () => {
         className="w-full h-32 md:h-[200px] bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage: `url(${contactBanner})`, // Use the imported path
-          // Default height for larger screens
+     
         }}
       ></div>
 
@@ -231,14 +231,20 @@ const ContactPage = () => {
 
         {/* Social Icons */}
         <div className="mt-12 mb-6 flex justify-center w-full">
-          <a href="#" className="text-white hover:text-gray-400 mx-2">
+          {/* <a href="#" className="text-white hover:text-gray-400 mx-2">
             <FaTwitter />
           </a>
           <a href="#" className="text-white hover:text-gray-400 mx-2">
             <FaDiscord />
-          </a>
-          <a href="#" className="text-white hover:text-gray-400 mx-2">
+          </a> */}
+          <a href="#" className="text-white hover:text-gray-400 mx-2 text-xl">
             <FaLinkedin />
+          </a>
+          <a target='*' href="https://www.instagram.com/xplore.24?igsh=ZXc4NWplaDNnZmZo" className="text-white hover:text-gray-400 mx-2 text-xl">
+            <FaInstagram />
+          </a>
+          <a target='*' href="https://whatsapp.com/channel/0029Van4hPFJ3juqHUezQ82f" className="text-white hover:text-gray-400 mx-2 text-xl">
+            <FaWhatsapp />
           </a>
         </div>
       </div>
