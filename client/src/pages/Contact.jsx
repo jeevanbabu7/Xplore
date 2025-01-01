@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { FaTwitter, FaDiscord, FaLinkedin, FaEnvelope, FaPhone, FaMapMarkerAlt, FaInstagram, FaWhatsapp } from 'react-icons/fa';
+import { FaEnvelope, FaPhone, FaMapMarkerAlt} from 'react-icons/fa';
 import contactBanner from '../assets/images/contact-banner.png'
 import { useNavigate } from 'react-router-dom';
 import SocialIcons from '../components/SocialIcons.jsx';
+import WordPullUp from "../components/ui/word-pull-up";
 
 const ContactPage = () => {
   const navigate = useNavigate();
@@ -160,6 +161,7 @@ const ContactPage = () => {
 
         {/* Contact Details */}
         <section className="w-full mt-12 px-5">
+          
           <h2 className="text-4xl font-bold text-white mb-10 text-center">
             Get in Touch
           </h2>
