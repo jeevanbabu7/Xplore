@@ -40,7 +40,7 @@ const ParallaxLayer = () => {
      
     >
       <motion.div
-         style={{ backgroundImage: `url('./Hero_bg.png')`, y: backgroundY , opacity: 0.35, y:backgroundY}}
+         style={{ backgroundImage: `url('./Hero_bg.png')`, y: backgroundY , opacity: 0.35}}
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
       />
 

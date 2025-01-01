@@ -19,9 +19,9 @@ app.use(cors());
 app.use('/', authenticationRoutes);
 app.use('/', registrationRoutes);
 // MongoDB connection
-mongoose.connect(process.env.MONGO_URI)
-.then(() => console.log('MongoDB connected'))
-.catch((error) => console.error('MongoDB connection error:', error));
+// mongoose.connect(process.env.MONGO_URI)
+// .then(() => console.log('MongoDB connected'))
+// .catch((error) => console.error('MongoDB connection error:', error));
 
 // Routes
 app.get('/', (req, res) => {
