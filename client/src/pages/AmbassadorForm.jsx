@@ -4,6 +4,8 @@ import 'react-toastify/dist/ReactToastify.css';
 import { v4 as uuidv4 } from 'uuid';
 import { FaCopy } from "react-icons/fa";
 
+
+
 const AmbassadorForm = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -18,6 +20,28 @@ const AmbassadorForm = () => {
     comments: "",
     ambassadorId: ""
   });
+
+  const sendEmail = async (to, subject, html) => {
+    try {
+      const response = await fetch('http://localhost:3000/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ to, subject, html }),
+      });
+  
+      const data = await response.json();
+  
+      if (response.ok) {
+        console.log('Email sent successfully:', data);
+      } else {
+        console.error('Error sending email:', data.error);
+      }
+    } catch (error) {
+      console.error('Error sending email:', error);
+    }
+  };
 
   const requiredFields = ["name", "email", "whatsapp", "course", "college"];
 
@@ -45,6 +69,17 @@ const AmbassadorForm = () => {
       ...prevState,
       ambassadorId: uuidv4(),
     }));
+    const html = `
+      <div style="font-family: Arial, sans-serif; text-align: center; padding: 20px; background-color: #f4f4f4;">
+          <h1 style="color: #4CAF50;">You have successfully registered as an ambassador for Xplore'24!</h1>
+          <div style="margin-top: 20px;">
+              <img src="path_to_image.jpg" alt="Ambassador Image" style="max-width: 200px; height: auto; margin: 20px 0;">
+          </div>
+          <p style="font-size: 18px; font-weight: bold; color: #333;">Ambassador ID: ${formData.ambassadorId}</p>
+      </div>
+
+    `;
+    sendEmail(formData.email, 'Ambassador Registration', html);
   
     toast.success('Form submitted successfully!', {
       position: 'top-left',
