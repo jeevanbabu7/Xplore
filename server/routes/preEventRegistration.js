@@ -1,4 +1,5 @@
 import express from 'express';
+import nodemailer from 'nodemailer';
 import User from '../models/p_e_r_userModel.js';
 import bcrypt from 'bcryptjs';
 import authClient from '../googleAuth/googleSheets.js'
@@ -59,29 +60,60 @@ router.post('/export-to-sheets', async (req, res) => {
     res.status(500).send('Failed to export data.');
   }
 });
-
 router.post('/ambassador-registration', async (req, res) => {
   try {
-    const {name, whatsapp, email, course, college, why, skills, promote, hours } = req.body;
-    const row = [name, email, whatsapp, course, college, why, skills, promote, hours];
+    
+    const { name, whatsapp, email, course, college, why, skills, promote, hours, ambassadorId } = req.body;
+    const row = [name, email, whatsapp, course, college, why, skills, promote, hours, ambassadorId];
     const googleSheets = await authClient();
 
-    const spreadsheetId = '1lRZds4q2RNQauHRwHheatgaJp7JYuXwNC_-0cUDzYso'; 
+    const spreadsheetId = '1lRZds4q2RNQauHRwHheatgaJp7JYuXwNC_-0cUDzYso';
 
-    await googleSheets.spreadsheets.values.update({
+    
+    await googleSheets.spreadsheets.values.append({
       spreadsheetId,
-      range: 'Sheet1!A1',  
+      range: 'Sheet1', 
       valueInputOption: 'RAW',
+      insertDataOption: 'INSERT_ROWS', 
       resource: {
-        values: [['Name', 'Email', 'Phone number', 'course', 'colege', 'why', 'skills', 'promote', 'hours'], row],
+        values: [row], 
       },
     });
-
-    res.send('Data exported successfully to Google Sheets!');
+    
+    
+    res.status(200).send({ok: true ,message: 'Data appended successfully to Google Sheets!'});
   } catch (error) {
-    console.error('Error exporting data:', error.response?.data || error);
-    res.status(500).send('Failed to export data.');
+    console.error('Error appending data:', error.response?.data || error);
+    res.status(500).send({ok: false, message: 'Failed to append data.'});
   }
+});
+
+
+router.post('/send-email', async (req, res) => {
+  console.log("hehehe");
+  const { to, subject, html } = req.body;
+  const transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+      user: process.env.EMAIL,
+      pass: process.env.EMAIL_PASS,
+    },
+  });
+  
+  const mailOptions = {
+    from: process.env.EMAIL,
+    to,
+    subject ,
+    html,
+  };
+  
+  transporter.sendMail(mailOptions, (error, info) => {
+    if (error) {
+      console.error('Error sending email:', error);
+    } else {
+      console.log('Email sent:', info.response);
+    }
+  });
 });
 
 
