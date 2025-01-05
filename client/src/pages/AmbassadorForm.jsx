@@ -83,6 +83,23 @@ const AmbassadorForm = () => {
       </div>
 
     `;
+    try {
+
+      const res = fetch('http://api.explore.com/ambassador-registration', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+      const data = res.json();
+      console.log(data);
+
+    }
+    catch (error) {
+      console.error('Error sending email:', error);
+    }
+    
     sendEmail(formData.email, 'Ambassador Registration', html);
   
     toast.success('Form submitted successfully!', {
