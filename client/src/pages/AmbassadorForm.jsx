@@ -26,6 +26,7 @@ const AmbassadorForm = () => {
       const PORT = import.meta.env.VITE_PORT;
       console.log(IP_ADDRESS, PORT);
       
+
       const response = await fetch(`${IP_ADDRESS}:${PORT}/send-email`, {
         method: 'POST',
         headers: {
