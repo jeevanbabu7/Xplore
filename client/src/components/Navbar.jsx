@@ -152,7 +152,7 @@ const Navbar = () => {
               Register Now
             </a> */}
 
-            <img src='./REGISTER_NOW_header.png' className="w-32"/>
+            <img onClick={() => navigate('/events')} src='./REGISTER_NOW_header.png' className="w-32"/>
           </ul>
           
         </nav>
