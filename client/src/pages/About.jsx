@@ -59,7 +59,7 @@ const AboutPage = () => {
         <animated.section ref={aboutAnimation.ref} style={aboutAnimation.styles} className="mb-12 lg:mb-16">
           <h2 className="text-3xl lg:text-4xl font-bold mb-4">About Us</h2>
           <p className="text-lg lg:text-xl text-gray-300 mb-6 leading-relaxed tracking-wide drop-shadow-sm">
-            Welcome to Xplore 25, the premier Techno-Management-Cultural Festival of the Government College of Engineering, Kannur (GCEK). Building on the vibrant legacy of Xplore, the event is a grand confluence of technology, management, and culture, offering a platform for innovation, collaboration, and celebration.
+            Welcome to Xplore 24, the premier Techno-Management-Cultural Festival of the Government College of Engineering, Kannur (GCEK). Building on the vibrant legacy of Xplore, the event is a grand confluence of technology, management, and culture, offering a platform for innovation, collaboration, and celebration.
           </p>
         </animated.section>
 
@@ -67,7 +67,7 @@ const AboutPage = () => {
         <animated.section ref={legacyAnimation.ref} style={legacyAnimation.styles} className="mb-12 lg:mb-16">
           <h2 className="text-3xl lg:text-4xl font-bold mb-4">Our Legacy</h2>
           <p className="text-lg lg:text-xl text-gray-300 mb-6 leading-relaxed tracking-wide drop-shadow-sm">
-            First held in 2015, Xplore has grown to become a symbol of excellence and creativity in the student community. The 2022 edition, Xplore 25, marked the landmark 25th iteration, featuring a dynamic mix of technical, managerial, and cultural events, workshops, and competitions that have become a staple of the festival. Spanning across 3 days, Xplore 25 witnessed participation from students and professionals from across the country.
+            First held in 2015, Xplore has grown to become a symbol of excellence and creativity in the student community. The 2024 edition, Xplore 24, marked the landmark 24th iteration, featuring a dynamic mix of technical, managerial, and cultural events, workshops, and competitions that have become a staple of the festival. Spanning across 3 days, Xplore 24 witnessed participation from students and professionals from across the country.
           </p>
         </animated.section>
 
@@ -75,14 +75,14 @@ const AboutPage = () => {
         <animated.section ref={offerAnimation.ref} style={offerAnimation.styles} className="mb-12 lg:mb-16">
           <h2 className="text-3xl lg:text-4xl font-bold mb-4">What We Offer</h2>
           <p className="text-lg lg:text-xl leading-relaxed text-gray-300 mb-6 tracking-wide drop-shadow-sm">
-            Xplore 25 promises to raise the bar, continuing the tradition of excellence while introducing cutting-edge themes and activities. Whether you're a tech enthusiast, a management geek, or an artist at heart, Xplore 25 has something for everyone.
+            Xplore 24 promises to raise the bar, continuing the tradition of excellence while introducing cutting-edge themes and activities. Whether you're a tech enthusiast, a management geek, or an artist at heart, Xplore 24 has something for everyone.
           </p>
-          <ul className="list-disc pl-6 mt-4 text-lg lg:text-xl text-gray-300 mb-6 leading-relaxed tracking-wide drop-shadow-sm">
+          {/* <ul className="list-disc pl-6 mt-4 text-lg lg:text-xl text-gray-300 mb-6 leading-relaxed tracking-wide drop-shadow-sm">
             <li>Technical Events: Hackathons, coding challenges, and workshops on emerging technologies</li>
             <li>Management Challenges: Business plan competitions, strategy games, and entrepreneur talks</li>
             <li>Cultural Extravaganza: Music, dance, and drama performances celebrating diverse talents</li>
             <li>Networking Opportunities: Meet industry leaders, innovators, and like-minded peers</li>
-          </ul>
+          </ul> */}
         </animated.section>
 
         {/* Events */}
