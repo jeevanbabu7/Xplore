@@ -219,10 +219,7 @@ const ContactPage = () => {
                 Venue
               </h3>
               <a
-                href="https://goo.gl/maps/example"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-2 text-sm font-medium hover:underline"
+                className="mt-2 text-sm font-medium hover:underline hover:cursor-pointer"
                 onClick={() => navigate("/get-directions")}
               >
                 Get Directions

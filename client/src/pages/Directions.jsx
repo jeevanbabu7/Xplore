@@ -18,7 +18,7 @@ const GetDirections = () => {
         <div className="flex justify-center w-full md:w-1/2 mb-12 md:mb-0">
           <div className="w-full h-80 md:h-[400px] rounded-lg shadow-lg overflow-hidden">
             <iframe
-              src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJb8rV8z2hYz4R5CgJ1wELddI&key=YOUR_GOOGLE_MAPS_API_KEY"
+              src="https://www.google.com/maps/embed/v1/place?q=11.986001564305914,75.38173836857075&key=AIzaSyCjngIi8RzMqhJVGj2egMNQDRTmKOwDUWY"
               width="100%"
               height="100%"
               frameBorder="0"
@@ -34,7 +34,7 @@ const GetDirections = () => {
         <div className="w-full md:w-1/2 text-center md:text-left md:ml-8">
           <h2 className="text-3xl sm:text-3xl md:text-4xl font-semibold text-white">Event Location</h2>
           <p className="mt-6 text-lg sm:text-lg md:text-xl text-white bg-black p-4 rounded-lg border-2 border-slate-500 shadow-lg hover:bg-gray-700 transition-all duration-300">
-            Mangattuparamba, Parassinikadavu P.O., Kannur, Kerala 670563
+            Government College of Engineering, Kannur, Mangattuparamba, Parassinikadavu P.O., Kannur, Kerala 670563
           </p>
           <p className="text-lg sm:text-lg md:text-xl text-gray-300 mt-4">
             Join us at the venue for an exciting experience with lots of events and workshops!
