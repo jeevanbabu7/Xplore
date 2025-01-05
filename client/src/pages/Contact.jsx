@@ -88,7 +88,8 @@ const ContactPage = () => {
             </div>
             {activeIndex === 0 && (
               <div className="bg-gray-800 p-6 mt-4 text-lg text-white">
-                <p className="text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non urna nec orci malesuada condimentum...</p>
+                <p className="text-lg">Xplore '24 stands as a beacon of innovation, creativity, and excellence, uniting the realms of technology, management, and culture under one dynamic platform. Rooted in the vibrant legacy of its predecessors, Xplore continues to push boundaries, inspiring students, professionals, and enthusiasts to collaborate, compete, and celebrate the spirit of progress.  
+                With cutting-edge technical workshops, thought-provoking management challenges, and vibrant cultural performances, Xplore '24 promises an unforgettable experience for all participants.  </p>
               </div>
             )}
             
@@ -219,10 +220,7 @@ const ContactPage = () => {
                 Venue
               </h3>
               <a
-                href="https://goo.gl/maps/example"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-2 text-sm font-medium hover:underline"
+                className="mt-2 text-sm font-medium hover:underline hover:cursor-pointer"
                 onClick={() => navigate("/get-directions")}
               >
                 Get Directions

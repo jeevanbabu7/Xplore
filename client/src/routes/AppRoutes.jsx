@@ -9,7 +9,6 @@ import ContactPage from "../pages/Contact";
 import GetDirections from "../pages/Directions";
 import AmbassadorForm from "../pages/AmbassadorForm";
 import EventRegistration from "../pages/EventRegistration";
-// Import other pages if necessary
 
 const AppRoutes = () => (
   <Router>
