@@ -47,12 +47,12 @@ const Event = ({ eventDetails, type }) => {
           src={viewBtn}
           alt="View event details button"
           className="absolute -right-5 -bottom-3 w-[184px] h-[69px] hover:cursor-pointer"
-          onClick={() =>
-            navigate(`/${type}/${name.replace(/\s+/g, "-").toLowerCase()}`)
-          }
+          // onClick={() =>
+          //   navigate(`/${type}/${name.replace(/\s+/g, "-").toLowerCase()}`)
+          // }
         />
         <p className="absolute top-5 left-5 font-bold text-2xl text-white">
-          {name}
+          {"Coming Soon.."}
         </p>
       </animated.div>
     </animated.div>
