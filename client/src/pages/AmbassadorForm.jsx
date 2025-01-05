@@ -5,7 +5,6 @@ import { v4 as uuidv4 } from 'uuid';
 import { FaCopy } from "react-icons/fa";
 
 
-
 const AmbassadorForm = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -23,7 +22,11 @@ const AmbassadorForm = () => {
 
   const sendEmail = async (to, subject, html) => {
     try {
-      const response = await fetch('http://localhost:3000/send-email', {
+      const IP_ADDRESS = import.meta.env.VITE_IP_ADDRESS;
+      const PORT = import.meta.env.VITE_PORT;
+      console.log(IP_ADDRESS, PORT);
+      
+      const response = await fetch(`${IP_ADDRESS}:${PORT}/send-email`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -127,9 +130,9 @@ const AmbassadorForm = () => {
                 </div>
                 
                 <div className="bg-[#0A0202] flex flex-col gap-5 justify-start px-10 py-2">
-                  {contactData.map((contact) => {
+                  {contactData.map((contact, index) => {
                     return (
-                      <p className="font-bold flex items-center ">
+                      <p key={index} className="font-bold flex items-center ">
                         {contact.name}: {contact.number} <FaCopy className="ml-2 cursor-pointer" onClick={() => handleCopyClick(contact.number)}/>
                       </p>
                     )

@@ -8,6 +8,7 @@ import Details from "../components/Details";
 import ContactPage from "../pages/Contact";
 import GetDirections from "../pages/Directions";
 import AmbassadorForm from "../pages/AmbassadorForm";
+import EventRegistration from "../pages/EventRegistration";
 // Import other pages if necessary
 
 const AppRoutes = () => (
@@ -16,7 +17,7 @@ const AppRoutes = () => (
       <Route element={<Navbar />}>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/events" element={<Events />} />
+        <Route path="/events" element={<EventRegistration />} />
         <Route path="/:type/:eventId" element={<Details />} />
         <Route path="/workshops" element={<Workshops />} />
         <Route path="/contact-us" element={<ContactPage/>} /> 
