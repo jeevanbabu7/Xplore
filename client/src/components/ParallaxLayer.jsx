@@ -128,13 +128,13 @@ const ParallaxLayer = () => {
         >
           <motion.img
             src="./logo.png"
-            className="sm:w-[60%] md:w-[35%] mb-2 z-50"
+            className="w-[60%] sm:w-[50%] md:w-[35%] mb-2 z-10"
             alt="Hero"
             initial={{ opacity: 0, scale: 1 }}
             animate={{ opacity: 1, scale: 1.2 }}
-            // style={{
-            //   scale: window.innerWidth >= 768 ? logoScale : 1, 
-            // }}
+            style={{
+              scale: window.innerWidth >= 768 ? logoScale : 1, 
+            }}
             transition={{
               duration: 0.5,
               ease: "easeOut",
@@ -166,7 +166,7 @@ const ParallaxLayer = () => {
 
         {/* Bottom Section */}
         <div
-          className="relative flex overflow-hidden w-full h-52 backdrop-blur-3xl pb-80"
+          className="relative flex overflow-hidden w-full  backdrop-blur-3xl pb-52"
           style={{
             maskImage: "linear-gradient(to right, transparent, black 10%, black 90%, transparent)",
             WebkitMaskImage: "linear-gradient(to right, transparent, black 10%, black 90%, transparent)",
