@@ -173,7 +173,7 @@ const AmbassadorForm = () => {
                 />
                 <input
                   onChange={handleChange}
-                  type="tel"
+                  type="text"
                   name="course"
                   placeholder="Course and Year of Study*"
                   className="bg-gray-900 text-gray-400 px-4 py-3 rounded-md flex-1 focus:outline-none focus:ring-2 focus:ring-yellow-500"

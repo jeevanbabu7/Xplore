@@ -121,7 +121,7 @@ const ContactPage = () => {
             </div>
             {activeIndex === 2 && (
               <div className="bg-gray-800 p-6 mt-4 text-lg text-white">
-                <p className="text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non urna nec orci malesuada condimentum...</p>
+                <p className="text-lg">Accommodation will be provided to valid attendees of the Xplore Multifest at a nominal charge. Further details regarding availability and charges will be shared upon successful registration.</p>
               </div>
             )}
             
