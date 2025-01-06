@@ -27,7 +27,7 @@ const AmbassadorForm = () => {
       console.log(IP_ADDRESS, PORT);
       
 
-      const response = await fetch(`${IP_ADDRESS}:${PORT}/send-email`, {
+      const response = await fetch(`https://api.explore24.com/send-email`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -57,7 +57,7 @@ const AmbassadorForm = () => {
     }));
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
    
     for (let field of requiredFields) {
@@ -83,11 +83,29 @@ const AmbassadorForm = () => {
       </div>
 
     `;
-    sendEmail(formData.email, 'Ambassador Registration', html);
+    try {
+
+      const res = await fetch('https://api.xplore24.com/ambassador-registration', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+      const data = await res.json();
+      sendEmail(formData.email, 'Ambassador Registration', html);
   
-    toast.success('Form submitted successfully!', {
-      position: 'top-left',
-    });
+      toast.success('Form submitted successfully!', {
+        position: 'top-left',
+      });
+      console.log(data);
+
+    }
+    catch (error) {
+      console.error('Error sending email:', error);
+    }
+
+ 
     console.log(formData);
   }
   const handleCopyClick = async (text) => {

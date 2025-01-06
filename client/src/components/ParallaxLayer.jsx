@@ -128,16 +128,19 @@ const ParallaxLayer = () => {
         >
           <motion.img
             src="./logo.png"
-            className="sm:w-[80%] md:w-[35%] mb-2 z-50"
+            className="sm:w-[60%] md:w-[35%] mb-2 z-50"
             alt="Hero"
             initial={{ opacity: 0, scale: 1 }}
             animate={{ opacity: 1, scale: 1.2 }}
-            style={{ scale: logoScale}}
+            // style={{
+            //   scale: window.innerWidth >= 768 ? logoScale : 1, 
+            // }}
             transition={{
               duration: 0.5,
               ease: "easeOut",
             }}
           />
+
           <motion.p className="sm:text-5xl md:text-md lg:text-lg font-bold z-0 flex -mt-10 mb-5 md:-mt-20 font-">
             <TypingAnimation>NATIONAL LEVEL MULTI-FEST</TypingAnimation>
           </motion.p>
