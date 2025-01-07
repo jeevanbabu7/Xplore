@@ -44,18 +44,24 @@ const ContactPage = () => {
           <p>${queryData.message}</p>
         </div>
       `;
-      const response = await fetch(`https://api.explore24.com/send-email`, {
+      const response = await fetch(`https://api.xplore24.com/send-email`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ to: "jeevanbabu190@gmail.com",subject: "General query", html: emailContent }),
+        body: JSON.stringify({ to, subject, html: emailContent }),
       });
-
+  
       const data = await response.json();
+  
+      if (response.ok) {
+        console.log('Email sent successfully:', data);
+      } else {
+        console.error('Error sending email:', data.error);
+      }
     }
     catch(err) {
-      console.error(err);
+      console.error('Error sending email:', error);
     }
     
   }
@@ -164,7 +170,7 @@ const ContactPage = () => {
             </div>
             {activeIndex === 1 && (
               <div className="bg-gray-800 p-6 mt-4 text-lg text-white">
-                <p className="text-lg">Update soon..</p>
+                <p className="text-lg">You can register for various workshops and events through the registration section.</p>
               </div>
             )}
             
@@ -196,7 +202,7 @@ const ContactPage = () => {
             </div>
             {activeIndex === 3 && (
               <div className="bg-gray-800 p-6 mt-4 text-lg text-white">
-                <p className="text-lg">Update soon..</p>
+                <p className="text-lg">Certificates will be provided to participants, and they will also be eligible for KTU activity points.</p>
               </div>
             )}
             
@@ -244,7 +250,7 @@ const ContactPage = () => {
                 href="tel:+123456789"
                 className="mt-1 text-sm font-medium hover:underline"
               >
-                +1 234 567 89
+                +91 6238 055 808
               </a>
             </div>
 
@@ -260,13 +266,14 @@ const ContactPage = () => {
                 href="mailto:support@xplore25.com"
                 className="mt-2 text-sm font-medium hover:underline"
               >
-                support@xplore25.com
+                support@xplore24.com 
+
               </a>
               <a
                 href="tel:+987654321"
                 className="mt-1 text-sm font-medium hover:underline"
               >
-                +9 876 543 21
+                +91 80756 83613
               </a>
             </div>
 
