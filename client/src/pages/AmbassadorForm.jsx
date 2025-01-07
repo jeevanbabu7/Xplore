@@ -76,7 +76,7 @@ const AmbassadorForm = () => {
         <div style="margin-top: 20px;">
           <img src="./email_banner.png" alt="Ambassador Image" style="width: 150px; height: auto; border-radius: 50%; margin: 20px 0; border: 2px solid #388e3c;">
         </div>
-        <p style="font-size: 18px; font-weight: bold; color: #2e7d32;">Ambassador ID: ${ambassadorId}</p>
+        <p style="font-size: 18px; font-weight: bold; color: #2e7d32;">Ambassador ID: ${formData.ambassadorId}</p>
         <p style="font-size: 16px; color: #4f4f4f; margin-top: 10px;">Welcome aboard! We’re excited to have you as part of the Xplore'24 team.</p>
       </div>
     `;
