@@ -22,10 +22,7 @@ const AmbassadorForm = () => {
 
   const sendEmail = async (to, subject, html) => {
     try {
-      const IP_ADDRESS = import.meta.env.VITE_IP_ADDRESS;
-      const PORT = import.meta.env.VITE_PORT;
-      console.log(IP_ADDRESS, PORT);
-      
+           
 
       const response = await fetch(`https://api.xplore24.com/send-email`, {
         method: 'POST',
@@ -74,14 +71,14 @@ const AmbassadorForm = () => {
       ambassadorId: uuidv4(),
     }));
     const html = `
-      <div style="font-family: Arial, sans-serif; text-align: center; padding: 20px; background-color: #f4f4f4;">
-          <h1 style="color: #4CAF50;">You have successfully registered as an ambassador for Xplore'24!</h1>
-          <div style="margin-top: 20px;">
-              <img src="path_to_image.jpg" alt="Ambassador Image" style="max-width: 200px; height: auto; margin: 20px 0;">
-          </div>
-          <p style="font-size: 18px; font-weight: bold; color: #333;">Ambassador ID: ${formData.ambassadorId}</p>
+      <div style="font-family: 'Roboto', sans-serif; text-align: center; padding: 30px; background-color: #e8f5e9; border: 1px solid #c8e6c9; border-radius: 10px; max-width: 600px; margin: 20px auto; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+        <h1 style="color: #388e3c; margin-bottom: 20px;">You have successfully registered as an ambassador for Xplore'24!</h1>
+        <div style="margin-top: 20px;">
+          <img src="./email_banner.png" alt="Ambassador Image" style="width: 150px; height: auto; border-radius: 50%; margin: 20px 0; border: 2px solid #388e3c;">
+        </div>
+        <p style="font-size: 18px; font-weight: bold; color: #2e7d32;">Ambassador ID: ${ambassadorId}</p>
+        <p style="font-size: 16px; color: #4f4f4f; margin-top: 10px;">Welcome aboard! We’re excited to have you as part of the Xplore'24 team.</p>
       </div>
-
     `;
     try {
 
