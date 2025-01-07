@@ -17,7 +17,7 @@ const AmbassadorForm = () => {
     promote: "",
     hours: "",
     comments: "",
-    ambassadorId: ""
+    ambassadorId: uuidv4()
   });
 
   const sendEmail = async (to, subject, html) => {
@@ -99,6 +99,8 @@ const AmbassadorForm = () => {
       toast.success(data.message, {
         position: 'top-left',
       });
+
+      window.location.reload();
 
     }
     catch (error) {

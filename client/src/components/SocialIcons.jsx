@@ -11,9 +11,9 @@ const SocialIcons = () => {
           <a href="#" className="text-white hover:text-gray-400 mx-2">
             <FaDiscord />
           </a> */}
-          <a href="#" className="text-white hover:text-gray-400 mx-2 text-xl">
+          {/* <a href="#" className="text-white hover:text-gray-400 mx-2 text-xl">
             <FaLinkedin />
-          </a>
+          </a> */}
           <a target='*' href="https://www.instagram.com/xplore.24?igsh=ZXc4NWplaDNnZmZo" className="text-white hover:text-gray-400 mx-2 text-xl">
             <FaInstagram />
           </a>
