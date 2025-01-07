@@ -29,7 +29,7 @@ const Home = () => {
       <ParallaxLayer />
       <section className="z-50 mt-5">
       <ReactLenis root options={lenisOptions}>
-          <div id="about" className="shadow-top-only">
+          <div id="about" className="shadow-top-only mt-16">
             <AboutPage />
           </div>
           <VelocityScroll
