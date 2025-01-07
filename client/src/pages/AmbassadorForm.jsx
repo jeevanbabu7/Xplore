@@ -27,7 +27,7 @@ const AmbassadorForm = () => {
       console.log(IP_ADDRESS, PORT);
       
 
-      const response = await fetch(`https://api.explore24.com/send-email`, {
+      const response = await fetch(`https://api.xplore24.com/send-email`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
