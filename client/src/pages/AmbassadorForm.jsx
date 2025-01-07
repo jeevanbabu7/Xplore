@@ -95,10 +95,10 @@ const AmbassadorForm = () => {
       const data = await res.json();
       sendEmail(formData.email, 'Ambassador Registration', html);
   
-      toast.success('Form submitted successfully!', {
+      console.log(data);
+      toast.success(data.message, {
         position: 'top-left',
       });
-      console.log(data);
 
     }
     catch (error) {
