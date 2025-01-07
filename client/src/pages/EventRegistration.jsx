@@ -30,8 +30,8 @@ const EventRegistration = () => {
 
   return (
     <div className="pt-32 bg-black h-screen overflow-auto">
-      <div className='text-center pt-32 fixed top-0  z-10  w-full'>
-        <div className="flex justify-center mb-6 gap-8">
+      <div className='text-center pt-32 fixed top-0  z-10  w-full bg-black'>
+        <div className="flex justify-center sm:gap-3 mb-6 gap-8 bg-black">
         <button className="group relative overflow-hidden px-10 py-1 text-lg font-semibold text-[rgb(193,163,98)] border-2 border-[rgb(193,163,98)] rounded-full bg-transparent transition-all duration-300 ease-[cubic-bezier(0.23,1,0.32,1)] hover:scale-110 hover:text-[#212121] hover:shadow-[0_0px_20px_rgba(193,163,98,0.4)] active:scale-100"
           onClick={() => handleFilterClick('all')}
         >
@@ -83,7 +83,7 @@ const EventRegistration = () => {
 
       </div>
 
-      <div className="flex flex-row items-center p-10 gap-10 flex-wrap overflow-scroll relative top-32">
+      <div className="flex flex-row items-center p-10 gap-10 flex-wrap overflow-auto relative top-32">
         {filteredContent.map(event => (
           // <div key={event.id} className="bg-white p-6 rounded-lg shadow-lg w-full max-w-lg mb-4 text-center">
           //   <h3 className="text-xl font-semibold text-gray-800">{event.name}</h3>
