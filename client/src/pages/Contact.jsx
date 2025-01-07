@@ -14,6 +14,53 @@ const ContactPage = () => {
     setActiveIndex(activeIndex === index ? null : index);
   };
 
+  const [queryData, setQueryData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    phone: '',
+    message: ''
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setQueryData({
+      ...queryData,
+      [name]: value
+    });
+  }
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const emailContent = `
+        <div style="font-family: Arial, sans-serif; line-height: 1.5;">
+          <h2>New Contact Query</h2>
+          <p><strong>First Name:</strong> ${queryData.firstName}</p>
+          <p><strong>Last Name:</strong> ${queryData.lastName}</p>
+          <p><strong>Email:</strong> ${queryData.email}</p>
+          <p><strong>Phone:</strong> ${queryData.phone}</p>
+          <p><strong>Message:</strong></p>
+          <p>${queryData.message}</p>
+        </div>
+      `;
+      const response = await fetch(`https://api.explore24.com/send-email`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ to: "jeevanbabu190@gmail.com",subject: "General query", html: emailContent }),
+      });
+
+      const data = await response.json();
+    }
+    catch(err) {
+      console.error(err);
+    }
+    
+  }
+
+
   return (
     <div className="flex flex-col items-center w-full h-full bg-gradient-to-b from-red-900 via-black to-black"
 
@@ -40,11 +87,15 @@ const ContactPage = () => {
                   type="text"
                   placeholder="Enter First Name"
                   className="bg-gray-900 text-gray-400 px-4 py-3 rounded-md flex-1 focus:outline-none focus:ring-2 focus:ring-yellow-500"
+                  name='firstName'
+                  onChange={handleChange}
                 />
                 <input
                   type="text"
                   placeholder="Enter Last Name"
                   className="bg-gray-900 text-gray-400 px-4 py-3 rounded-md flex-1 focus:outline-none focus:ring-2 focus:ring-yellow-500"
+                  name='lastName'
+                  onChange={handleChange}
                 />
               </div>
               <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 w-full">
@@ -52,20 +103,28 @@ const ContactPage = () => {
                   type="email"
                   placeholder="Enter your Email"
                   className="bg-gray-900 text-gray-400 px-4 py-3 rounded-md flex-1 focus:outline-none focus:ring-2 focus:ring-yellow-500"
+                  name='email'
+                  onChange={handleChange}
                 />
                 <div className="relative flex-1">
                   <input
-                    type="tel"
+                    type="text"
                     placeholder="Enter Phone Number"
                     className="bg-gray-900 text-gray-400 px-4 py-3 rounded-md flex-1 focus:outline-none focus:ring-2 focus:ring-yellow-500"
+                    name='phone'
+                    onChange={handleChange}
                   />
                 </div>
               </div>
               <textarea
                 placeholder="Enter your Message"
                 className="bg-gray-900 text-gray-400 px-4 py-3 rounded-md h-32 focus:outline-none focus:ring-2 focus:ring-yellow-500"
+                name='message'
+                onChange={handleChange}
               ></textarea>
-              <button className="bg-yellow-500 text-gray-900 font-bold px-6 py-3 rounded-md hover:bg-yellow-600 transition-colors w-24">
+              <button className="bg-yellow-500 text-gray-900 font-bold px-6 py-3 rounded-md hover:bg-yellow-600 transition-colors w-24"
+                onClick={handleSubmit}
+              >
                 Send
               </button>
             </div>
@@ -105,7 +164,7 @@ const ContactPage = () => {
             </div>
             {activeIndex === 1 && (
               <div className="bg-gray-800 p-6 mt-4 text-lg text-white">
-                <p className="text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non urna nec orci malesuada condimentum...</p>
+                <p className="text-lg">Update soon..</p>
               </div>
             )}
             
@@ -137,7 +196,7 @@ const ContactPage = () => {
             </div>
             {activeIndex === 3 && (
               <div className="bg-gray-800 p-6 mt-4 text-lg text-white">
-                <p className="text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non urna nec orci malesuada condimentum...</p>
+                <p className="text-lg">Update soon..</p>
               </div>
             )}
             
@@ -153,7 +212,7 @@ const ContactPage = () => {
             </div>
             {activeIndex === 4 && (
               <div className="bg-gray-800 p-6 mt-4 text-lg text-white">
-                <p className="text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non urna nec orci malesuada condimentum...</p>
+                <p className="text-lg">Update soon..</p>
               </div>
             )}
           </div>
@@ -179,7 +238,7 @@ const ContactPage = () => {
                 href="mailto:general@xplore25.com"
                 className="mt-2 text-sm font-medium hover:underline"
               >
-                general@xplore25.com
+                xplore24.gcek@gmail.com
               </a>
               <a
                 href="tel:+123456789"

@@ -64,12 +64,12 @@ const AboutPage = () => {
         </animated.section>
 
         {/* Legacy */}
-        <animated.section ref={legacyAnimation.ref} style={legacyAnimation.styles} className="mb-12 lg:mb-16">
+        {/* <animated.section ref={legacyAnimation.ref} style={legacyAnimation.styles} className="mb-12 lg:mb-16">
           <h2 className="text-3xl lg:text-4xl font-bold mb-4">Our Legacy</h2>
           <p className="text-lg lg:text-xl text-gray-300 mb-6 leading-relaxed tracking-wide drop-shadow-sm">
             First held in 2015, Xplore has grown to become a symbol of excellence and creativity in the student community. The 2024 edition, Xplore 24, marked the landmark 24th iteration, featuring a dynamic mix of technical, managerial, and cultural events, workshops, and competitions that have become a staple of the festival. Spanning across 3 days, Xplore 24 witnessed participation from students and professionals from across the country.
           </p>
-        </animated.section>
+        </animated.section> */}
 
         {/* What We Offer */}
         <animated.section ref={offerAnimation.ref} style={offerAnimation.styles} className="mb-12 lg:mb-16">
