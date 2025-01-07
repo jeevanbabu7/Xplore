@@ -49,7 +49,7 @@ const ContactPage = () => {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ to, subject, html: emailContent }),
+        body: JSON.stringify({ to: 'support@xplore24.com', subject: "Query", html: emailContent }),
       });
   
       const data = await response.json();
