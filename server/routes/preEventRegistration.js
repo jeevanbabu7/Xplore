@@ -15,10 +15,10 @@ router.post('/register',async (req, res) => {
         if (existingUser) {
           return res.status(400).json({ message: 'User already exists' });
         }
-    
+
         // Hash password
         const hashedPassword = await bcrypt.hash(password, 12);
-    
+
         // Create new user
         const newUser = new User({
           name,
@@ -26,9 +26,9 @@ router.post('/register',async (req, res) => {
           email,
           password: hashedPassword
         });
-    
+
         await newUser.save();
-    
+
         res.status(201).json({ message: 'Registration successful' });
       } catch (error) {
         console.error('Error during registration:', error);
@@ -47,7 +47,7 @@ router.post('/export-to-sheets', async (req, res) => {
 
     await googleSheets.spreadsheets.values.update({
       spreadsheetId,
-      range: 'Sheet1!A1',  
+      range: 'Sheet1!A1',
       valueInputOption: 'RAW',
       resource: {
         values: [['Name', 'Phone-Number', 'Email'], ...rows],
@@ -55,11 +55,12 @@ router.post('/export-to-sheets', async (req, res) => {
     });
 
     res.send('Data exported successfully to Google Sheets!');
-  } catch (error) {
+  }catch (error) {
     console.error('Error exporting data: ', error);
     res.status(500).send('Failed to export data.');
   }
 });
+
 router.post('/ambassador-registration', async (req, res) => {
   try {
     const { name, whatsapp, email, course, college, why, skills, promote, hours, ambassadorId } = req.body;
@@ -68,15 +69,15 @@ router.post('/ambassador-registration', async (req, res) => {
 
     const spreadsheetId = '1lRZds4q2RNQauHRwHheatgaJp7JYuXwNC_-0cUDzYso';
 
-    
+
     const getData = await googleSheets.spreadsheets.values.get({
       spreadsheetId,
-      range: 'Sheet1', 
+      range: 'Sheet1',
     });
 
-    const existingData = getData.data.values || []; 
+    const existingData = getData.data.values || [];
 
-    const emailExists = existingData.some((row) => row[1] === email); 
+    const emailExists = existingData.some((row) => row[1] === email);
 
     if (emailExists) {
       return res.status(400).send({ ok: false, message: 'Email already exists' });
@@ -99,8 +100,6 @@ router.post('/ambassador-registration', async (req, res) => {
   }
 });
 
-
-
 router.post('/send-email', async (req, res) => {
   console.log("hehehe");
   const { to, subject, html } = req.body;
@@ -111,14 +110,14 @@ router.post('/send-email', async (req, res) => {
       pass: process.env.EMAIL_PASS,
     },
   });
-  
+
   const mailOptions = {
     from: process.env.EMAIL,
     to,
     subject ,
     html,
   };
-  
+
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
       console.error('Error sending email:', error);
