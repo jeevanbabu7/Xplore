@@ -74,7 +74,7 @@ const AmbassadorForm = () => {
       <div style="font-family: 'Roboto', sans-serif; text-align: center; padding: 30px; background-color: #e8f5e9; border: 1px solid #c8e6c9; border-radius: 10px; max-width: 600px; margin: 20px auto; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
         <h1 style="color: #388e3c; margin-bottom: 20px;">You have successfully registered as an ambassador for Xplore'24!</h1>
         <div style="margin-top: 20px;">
-          <img src="./email_banner.png" alt="Ambassador Image" style="width: 150px; height: auto; border-radius: 50%; margin: 20px 0; border: 2px solid #388e3c;">
+          <img src="https://firebasestorage.googleapis.com/v0/b/image-uploader-842b5.appspot.com/o/email_banner.png?alt=media&token=5aaaa7ca-ad39-4f44-acda-b77f16d92567" alt="Ambassador Image" style="width: 150px; height: auto; margin: 20px 0;">
         </div>
         <p style="font-size: 18px; font-weight: bold; color: #2e7d32;">Ambassador ID: ${formData.ambassadorId}</p>
         <p style="font-size: 16px; color: #4f4f4f; margin-top: 10px;">Welcome aboard! We’re excited to have you as part of the Xplore'24 team.</p>
