@@ -137,7 +137,7 @@ const ContactPage = () => {
           <div className="space-y-6">
             {/* FAQ Item 1 */}
             <div className="border-b border-gray-600 py-6 flex justify-between items-center">
-              <h3 className="text-xl font-bold text-white">What is Xplore '25?</h3>
+              <h3 className="text-xl font-bold text-white">What is Xplore '24?</h3>
               <button 
                 className="text-3xl text-white"
                 onClick={() => toggleFAQ(0)}
