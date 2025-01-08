@@ -39,9 +39,11 @@ const GetDirections = () => {
           <p className="text-lg sm:text-lg md:text-xl text-gray-300 mt-4">
             Join us at the venue for an exciting experience with lots of events and workshops!
           </p>
-          <p className="text-lg sm:text-lg md:text-xl text-gray-300 mt-4">
-            <strong>Contact:</strong> 123-456-7890
-          </p>
+          <a className="text-lg sm:text-lg md:text-xl text-gray-300 mt-4"
+            href="tel:+91 7994360529"
+          >
+            <strong>Contact:</strong> +91 7994360529
+          </a>
         </div>
       </div>
 

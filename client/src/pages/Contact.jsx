@@ -247,7 +247,7 @@ const ContactPage = () => {
                 xplore24.gcek@gmail.com
               </a>
               <a
-                href="tel:+123456789"
+                href="tel:+91 6238 055 808"
                 className="mt-1 text-sm font-medium hover:underline"
               >
                 +91 6238 055 808
@@ -270,7 +270,7 @@ const ContactPage = () => {
 
               </a>
               <a
-                href="tel:+987654321"
+                href="tel:+91 80756 83613"
                 className="mt-1 text-sm font-medium hover:underline"
               >
                 +91 80756 83613
