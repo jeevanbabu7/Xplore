@@ -7,36 +7,29 @@ import Workshops from "./Workshops";
 import ContactPage from "./Contact";
 import { ReactLenis } from "@studio-freight/react-lenis";
 import { VelocityScroll } from "../components/ui/scroll-based-velocity";
- 
- 
 
 const Home = () => {
   const navigate = useNavigate();
 
- 
   const lenisOptions = {
     lerp: 0.1,
     duration: 1.5,
-    smoothTouch: false, 
+    smoothTouch: false,
     smooth: true,
   };
 
   return (
-    <div
-      className="h-screen"
-      id="home"
-    >
+    <div className="h-screen" id="home">
+      {/* Don't render the navbar here */}
       <ParallaxLayer />
       <section className="z-50 mt-5">
         <ReactLenis root options={lenisOptions}>
-          
-          
           <div
             id="about"
             className="shadow-top-only mt-16"
             style={{
-              boxShadow: '0 -20px 50px rgba(0, 0, 0, 0.75)',
-              position: 'relative', 
+              boxShadow: "0 -20px 50px rgba(0, 0, 0, 0.75)",
+              position: "relative",
             }}
           >
             <AboutPage />
@@ -59,7 +52,6 @@ const Home = () => {
         </ReactLenis>
       </section>
     </div>
-
   );
 };
 
