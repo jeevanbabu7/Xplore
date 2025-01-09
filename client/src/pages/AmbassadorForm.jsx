@@ -124,7 +124,7 @@ const AmbassadorForm = () => {
     }
     catch (error) {
       console.error('Error sending email:', error);
-      toast.success("Error in submitting the form.Please try again..", {
+      toast.error("Error in submitting the form.Please try again..", {
         position: 'top-left',
       });
       setLoading(false);
@@ -194,6 +194,7 @@ const AmbassadorForm = () => {
                   name="name"
                   placeholder="Enter Full Name*"
                   className="bg-gray-900 text-gray-400 px-4 py-3 rounded-md flex-1 focus:outline-none focus:ring-2 focus:ring-yellow-500"
+                  value={formData.name}
                   required
                 />
                 <input
@@ -202,6 +203,7 @@ const AmbassadorForm = () => {
                   name="whatsapp"
                   placeholder="WhatsApp Number*"
                   className="bg-gray-900 text-gray-400 px-4 py-3 rounded-md flex-1 focus:outline-none focus:ring-2 focus:ring-yellow-500"
+                  value={formData.whatsapp}
                   required
                 />
               </div>
@@ -212,6 +214,7 @@ const AmbassadorForm = () => {
                   name="email"
                   placeholder="Enter your Email*"
                   className="bg-gray-900 text-gray-400 px-4 py-3 rounded-md flex-1 focus:outline-none focus:ring-2 focus:ring-yellow-500"
+                  value={formData.email}
                   required
                 />
                 <input
@@ -220,6 +223,7 @@ const AmbassadorForm = () => {
                   name="course"
                   placeholder="Course and Year of Study*"
                   className="bg-gray-900 text-gray-400 px-4 py-3 rounded-md flex-1 focus:outline-none focus:ring-2 focus:ring-yellow-500"
+                  value={formData.course}
                   required
                 />
               </div>
@@ -230,6 +234,7 @@ const AmbassadorForm = () => {
                 name="college"
                 placeholder="College Name*"
                 className="bg-gray-900 text-gray-400 px-4 py-3 rounded-md flex-1 focus:outline-none focus:ring-2 focus:ring-yellow-500 w-full"
+                value={formData.college}
                 required
               />
 
@@ -238,6 +243,7 @@ const AmbassadorForm = () => {
                 name="why"
                 placeholder="Why do you want to be a campus ambassador for Xplore'24?"
                 className="bg-gray-900 text-gray-400 px-4 py-3 rounded-md h-32 focus:outline-none focus:ring-2 focus:ring-yellow-500"
+                value={formData.why}
                 required
               ></textarea>
 
@@ -246,6 +252,7 @@ const AmbassadorForm = () => {
                 name="skills"
                 placeholder="What skills or experiences do you have that make you a good fit for this role?"
                 className="bg-gray-900 text-gray-400 px-4 py-3 rounded-md h-32 focus:outline-none focus:ring-2 focus:ring-yellow-500"
+                value={formData.skills}
                 required
               ></textarea>
 
@@ -254,6 +261,7 @@ const AmbassadorForm = () => {
                 name="promote"
                 placeholder="How would you promote Xplore'24 on your campus?"
                 className="bg-gray-900 text-gray-400 px-4 py-3 rounded-md h-20 focus:outline-none focus:ring-2 focus:ring-yellow-500"
+                value={formData.promote}
                 required
               ></textarea>
 
@@ -262,6 +270,7 @@ const AmbassadorForm = () => {
                 name="hours"
                 placeholder="How many hours per week can you commit to this role?"
                 className="bg-gray-900 text-gray-400 px-4 py-3 rounded-md h-20 focus:outline-none focus:ring-2 focus:ring-yellow-500"
+                value={formData.hours}
                 required
               ></textarea>
 
@@ -270,6 +279,7 @@ const AmbassadorForm = () => {
                 name="comments"
                 placeholder="Any additional comments or questions:"
                 className="bg-gray-900 text-gray-400 px-4 py-3 rounded-md h-20 focus:outline-none focus:ring-2 focus:ring-yellow-500"
+                value={formData.comments}
               ></textarea>
 
               <button
