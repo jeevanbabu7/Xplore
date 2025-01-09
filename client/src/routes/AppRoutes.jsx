@@ -9,6 +9,8 @@ import ContactPage from "../pages/Contact";
 import GetDirections from "../pages/Directions";
 import AmbassadorForm from "../pages/AmbassadorForm";
 import EventRegistration from "../pages/EventRegistration";
+import MaintenancePage from "../pages/Maintenance";
+import PageNotFound from "../pages/PageNotFound";
 
 const AppRoutes = () => (
   <Router>
@@ -22,6 +24,7 @@ const AppRoutes = () => (
         <Route path="/contact-us" element={<ContactPage/>} /> 
         <Route path="/get-directions" element={<GetDirections/>} /> 
         <Route path="/ambassador-form" element={<AmbassadorForm />} />
+        <Route path="*" element={<PageNotFound />} />
       </Route>
       
     </Routes>

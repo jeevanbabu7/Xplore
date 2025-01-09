@@ -19,6 +19,7 @@ const AmbassadorForm = () => {
     comments: "",
     ambassadorId: uuidv4()
   });
+  const [loading, setLoading] = useState(false);
 
   const sendEmail = async (to, subject, html) => {
     try {
@@ -56,7 +57,7 @@ const AmbassadorForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-   
+    setLoading(true);
     for (let field of requiredFields) {
       if (!formData[field]) {
         toast.error('Fill required fields!!', {
@@ -103,7 +104,22 @@ const AmbassadorForm = () => {
         position: 'top-left',
       });
 
-      window.location.reload();
+      setFormData({
+        name: "",
+        email: "",
+        whatsapp: "",
+        course: "",
+        college: "",
+        why: "",
+        skills: "",
+        promote: "",
+        hours: "",
+        comments: "",
+        ambassadorId: uuidv4()
+      });
+      setLoading(false);
+
+      
 
     }
     catch (error) {
@@ -256,7 +272,7 @@ const AmbassadorForm = () => {
                 className="bg-yellow-500 text-gray-900 font-bold px-6 py-3 rounded-md hover:bg-yellow-600 transition-colors w-24"
                 onClick={handleSubmit}
               >
-                Send
+                {loading ? <span className="loading loading-spinner loading-sm"></span> : 'Submit'}
               </button>
             </div>
           </div>
