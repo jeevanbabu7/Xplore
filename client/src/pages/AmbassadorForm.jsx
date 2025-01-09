@@ -124,6 +124,10 @@ const AmbassadorForm = () => {
     }
     catch (error) {
       console.error('Error sending email:', error);
+      toast.success("Error in submitting the form.Please try again..", {
+        position: 'top-left',
+      });
+      setLoading(false);
     }
 
  
