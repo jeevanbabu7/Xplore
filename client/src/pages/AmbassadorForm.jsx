@@ -57,7 +57,7 @@ const AmbassadorForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setLoading(true);
+    
     for (let field of requiredFields) {
       if (!formData[field]) {
         toast.error('Fill required fields!!', {
@@ -66,7 +66,7 @@ const AmbassadorForm = () => {
         return;
       }
     }
-
+    setLoading(true);
     setFormData(prevState => ({
       ...prevState,
       ambassadorId: uuidv4(),
