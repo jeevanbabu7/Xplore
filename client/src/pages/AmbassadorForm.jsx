@@ -55,6 +55,14 @@ const AmbassadorForm = () => {
     }));
   }
 
+  function generateRandomID() {
+      const uuid = uuidv4(); // Generate a UUID
+      const uppercaseUUID = uuid.toUpperCase(); // Convert to uppercase
+      const alphanumericID = uppercaseUUID.replace(/[^A-Z0-9]/g, ''); // Remove non-alphanumeric characters
+      return alphanumericID.slice(0, 5); // Take the first 5 characters
+  }
+  
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     
@@ -69,22 +77,22 @@ const AmbassadorForm = () => {
     setLoading(true);
     setFormData(prevState => ({
       ...prevState,
-      ambassadorId: uuidv4(),
+      ambassadorId: generateRandomID(),
     }));
     const html = `
       <div style="font-family: 'Roboto', sans-serif; text-align: center; padding: 30px; background-color: #f5f5f5; border: 1px solid #e0e0e0; border-radius: 10px; max-width: 600px; margin: 20px auto; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
-    <h1 style="color: #00796b; margin-bottom: 20px; font-size: 24px; font-weight: bold;">You have successfully registered as an ambassador for Xplore'24!</h1>
-    <div style="margin-top: 20px;width: 100%; display: flex; justify-content: center;">
-        <img src="https://firebasestorage.googleapis.com/v0/b/image-uploader-842b5.appspot.com/o/email_banner.png?alt=media&token=5aaaa7ca-ad39-4f44-acda-b77f16d92567" alt="Ambassador Image" style="width: 80%; height: auto; margin: 20px 0;">
+        <h1 style="color: #00796b; margin-bottom: 20px; font-size: 24px; font-weight: bold;">You have successfully registered as an ambassador for Xplore'24!</h1>
+        <div style="margin-top: 20px;width: 100%; display: flex; justify-content: center;">
+            <img src="https://firebasestorage.googleapis.com/v0/b/image-uploader-842b5.appspot.com/o/email_banner.png?alt=media&token=5aaaa7ca-ad39-4f44-acda-b77f16d92567" alt="Ambassador Image" style="width: 80%; height: auto; margin: 20px 0;">
+        </div>
+        <p style="font-size: 18px; font-weight: bold; color: #616161 margin-top: 10px;">Ambassador ID: ${formData.ambassadorId}</p>
+        <p style="font-size: 16px; color: #616161; margin-top: 10px; margin-bottom: 0 !important; padding: 0 !important;">Welcome aboard! We&rsquo;re excited to have you as part of the Xplore'24 team.</p>
+        <a href="https://chat.whatsapp.com/BNK5mkNURwBJp37uzMO777" target="_blank" style="text-decoration: none; margin-top: 20px; display: inline-block;">
+            <button style="background-color: #00796b; color: #ffffff; font-size: 16px; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);">
+                Join WhatsApp Group
+            </button>
+        </a>
     </div>
-    <p style="font-size: 18px; font-weight: bold; color: #616161 margin-top: 10px;">Ambassador ID: ${formData.ambassadorId}</p>
-    <p style="font-size: 16px; color: #616161; margin-top: 10px; margin-bottom: 0 !important; padding: 0 !important;">Welcome aboard! We&rsquo;re excited to have you as part of the Xplore'24 team.</p>
-    <a href="https://chat.whatsapp.com/BNK5mkNURwBJp37uzMO777" target="_blank" style="text-decoration: none; margin-top: 20px; display: inline-block;">
-        <button style="background-color: #00796b; color: #ffffff; font-size: 16px; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);">
-            Join WhatsApp Group
-        </button>
-    </a>
-</div>
 
     `;
     try {
