@@ -38,32 +38,35 @@ const Event = ({ eventDetails, type }) => {
         onMouseLeave={() => setHovering(false)}
         className="relative w-[276px] h-[236px]"
       >
-        <img
+        {/* <img
           src={event}
           alt={`${name} event`}
           className="w-full h-full object-cover rounded-lg"
-        />
-      {/* <div
+        /> */}
+      <div
           className="w-full h-full text-white flex items-center justify-center font-sans text-lg text-center rounded-3xl"
           style={{
             clipPath: 'polygon(0 0, 99% 0, 100% 72%, 45% 73%, 27% 100%, 0 100%)',
             backgroundImage: `url(${image})`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
-            border: '2px solid #D5D2D2'
+            border: '2px solid #D5D2D2',
+            opacity: 0.75,
           }}
-        ></div> */}
+        ></div>
         <img
           src={viewBtn}
           alt="View event details button"
-          className="absolute -right-5 -bottom-3 w-[184px] h-[69px] hover:cursor-pointer"
-          // onClick={() =>
-          //   navigate(`/${type}/${name.replace(/\s+/g, "-").toLowerCase()}`)
-          // }
+          className="absolute -right-5 -bottom-3 w-[202px] h-[76px] hover:cursor-pointer"
+          onClick={() => {
+            if(type == 'event') return;
+            navigate(`/${type}/${name.replace(/\s+/g, "-").toLowerCase()}`)
+          
+          }}
         />
-        <p className="absolute top-5 left-5 font-bold text-2xl text-white">
+        {/* <p className="absolute top-5 left-5 font-bold text-2xl text-white">
           {"Coming Soon.."}
-        </p>
+        </p> */}
       </animated.div>
     </animated.div>
   );
