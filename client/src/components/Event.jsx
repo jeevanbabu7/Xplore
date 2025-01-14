@@ -5,7 +5,7 @@ import event from "../assets/images/event.png";
 import { useNavigate } from "react-router-dom";
 
 const Event = ({ eventDetails, type }) => {
-  const { name, description, date, time, location } = eventDetails;
+  const { name, description, date, time, location, image } = eventDetails;
   const navigate = useNavigate();
 
   // Entry animation for the card
@@ -43,6 +43,16 @@ const Event = ({ eventDetails, type }) => {
           alt={`${name} event`}
           className="w-full h-full object-cover rounded-lg"
         />
+      {/* <div
+          className="w-full h-full text-white flex items-center justify-center font-sans text-lg text-center rounded-3xl"
+          style={{
+            clipPath: 'polygon(0 0, 99% 0, 100% 72%, 45% 73%, 27% 100%, 0 100%)',
+            backgroundImage: `url(${image})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            border: '2px solid #D5D2D2'
+          }}
+        ></div> */}
         <img
           src={viewBtn}
           alt="View event details button"

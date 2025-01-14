@@ -6,6 +6,12 @@ import { FaCopy } from "react-icons/fa";
 
 
 const AmbassadorForm = () => {
+  function generateRandomID() {
+    const uuid = uuidv4(); // Generate a UUID
+    const uppercaseUUID = uuid.toUpperCase(); // Convert to uppercase
+    const alphanumericID = uppercaseUUID.replace(/[^A-Z0-9]/g, ''); // Remove non-alphanumeric characters
+    return alphanumericID.slice(0, 5); // Take the first 5 characters
+}
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -17,7 +23,7 @@ const AmbassadorForm = () => {
     promote: "",
     hours: "",
     comments: "",
-    ambassadorId: uuidv4()
+    ambassadorId: generateRandomID()
   });
   const [loading, setLoading] = useState(false);
 
@@ -55,12 +61,7 @@ const AmbassadorForm = () => {
     }));
   }
 
-  function generateRandomID() {
-      const uuid = uuidv4(); // Generate a UUID
-      const uppercaseUUID = uuid.toUpperCase(); // Convert to uppercase
-      const alphanumericID = uppercaseUUID.replace(/[^A-Z0-9]/g, ''); // Remove non-alphanumeric characters
-      return alphanumericID.slice(0, 5); // Take the first 5 characters
-  }
+
   
 
   const handleSubmit = async (e) => {
