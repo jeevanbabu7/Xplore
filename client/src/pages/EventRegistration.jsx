@@ -1,5 +1,5 @@
 import React, { useMemo, useState } from 'react';
-import { eventData } from '../utils/events';
+import { AllEvents } from '../utils/events';
 import { IoIosClose } from "react-icons/io";
 import Event from '../components/Event';
 
@@ -8,9 +8,9 @@ const EventRegistration = () => {
 
   const filteredContent = useMemo(() => {
     if (filter.includes('all') || filter.length == 0) {
-      return eventData;
+      return AllEvents;
     } else {
-      return eventData.filter(event => filter.includes(event.category));
+      return AllEvents.filter(event => filter.includes(event.category));
     }
   }, [filter]);
   console.log(filter);
@@ -89,7 +89,7 @@ const EventRegistration = () => {
           //   <h3 className="text-xl font-semibold text-gray-800">{event.name}</h3>
           //   <p className="text-gray-600">Category: {event.category}</p>
           // </div>
-          <Event key={event.id} eventDetails={event} type="event" />
+          <Event key={event.id} eventDetails={event} type={event.category} />
         ))}
       </div>
     </div>
