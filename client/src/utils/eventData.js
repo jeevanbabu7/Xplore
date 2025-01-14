@@ -1,5 +1,5 @@
 import event1 from '../assets/images/event1.png'
-
+import printing from '../assets/images/Events/3D_PRINTING.png'
 export const eventData = [
     {
         id: 123,
@@ -8,7 +8,7 @@ export const eventData = [
         date: "2022-06-01",
         time: "10:00",
         location: "CCF",
-        image: event1,
+        image: printing,
     },
     {   
         id: 123,
