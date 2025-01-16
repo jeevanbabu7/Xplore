@@ -68,8 +68,8 @@ const WorkshopDetails = () => {
                     style={contentAnimation}
                     className="flex flex-col items-center mb-12 space-y-6 mr-8 w-full md:w-1/2"
                 >
-                    <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center text-white mb-4">{item.name}</h1>
-                    <p className="text-lg md:text-2xl text-center text-gray-300 mb-4">{item.description}</p>
+                    <h1 className="font-roadRage text-3xl md:text-5xl lg:text-5xl text-center text-white mb-4">{item.name}</h1>
+                    <p className="text-lg md:text-2xl text-center text-gray-300 mb-4 font-semibold">{item.description}</p>
                     {/* <div className="flex flex-col items-center space-y-2">
                         <p className="text-base text-gray-400">
                             <strong>Date:</strong> {item.date}

@@ -8,6 +8,7 @@ export default {
 			pixelify: ['"Pixelify Sans"', 'sans-serif'],
 			silkscreen: ['"Silkscreen"', 'cursive'],
 			work: ['"Work Sans"', 'sans-serif'],
+			roadRage: ['"Road Rage"', 'cursive'],
 		},
   		boxShadow: {
   			'top-only': '0 -4px 6px -1px rgba(100, 100, 100, 0.5)'
