@@ -60,7 +60,7 @@ const Event = ({ eventDetails, type }) => {
           className="absolute -right-5 -bottom-3 w-[202px] h-[76px] hover:cursor-pointer"
           onClick={() => {
             if(type == 'event') return;
-            navigate(`/${type}/${name.replace(/\s+/g, "-").toLowerCase()}`)
+            navigate(`/${type}/${name.replace(/[/\s]/g, "-").toLowerCase()}`)
           
           }}
         />

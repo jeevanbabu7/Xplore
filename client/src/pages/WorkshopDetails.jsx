@@ -14,7 +14,7 @@ const WorkshopDetails = () => {
     const data = type === "event" ? eventData : workshopData;
 
     // Find the specific event/workshop by its name
-    const item = data.find((e) => e.name.replace(/\s+/g, "-").toLowerCase() === eventId);
+    const item = data.find((e) => e.name.replace(/[/\s]/g, "-").toLowerCase() === eventId);
 
     if (!item) {
         return (
@@ -46,15 +46,16 @@ const WorkshopDetails = () => {
     });
 
     const handleRegister = () => {
-        toast.info("Registration has not started yet. Please come back later.", {
-            position: "top-center",
-            autoClose: 4000,
-            hideProgressBar: true,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-        });
+        // toast.info("Registration has not started yet. Please come back later.", {
+        //     position: "top-center",
+        //     autoClose: 4000,
+        //     hideProgressBar: true,
+        //     closeOnClick: true,
+        //     pauseOnHover: true,
+        //     draggable: true,
+        //     progress: undefined,
+        // });
+        window.open(item.registerLink, "_blank");
     }
 
     const toggleDetails = () => {
@@ -81,6 +82,7 @@ const WorkshopDetails = () => {
                 >
                     <h1 className="font-roadRage text-3xl md:text-5xl lg:text-5xl text-center text-white mb-4">{item.name}</h1>
                     <p className="text-lg md:text-2xl text-center text-gray-300 mb-4 font-semibold">{item.description}</p>
+                    
                     <div className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4">
                         <button className="px-8 py-3 border-2 border-purple-600 text-white rounded-full hover:bg-purple-600 hover:text-white transition-all transform hover:scale-105 focus:outline-none bg-transparent shadow-lg shadow-purple-600/50" onClick={handleRegister}>
                             Register Now

@@ -174,7 +174,7 @@ const ParallaxLayer = () => {
         >
           <ul
             ref={containerRef}
-            className="flex animate-infinite-scroll space-x-6"
+            className="flex animate-infinite-scroll space-x-2"
           >
             {eventData.map((event, index) => (
               <li key={index} className="flex-shrink-0">

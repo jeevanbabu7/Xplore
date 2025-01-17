@@ -42,8 +42,11 @@ const Events = () => {
         style={{
           ...bannerAnimation,
           backgroundImage: `url(${eventBanner})`,
+          boxShadow: "0px 8px 20px rgba(0, 0, 0, 0.5)", // Deeper and larger shadow
+          borderBottom: "5px solid rgba(0, 0, 0, 0.2)",  // Optional bottom border
         }}
       ></animated.section>
+
 
       {/* Event Type Buttons */}
       <div className="flex justify-center space-x-8 my-8 px-4">

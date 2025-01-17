@@ -28,7 +28,7 @@ const Home = () => {
             id="about"
             className="shadow-top-only mt-16"
             style={{
-              boxShadow: "0 -20px 50px rgba(0, 0, 0, 0.75)",
+              boxShadow: "0 -50px 100px rgba(0, 0, 0, 0.75)",
               position: "relative",
             }}
           >

@@ -75,7 +75,8 @@ const ContactPage = () => {
         className="w-full h-32 md:h-[200px] bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage: `url(${contactBanner})`, // Use the imported path
-     
+          boxShadow: "0px 30px 100px rgba(0, 0, 0, 0.5)", // Deeper and larger shadow
+          borderBottom: "5px solid rgba(0, 0, 0, 0.2)"
         }}
       ></div>
 
