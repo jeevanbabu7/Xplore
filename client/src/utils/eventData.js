@@ -275,3 +275,49 @@ export const workshopData = [
         category: "workshop"
     }
 ];
+
+export const culturalEventData = [
+    {
+        id: 3001,
+        name: "Dance Competition",
+        description: "Showcase your dance skills in various styles.",
+        date: "2023-09-15",
+        time: "18:00",
+        location: "Main Auditorium",
+        image: event1, // Using event1 as a placeholder image
+        category: "cultural"
+    },
+    {
+        id: 3002,
+        name: "Battle of Bands",
+        description: "Rock the stage with your band in this musical showdown.",
+        date: "2023-09-16",
+        time: "19:00",
+        location: "Open Air Theater",
+        image: event1, // Using event1 as a placeholder image
+        category: "cultural"
+    },
+    {
+        id: 3003,
+        name: "Art Exhibition",
+        description: "Display your artistic talents in our annual art showcase.",
+        date: "2023-09-17",
+        time: "10:00",
+        location: "Art Gallery",
+        image: event1, // Using event1 as a placeholder image
+        category: "cultural"
+    },
+    {
+        id: 3004,
+        name: "Poetry Slam",
+        description: "Express yourself through spoken word in our poetry competition.",
+        date: "2023-09-18",
+        time: "16:00",
+        location: "Amphitheater",
+        image: event1, // Using event1 as a placeholder image
+        category: "cultural"
+    }
+];
+
+
+  
