@@ -80,6 +80,9 @@ const EventDetails = () => {
                         <p className="text-xl text-gray-400 mb-6">
                             <strong>Location:</strong> {item.location}
                         </p>
+                        <p className="text-xl text-gray-400 mb-6">
+                            <strong>Fee:</strong> {item.fee}
+                        </p>
                     </div> */}
                     <button className="px-8 py-3 border-2 border-purple-600 text-white rounded-full hover:bg-purple-600 hover:text-white transition-all transform hover:scale-105 focus:outline-none bg-transparent shadow-lg shadow-purple-600/50" onClick={handleRegister}>
                         Register Now

@@ -49,6 +49,7 @@ const AboutPage = () => {
             style={{
               ...rotationAnimation,
               willChange: "transform, opacity",
+              
             }}
           />
         </div>

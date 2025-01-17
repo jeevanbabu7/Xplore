@@ -69,7 +69,8 @@ export const workshopData = [
         fee: 300,
         image: flutter,
         imageDetails: Flutter_details,
-        category: "workshop"
+        category: "workshop",
+        registerLink: "https://tiqr.events/e/Flutter-Workshop-700"
     },
     {
         id: 2002,
@@ -80,8 +81,9 @@ export const workshopData = [
         location: "CCF",
         fee: 150,
         image: satellite,
-        imageDetails: satellite,
-        category: "workshop"
+        imageDetails: satellite_details,
+        category: "workshop",
+        registerLink: "https://tiqr.events/e/SATELLITE-DATA-PLATFORM-WORKSHOP-704"
     },
     {
         id: 2003,
@@ -93,7 +95,8 @@ export const workshopData = [
         fee: 500,
         image: Bim_modeling,
         imageDetails: Bim_modeling_details,
-        category: "workshop"
+        category: "workshop",
+        registerLink: "https://tiqr.events/e/BIM-Modelling-706"
     },
     {
         id: 2004,
@@ -117,7 +120,8 @@ export const workshopData = [
         fee: 350,
         image: IOT,
         imageDetails: iot_details,
-        category: "workshop"
+        category: "workshop",
+        registerLink: "https://tiqr.events/e/IOT-and-Embedded-Systems-Workshop-710"
     },
     {
         id: 2006,
@@ -141,7 +145,8 @@ export const workshopData = [
         fee: 499,
         image: robotic_arm_website,
         imageDetails: robotic_arm,
-        category: "workshop"
+        category: "workshop",
+        registerLink: "https://tiqr.events/e/Robotic-Arm-Workshop-701/"
     },
     {
         id: 2008,
@@ -153,7 +158,8 @@ export const workshopData = [
         fee: 499,
         image: autocad_website,
         imageDetails: autocad_details,
-        category: "workshop"
+        category: "workshop",
+        registerLink: "https://tiqr.events/e/AutoCAD-Workshop-703"
     },
     {
         id: 2009,
@@ -165,7 +171,8 @@ export const workshopData = [
         fee: 199,
         image: robotics,
         imageDetails: robotics_details,
-        category: "workshop"
+        category: "workshop",
+        registerLink: "https://tiqr.events/e/Robotics-and-IOT-Workshop-705"
     },
     {
         id: 2010,
@@ -177,7 +184,8 @@ export const workshopData = [
         fee: 499,
         image: drone_website,
         imageDetails: drone,
-        category: "workshop"
+        category: "workshop",
+        registerLink: "https://tiqr.events/e/Drone-Workshop-707"
     },
     {
         id: 2011,
@@ -189,7 +197,8 @@ export const workshopData = [
         fee: 399,
         image:  llm_website,
         imageDetails: llm_details,
-        category: "workshop"
+        category: "workshop",
+        registerLink: "https://tiqr.events/e/LLM-Fine-Tuning-%26-Edge-AI-Workshop-709"
     },
     {
         id: 2012,
@@ -201,7 +210,8 @@ export const workshopData = [
         fee: 199,
         image: open_rocket_website,
         imageDetails: open_rocket_details,
-        category: "workshop"
+        category: "workshop",
+        registerLink: "https://tiqr.events/e/Open-Rocket-Simulator-Workshop-711"
     },
     {
         id: 2013,
