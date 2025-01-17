@@ -84,6 +84,9 @@ const EventDetails = () => {
                     <button className="px-8 py-3 border-2 border-purple-600 text-white rounded-full hover:bg-purple-600 hover:text-white transition-all transform hover:scale-105 focus:outline-none bg-transparent shadow-lg shadow-purple-600/50" onClick={handleRegister}>
                         Register Now
                     </button>
+                    <button className="px-8 py-3 border-2 border-blue-500 text-white rounded-full hover:bg-blue-500 hover:text-white transition-all transform hover:scale-105 focus:outline-none bg-transparent shadow-lg shadow-blue-500/50" onClick={toggleDetails}>
+                            Details
+                    </button>
                 </animated.div>
 
                 {/* Image */}
