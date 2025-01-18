@@ -3,6 +3,7 @@ import heroBg from "../assets/images/hero-bg3.jpg";
 import date from "../assets/images/date-img.png";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { eventData } from "../utils/eventData.js";
+import { proshowEvents } from "../utils/proShow.js";
 import Card from "./Card.jsx";
 import { useNavigate } from "react-router-dom";
 import TypingAnimation from "../components/ui/typing-animation";
@@ -36,7 +37,7 @@ const ParallaxLayer = () => {
   return (
     <section
       ref={ref}
-      className="relative -top-16 w-full h-screen bg-cover bg-center bg-no-repeat"
+      className="relative -top-16 w-full h-screen bg-cover bg-center bg-no-repeat mb-28 "
      
     >
       <motion.div
@@ -141,7 +142,7 @@ const ParallaxLayer = () => {
             }}
           />
 
-          <motion.p className="sm:text-5xl md:text-md lg:text-lg font-bold z-0 flex -mt-10 mb-5 md:-mt-20 font-">
+          <motion.p className="sm:text-5xl md:text-md lg:text-lg font-bold z-0 flex -mt-10 mb-5 md:-mt-20 font-mono">
             <TypingAnimation>NATIONAL LEVEL MULTI-FEST</TypingAnimation>
           </motion.p>
         </motion.div>
@@ -166,17 +167,18 @@ const ParallaxLayer = () => {
 
         {/* Bottom Section */}
         <div
-          className="relative flex overflow-hidden w-full  backdrop-blur-3xl pb-52"
+          className="relative flex overflow-hidden w-full backdrop-blur-3xl pb-72"
           style={{
-            maskImage: "linear-gradient(to right, transparent, black 10%, black 90%, transparent)",
-            WebkitMaskImage: "linear-gradient(to right, transparent, black 10%, black 90%, transparent)",
+            // maskImage: "linear-gradient(to right, transparent, black 20%, black 80%, transparent)",
+            // WebkitMaskImage: "linear-gradient(to right, transparent, black 20%, black 80%, transparent)",
+            scrollBehavior: 'smooth'
           }}
         >
           <ul
             ref={containerRef}
-            className="flex animate-infinite-scroll space-x-2"
+            className="flex animate-infinite-scroll space-x-36 p-4"
           >
-            {eventData.map((event, index) => (
+            {proshowEvents.map((event, index) => (
               <li key={index} className="flex-shrink-0">
                 <div className="flex-grow h-52 flex items-center justify-center backdrop-blur-2xl z-0">
                   <Card event={event} />
@@ -185,6 +187,7 @@ const ParallaxLayer = () => {
             ))}
           </ul>
         </div>
+
       </motion.div>
 
 

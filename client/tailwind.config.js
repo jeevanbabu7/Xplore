@@ -14,7 +14,7 @@ export default {
   			'top-only': '0 -4px 6px -1px rgba(100, 100, 100, 0.5)'
   		},
   		animation: {
-  			'infinite-scroll': 'infinite-scroll 20s linear infinite',
+  			'infinite-scroll': 'infinite-scroll 30s linear infinite',
   			'background-position-spin': 'background-position-spin 3000ms infinite alternate',
 			'mesh': 'mesh 10s infinite ease-in-out'
   		},
