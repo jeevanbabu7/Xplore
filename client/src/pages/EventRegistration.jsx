@@ -35,7 +35,7 @@ const EventRegistration = () => {
         <button className="group relative overflow-hidden px-10 py-1 text-lg font-semibold text-[rgb(193,163,98)] border-2 border-[rgb(193,163,98)] rounded-full bg-transparent transition-all duration-300 ease-[cubic-bezier(0.23,1,0.32,1)] hover:scale-110 hover:text-[#212121] hover:shadow-[0_0px_20px_rgba(193,163,98,0.4)] active:scale-100"
           onClick={() => handleFilterClick('all')}
         >
-          <span className="absolute inset-0 z-[-1] m-auto w-12 h-12 scale-0 rounded-full bg-[rgb(193,163,98)] transition-all duration-500 ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:scale-[2.5]"></span>
+          <span className="absolute inset-0 text-sm z-[-1] m-auto w-12 h-12 scale-0 rounded-full bg-[rgb(193,163,98)] transition-all duration-500 ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:scale-[2.5]"></span>
           All
         </button>
         <button className="group relative overflow-hidden px-10 py-1 text-lg font-semibold text-[rgb(193,163,98)] border-2 border-[rgb(193,163,98)] rounded-full bg-transparent transition-all duration-300 ease-[cubic-bezier(0.23,1,0.32,1)] hover:scale-110 hover:text-[#212121] hover:shadow-[0_0px_20px_rgba(193,163,98,0.4)] active:scale-100"
