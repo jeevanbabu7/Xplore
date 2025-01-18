@@ -215,7 +215,7 @@ export const workshopData = [
         id: 2012,
         name: "Open Rocket Simulator Workshop",
         description: "Master the fundamentals of rocket design and simulation with the Open Rocket Simulator. Learn to create, test, and optimize rocket models virtually, enhancing your engineering and analytical skills.",
-        date: "February 8, 2025",
+        date: "February 7, 2025",
         time: "9:00 AM - 12:00 PM",
         location: "CCF",
         fee: 199,
