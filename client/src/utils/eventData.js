@@ -35,6 +35,15 @@ import staad_website from '../assets/images/workshops/staad_website.png'
 import staad from '../assets/images/workshops/staad_details.png'
 import solid_website from '../assets/images/workshops/solid_website.png'
 import solid from '../assets/images/workshops/solid _details.png'
+
+// cultural events
+import debate from '../assets/images/cultural/debate.jpg'
+import mimicry from '../assets/images/cultural/mimicry.jpg'
+import monoact from '../assets/images/cultural/monoact.jpg'
+import magic from '../assets/images/cultural/magic.jpg'
+import kalari from '../assets/images/cultural/kalari.jpg'
+import anchoring from '../assets/images/cultural/anchoring.jpg'
+
 export const eventData = [
     {   
         id: 1001,
@@ -298,44 +307,137 @@ export const workshopData = [
 export const culturalEventData = [
     {
         id: 3001,
-        name: "Dance Competition",
-        description: "Showcase your dance skills in various styles.",
-        date: "2023-09-15",
-        time: "18:00",
-        location: "Main Auditorium",
-        image: event1, // Using event1 as a placeholder image
-        category: "cultural"
+        name: "Monoact Competition",
+        description: "Unleash your acting brilliance in the Monoact Competition. Step onto the stage and captivate the audience with your expressions, voice, and creativity. This is your moment to bring characters to life, convey emotions, and narrate powerful stories—all by yourself",
+        date: "6 February 2025",
+        time: "9 AM - 4 PM",
+        location: "Update soon..",
+        prizePool: '2.5 K',
+        fee: 100,
+        image:monoact ,
+        contacts: [{name: 'Angel Shoby', phone: '8089091146'}, {name: 'Neha T', phone: '9847799288'}],
+        rules: `1. This is a solo event. Open to all college students.\n
+                2. The registration fee is 100.\n
+                3. No restrictions on the theme. Participants can select their own theme.\n
+                4. Maximum time limit is 5 minutes.\n
+                5. Obscenity and offensive gestures are strictly prohibited and may result in disqualification.\n
+                6. Additional rules may be given by the judges.\n
+                7. In case of any dispute, the decision of the event organisers will be final.
+`,
+        category: "cultural",
+        registerLink: "https://tiqr.events/e/Monoact-Competition-723"
     },
     {
         id: 3002,
-        name: "Battle of Bands",
-        description: "Rock the stage with your band in this musical showdown.",
-        date: "2023-09-16",
-        time: "19:00",
-        location: "Open Air Theater",
-        image: event1, // Using event1 as a placeholder image
-        category: "cultural"
+        name: "Anchoring Competition ",
+        description: "Step into the spotlight and showcase your charm, confidence, and spontaneity in the ultimate anchoring challenge! 🎙 Grab the mic, engage the audience, and keep the energy alive with your unique hosting style.",
+        date: "6 feb 2025",
+        time: "9 AM - 4 PM",
+        location: "Update soon..",
+        prizePool: '3k',
+        fee:70, 
+        image: anchoring,
+        contacts: [{name: 'Akshay ', phone: '8304017049'}, {name: 'Afra', phone: '6238769860'}],
+        rules: `1. Participation is open to all.\n
+                2. The Registration fee is 100.\n
+                3. Maximum time limit is 10 minutes.\n
+                4. You can prefer any language (English or Malayalam) according to your comfort.\n
+                5. Topic will be given 10 minutes prior to the competition.\n
+                6. Costume and appearance will be considered for judgement.\n
+                7. Judges decision will be FINAL.\n
+                8. You will be judged according to the given criteria:\n
+                \t1. Fluency\n
+                \t2. Clarity\n
+                \t3. Costume and Appearance\n
+                \t4. Body language\n
+                \t5. Confidence\n
+                \t6. Gestures\n
+                \t7. Voice modulation`,
+        category: "cultural",
+        registerLink: "https://tiqr.events/e/Anchoring-Competition-724"
     },
     {
         id: 3003,
-        name: "Art Exhibition",
-        description: "Display your artistic talents in our annual art showcase.",
-        date: "2023-09-17",
-        time: "10:00",
-        location: "Art Gallery",
-        image: event1, // Using event1 as a placeholder image
-        category: "cultural"
+        name: "MIMICRY COMPETITION",
+        description: "Participate in an evening of wit, humor, and originality as talents impersonate renowned individuals and characters.",
+        date: "6 feb 2025",
+        time: "9 AM - 4 PM",
+        location: "Update soon..",
+        prizePool: '2.5k',
+        fee:100, 
+        image: mimicry,
+        contacts: [{name: 'Haritha ', phone: '9605107278'}, {name: 'Deeshnav ', phone: '8590884990'}],
+        rules: `1. Participation is open to all college students.\n
+                2. The Registration fee is 100.\n
+                3. Each artist shall be given a maximum of 5 minutes.\n
+                4. Participants may mimic the sounds of machines, film personalities, or other famous personalities.\n
+                5. The medium of expression will be in Malayalam or English.\n
+                6. It should necessarily be a cultured and pleasant piece of art.\n
+                7. No vulgar or unparliamentary language will be entertained.\n
+                8. Marking will be based on:\n
+                \t- Imitating skills\n
+                \t- Presentation\n
+                \t- Variety of sounds and voices imitated\n
+                9. Judges' decision will be FINAL and can't be APPEALED.
+`,
+        category: "cultural",
+        registerLink: "https://tiqr.events/e/MIMICRY-COMPETITION-722"
     },
     {
         id: 3004,
-        name: "Poetry Slam",
-        description: "Express yourself through spoken word in our poetry competition.",
-        date: "2023-09-18",
-        time: "16:00",
-        location: "Amphitheater",
-        image: event1, // Using event1 as a placeholder image
-        category: "cultural"
-    }
+        name: "MAGIC SHOW",
+        description: "Join us in the world of magic, mystery and wonder.",
+        date: "7th Feb 2025",
+        time: "9 AM - 4 PM",
+        location: "Update soon..",
+        prizePool: null,
+        fee:'Free', 
+        image: magic,
+        contacts: [{name: 'Keerthana P V ', phone: '8590480248'}, {name: 'Hasmina', phone: '98959 85462'}],
+        rules: '',
+        category: "cultural",
+        registerLink: "https://tiqr.events/e/Magic-Show-725"
+    },
+    {
+        id: 3005,
+        name: "KALARIPAYATT SHOW",
+        description: "Discover the amazing Kalaripayatt—an ancient Indian martial art that originated in Kerala during the 11th–12th century CE.",
+        date: "8 feb 2025",
+        time: "9 AM - 4 PM",
+        location: "Update soon..",
+        prizePool: null,
+        fee: null, 
+        image: kalari,
+        contacts: [],
+        rules: '',
+        category: "cultural",
+        registerLink: "https://tiqr.events/e/KALARIPAYATT-SHOW-726"
+    },
+    {
+        id: 3006,
+        name: "Debate Competition",
+        description: "Showcase your wit, eloquence, and critical thinking as you take on compelling topics and challenge the best minds.",
+        date: "6 feb 2025",
+        time: "9 AM - 4 PM",
+        location: "Update soon..",
+        prizePool: '3k',
+        fee: 100, 
+        image: debate,
+        contacts: [{name: 'Vismaya', phone: '91884 40511'}, {name: 'Arathi C K', phone: '9048259633'}],
+        rules: `1. The event will be conducted as a team consisting of two members.\n
+                2. Topic will be given on the spot which will be based on socially relevant issues.\n
+                3. Registration fee is 100/- per team.\n
+                4. Competition will be held in two stages such as Prelims and Finals.\n
+                5. Participants can speak in English or Malayalam as per their convenience.\n
+                6. Participants are not allowed to use any devices connected to the Internet during the course of debate.\n
+                7. Each team will be allowed to speak for 5-7 minutes.\n
+                8. The first and last minutes of a team’s time are protected - the opposition cannot intervene during this period.\n
+                9. The decision of the judges are to be respected as they are final and binding.
+                `,
+        category: "cultural",
+        registerLink: "https://tiqr.events/e/Debate-Competition-721"
+    },
+    
 ];
 
 

@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import eventBanner from "../assets/images/event-banner.png";
 import Event from "../components/Event";
 import { eventData, culturalEventData } from "../utils/eventData.js";
+import CulturalCard from "../components/CulturalCard.jsx";
 
 const Events = () => {
   const [eventType, setEventType] = useState("technical");
@@ -56,7 +57,10 @@ const Events = () => {
               ? "bg-gradient-to-r from-red-600 to-red-800 shadow-lg" 
               : "bg-gradient-to-r from-gray-700 to-gray-900 opacity-75 hover:opacity-100"
           }`}
-          onClick={() => setEventType("technical")}
+          onClick={() => {
+            setFilteredEvents(eventData);
+            setEventType("technical");
+          }}
         >
           Technical Events
         </button>
@@ -66,7 +70,10 @@ const Events = () => {
               ? "bg-gradient-to-r from-red-600 to-red-800 shadow-lg" 
               : "bg-gradient-to-r from-gray-700 to-gray-900 opacity-75 hover:opacity-100"
           }`}
-          onClick={() => setEventType("cultural")}
+          onClick={() => {
+            setFilteredEvents(culturalEventData);
+            setEventType("cultural");
+          }}
         >
           Cultural Events
         </button>
@@ -84,7 +91,7 @@ const Events = () => {
             viewport={{ once: true, amount: 0.2 }}
             variants={cardVariants}
           >
-            <Event eventDetails={event} type={eventType} />
+            {(eventType === "cultural" ? (<CulturalCard eventDetails={event}/>): <Event eventDetails={event} type={eventType} />)}
           </motion.div>
         ))}
       </div>
