@@ -108,7 +108,8 @@ export const workshopData = [
         fee: 350,
         image: D_PRINTING,
         imageDetails: D_printing_details,
-        category: "workshop"
+        category: "workshop",
+        registerLink: "https://tiqr.events/e/3D-Printing-and-Designing-Workshop-717"
     },
     {
         id: 2005,
@@ -133,7 +134,8 @@ export const workshopData = [
         fee: 450,
         image: PCB,
         imageDetails: PCB_Details,
-        category: "workshop"
+        category: "workshop",
+        registerLink: "https://tiqr.events/e/PCB-Designing-Workshop-718"
     },
     {
         id: 2007,
@@ -223,7 +225,8 @@ export const workshopData = [
         fee: "Free",
         image: uiux_website,
         imageDetails: ui_ux_details,
-        category: "workshop"
+        category: "workshop",
+        registerLink: "https://tiqr.events/e/UI-%2F-UX-Workshop-715"
     },
     {
         id: 2014,
@@ -235,7 +238,8 @@ export const workshopData = [
         fee: "Free",
         image: game_development_website,
         imageDetails: game_development_details,
-        category: "workshop"
+        category: "workshop",
+        registerLink: "https://tiqr.events/e/Game-Development-Workshop-714"
     },
     {
         id: 2015,
@@ -247,7 +251,8 @@ export const workshopData = [
         fee: 499,
         image: revit_website,
         imageDetails: revit,
-        category: "workshop"
+        category: "workshop",
+        registerLink: "https://tiqr.events/e/Revit-Workshop-713"
     },
     {
         id: 2016,
@@ -259,7 +264,8 @@ export const workshopData = [
         fee: 499,
         image: staad_website,
         imageDetails: staad,
-        category: "workshop"
+        category: "workshop",
+        registerLink: "https://tiqr.events/e/STAAD-Workshop-712"
     },
     {
         id: 2017,
@@ -271,7 +277,8 @@ export const workshopData = [
         fee: 499,
         image: solid_website,
         imageDetails: solid,
-        category: "workshop"
+        category: "workshop",
+        registerLink: "https://tiqr.events/e/SolidWorks-Workshop-708"
     },
     {
         id: 2018,
@@ -282,7 +289,8 @@ export const workshopData = [
         fee: 199,
         image: astro_website,
         imageDetails: astrophotography_details,
-        category: "workshop"
+        category: "workshop",
+        registerLink: "https://tiqr.events/e/Astrophotography-702"
     }
 ];
 
