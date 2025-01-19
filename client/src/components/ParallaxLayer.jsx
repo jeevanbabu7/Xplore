@@ -34,6 +34,8 @@ const ParallaxLayer = () => {
     }
   }, []);
 
+  console.log(window.innerWidth);
+  
   return (
     <section
       ref={ref}
@@ -129,12 +131,12 @@ const ParallaxLayer = () => {
         >
           <motion.img
             src="./logo.png"
-            className="w-[60%] sm:w-[50%] md:w-[35%] mb-2 z-10"
+            className="w-[90%] sm:w-[80%] md:w-[35%] mb-2 z-10"
             alt="Hero"
             initial={{ opacity: 0, scale: 1 }}
-            animate={{ opacity: 1, scale: 1.2 }}
+            animate={{ opacity: 1, scale: window.innerWidth >= 696 ? 1.2 : 1 }}
             style={{
-              scale: window.innerWidth >= 768 ? logoScale : 1, 
+              scale: window.innerWidth >= 696 ? logoScale : 1, 
             }}
             transition={{
               duration: 0.5,
@@ -142,8 +144,8 @@ const ParallaxLayer = () => {
             }}
           />
 
-          <motion.p className="sm:text-5xl md:text-md lg:text-lg font-bold z-0 flex -mt-10 mb-5 md:-mt-20 font-mono">
-            <TypingAnimation>NATIONAL LEVEL MULTI-FEST</TypingAnimation>
+          <motion.p className="font-bold z-0 flex -mt-10 mb-5 md:-mt-20 font-mono">
+            <TypingAnimation className="text-md sm:text-sm md:text-2xl">NATIONAL LEVEL MULTI-FEST</TypingAnimation>
           </motion.p>
         </motion.div>
 
@@ -180,7 +182,7 @@ const ParallaxLayer = () => {
           >
             {proshowEvents.map((event, index) => (
               <li key={index} className="flex-shrink-0">
-                <div className="flex-grow h-52 flex items-center justify-center backdrop-blur-2xl z-0">
+                <div className="flex-grow md:h-52  flex items-center justify-center backdrop-blur-2xl z-0">
                   <Card event={event} />
                 </div>
               </li>
