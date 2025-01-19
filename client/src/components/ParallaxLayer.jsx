@@ -39,7 +39,7 @@ const ParallaxLayer = () => {
   return (
     <section
       ref={ref}
-      className="relative -top-16 w-full h-screen bg-cover bg-center bg-no-repeat mb-28 "
+      className="relative -top-16 w-full bg-cover bg-center bg-no-repeat"
      
     >
       <motion.div
@@ -169,7 +169,7 @@ const ParallaxLayer = () => {
 
         {/* Bottom Section */}
         <div
-          className="relative flex overflow-hidden w-full backdrop-blur-3xl pb-72"
+          className="relative flex overflow-hidden w-full backdrop-blur-3xl pb-96 md:pb-72 "
           style={{
             // maskImage: "linear-gradient(to right, transparent, black 20%, black 80%, transparent)",
             // WebkitMaskImage: "linear-gradient(to right, transparent, black 20%, black 80%, transparent)",
@@ -182,7 +182,7 @@ const ParallaxLayer = () => {
           >
             {proshowEvents.map((event, index) => (
               <li key={index} className="flex-shrink-0">
-                <div className="flex-grow md:h-52  flex items-center justify-center backdrop-blur-2xl z-0">
+                <div className="flex-grow h-52 md:52  flex items-center justify-center backdrop-blur-2xl z-0">
                   <Card event={event} />
                 </div>
               </li>
