@@ -1,15 +1,17 @@
-import React, { useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { AllEvents } from '../utils/events';
 import { IoIosClose } from "react-icons/io";
 import Event from '../components/Event';
 import CulturalCard from '../components/CulturalCard';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 
 const EventRegistration = () => {
   const {category} = useParams();
   const [filter, setFilter] = useState(category || 'all');
   
+
   const filteredContent = useMemo(() => {
+    window.history.pushState(null, '', `/event-registration/${filter}`);
     if (filter === 'all') {
       return AllEvents;
     } else {
