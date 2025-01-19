@@ -530,7 +530,7 @@ export const culturalEventData = [
     },
     {
         id: 3011,
-        name: "Art in Motion",
+        name: "ART EXHIBITION",
         description: "Join the Celebration and sparkle  with art, inspiration, and connections.Immerse Yourself in Local Artistry Experience an eclectic mix of paintings, sculptures, photography, and more by talented local artists.",
         date: null ,
         time: null ,
@@ -538,7 +538,7 @@ export const culturalEventData = [
         prizePool: null,
         fee: null, 
         image: art_exhibition,
-        contacts: [],
+        contacts: [{name: "Sreedeep", phone: "8301942514"}, {name: "Nandana", phone: "954491881"}],
         category: "cultural",
         registerLink: null
     },

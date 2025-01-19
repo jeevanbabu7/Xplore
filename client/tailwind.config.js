@@ -20,6 +20,7 @@ export default {
   			roadRage: [
   				'Road Rage"',
   				'cursive'
+				
   			]
   		},
   		boxShadow: {
