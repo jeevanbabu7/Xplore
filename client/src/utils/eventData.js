@@ -49,6 +49,16 @@ import spot_photography from '../assets/images/cultural/spot_photography.webp'
 import pottery from '../assets/images/cultural/pottery.webp'
 import art_exhibition from '../assets/images/cultural/art_exhibition.webp'
 
+// music events
+
+import solo_song from '../assets/images/cultural/musical/solo_song.webp'
+import nadanpatt from '../assets/images/cultural/musical/nadanpatt.webp'
+import desk_knock from '../assets/images/cultural/musical/desk_knock.webp'
+import english_recitation from '../assets/images/cultural/musical/english_recitation.webp'
+import guitar from '../assets/images/cultural/musical/guitar.webp'
+import light_music from '../assets/images/cultural/musical/light_music.webp'
+import malayalam_recitation from '../assets/images/cultural/musical/malayalam_recitation.webp'
+
 export const eventData = [
     {   
         id: 1001,
@@ -542,7 +552,177 @@ export const culturalEventData = [
         category: "cultural",
         registerLink: null
     },
+    {
+        id: 3012,
+        name: "NADANPATTU",
+        eventName: "POLIKA",
+        description: "Step into the enchanting world of Kannur, where tradition meets celebration! As part of Xplore24, our national-level multifest, we invite you to experience the rich cultural tapestry of Kerala namely 'POLIKA' .",
+        date: "07/02/2025",
+        time: null,
+        location: "Main Auditorium",
+        prizePool: "10k",
+        fee: 150,
+        image: nadanpatt,
+        contacts: [
+            { name: "Anirudh P", phone: "9072701180" },
+            { name: "Punya", phone: "8547928336" }
+        ],
+        category: "cultural",
+        registerLink: "https://tiqr.events/e/Nadan-Pattu-Competition-739",
+        rules: `1. The registration fee is 150 per person.\n
+                2. The team can have 7 to 10 members.\n
+                3. The duration of the event should not be more than 10 minutes.\n
+                4. The song should be unique and traditional.\n
+                5. Only traditional musical instruments should be used; no electronic devices are permitted.`
+    },
+    {
+        id: 3013,
+        name: "Desk Knock",
+        eventName: "Bench Knock: Hit it, own it",
+        description: "XPLORE'24 presents Bench Knock: Hit It, Own It where every knock beats with creativity and great moments.",
+        date: "07/02/2025",
+        time: null,
+        location: "Any seminar hall",
+        prizePool: "6K",
+        fee: 300,
+        image: desk_knock,
+        contacts: [
+            { name: "Deeshnav K", phone: "+91 8590884990" },
+            { name: "Vismaya", phone: "+91 9188440511" }
+        ],
+        category: "cultural",
+        registerLink: "https://tiqr.events/e/DESK-KNOCK-736",
+        rules: `1. Each team must consist of 3 participants.\n
+                2. The registration fee is 300 per team.\n
+                3. Teams must create rhythmic beats and patterns by knocking, tapping, or using creative techniques on the desk surface.\n
+                4. Only the fingers, palms, wrist, and the area between the wrist and arm can be used for creating sounds.\n
+                5. No external objects or tools are allowed.\n
+                6. Maximum time limit is 10 minutes.\n
+                7. In case of any disputes, the decision of the judges will be final.`
+    },
+    {
+        id: 3015,
+        name: "Poem Recitation (English)",
+        eventName: null,
+        description: "XPLORE'24 Presents ENGLISH POEM RECITATION. A platform to express, inspire and connect with fellow poetry enthusiasts! Recite, Share, Inspire! ",
+        date: "07/02/2025",
+        time: null,
+        location: "Any seminar hall",
+        prizePool: "2.5k",
+        fee: 100,
+        image: english_recitation,
+        contacts: [
+            { name: "Angel", phone: "8089091146" },
+            { name: "Manu", phone: "9037632234" }
+        ],
+        category: "cultural",
+        registerLink: "https://tiqr.events/e/ENGLISH-POEM-RECITATION-735",
+        rules: `1. This is a solo event. Participation is open to all college students.\n
+                2. The registration fee is 100.\n
+                3. Time limit will be 5 minutes.\n
+                4. Participants are allowed to recite a poem of their own choice.\n
+                5. Participants are not allowed to refer to any notes or printed materials during the recitation.\n
+                6. Poems containing languages that are offensive, hurtful to any caste, creed, religion, and community, or wholly inappropriate, will be rejected.\n
+                7. The decision of the judges will be final.`
+    },
+    {
+        id: 3016,
+        name: "Guitar",
+        eventName: null,
+        description: "XPLORE’24 presents the ultimate Guitar Competition! Showcase your talent, strum your strings, and captivate the audience with your electrifying performance.",
+        date: "07/02/2025",
+        time: null,
+        location: "Any seminar hall",
+        prizePool: "3k",
+        fee: 150,
+        image: guitar,
+        contacts: [
+            { name: "Manu", phone: "9037632234" },
+            { name: "Nayantara", phone: "9778756085" }
+        ],
+        category: "cultural",
+        registerLink: "https://tiqr.events/e/Guitar-Competition-733",
+        rules: `1. This is an individual event open to all college students.\n
+                2. The registration fee is 150.\n
+                3. Maximum time limit is 10 minutes.\n
+                4. Any music style or genre is allowed.\n
+                5. Participants must bring their own instruments. Instruments will not be provided by the organizers.\n
+                6. The judges' decision will be final and cannot be questioned.`
+    },
+    {
+        id: 3017,
+        name: "Light Music",
+        eventName: null,
+        description: "The Light Music Competition at Xplore '24 is where soulful voices, enchanting melodies, captivating rhythms come together to create pure magic!! ",
+        date: "8th Feb 2025"        ,
+        time: null,
+        location: "Seminar hall",
+        prizePool: "2.5k",
+        fee: 100,
+        image: light_music,
+        contacts: [
+            { name: "Abhiram", phone: "9188307364" },
+            { name: "Drishya", phone: "7907118594" }
+        ],
+        category: "cultural",
+        registerLink: "https://tiqr.events/e/Light-Music-Competition-738",
+        rules: `1. Only non-film songs are allowed.\n
+                2. Registration fee is 100.\n
+                3. Instruments are not allowed.\n
+                4. Karaoke is not allowed.\n
+                5. Judgment is based on qualities like Swaram, Sruthilayam, Rhythm, Bhavam, language, and literal clarity.\n
+                6. Duration (max): 5 minutes.`
+    },
+    {
+        id: 3018,
+        name: "Solo Song (Karaoke)",
+        eventName: null,
+        description: "Get ready for an unforgettable musical journey with the Solo Song Performance at XPLORE'24!",
+        date: "08/02/2025",
+        time: null,
+        location: "Any seminar hall",
+        prizePool: "3k",
+        fee: 100,
+        image: solo_song,
+        contacts: [
+            { name: "Nayanthara M K", phone: "+91 9778756085" },
+            { name: "Adwaith", phone: "+91 9895703163" }
+        ],
+        category: "cultural",
+        registerLink: "https://tiqr.events/e/Solo-Song-Competition-734",
+        rules: `1. Duration of the event will be around 6 to 7 minutes.\n
+                2. Only Malayalam songs are allowed.\n
+                3. Fast beat songs/rap songs are not considered.\n
+                4. Live voice only, no pre-recorded voice allowed.\n
+                5. Participants must submit their soundtrack in MP3 format prior to the event.`
+    },
+    {
+        id: 3019,
+        name: "Poem Recitation (Malayalam)",
+        eventName: "കവിതാരവം",
+        description: "XPLORE'24 announces MALAYALAM POEM RECITATION COMPETITION.Join us to celebrate the Beauty of Words and the Power of Poetry.Showcase your poem recitation skills to us.",
+        date: "08/02/2025",
+        time: null,
+        location: "Any seminar hall",
+        prizePool: "2.5k",
+        fee: 100,
+        image: malayalam_recitation,
+        contacts: [
+            { name: "Punya", phone: "8547928336" },
+            { name: "Abhiram", phone: "9188307364" }
+        ],
+        category: "cultural",
+        registerLink: "https://tiqr.events/e/MALAYALAM-POEM-RECITATION-737",
+        rules: `1. Duration of the event is 5 minutes.\n
+                2. Registration fee is 100.\n
+                3. Participants must start their recitation by saying the title of the poem and poet's name.\n
+                4. Participants may recite poetry written by a poet of their choice.\n
+                5. Participants are not allowed to refer to any notes or printed materials during the recitation.\n
+                6. Poems containing language that are offensive, hurtful to any caste, creed, religion, and community, or wholly inappropriate, will be rejected.\n
+                7. The decision of judges will be final.`
+    }
     
+
 ];
 
 
