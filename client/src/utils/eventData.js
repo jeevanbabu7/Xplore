@@ -417,7 +417,7 @@ export const culturalEventData = [
         id: 3006,
         name: "Debate Competition",
         description: "Showcase your wit, eloquence, and critical thinking as you take on compelling topics and challenge the best minds.",
-        date: "6 feb 2025",
+        date: "8 feb 2025",
         time: "9 AM - 4 PM",
         location: "Update soon..",
         prizePool: '3k',
