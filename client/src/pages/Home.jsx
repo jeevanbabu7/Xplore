@@ -7,6 +7,7 @@ import Workshops from "./Workshops";
 import ContactPage from "./Contact";
 import { ReactLenis } from "@studio-freight/react-lenis";
 import { VelocityScroll } from "../components/ui/scroll-based-velocity";
+import Loading from "../components/Loading";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -18,6 +19,11 @@ const Home = () => {
     smooth: true,
   };
 
+
+  const [loading, setLoading] = React.useState(true);
+  setTimeout(() => {
+    setLoading(false);
+  }, 2000);
   return (
     <div className="h-screen" id="home">
       {/* Don't render the navbar here */}
@@ -51,6 +57,9 @@ const Home = () => {
           </div>
         </ReactLenis>
       </section>
+      {loading && (
+        <Loading />
+      )}
     </div>
   );
 };

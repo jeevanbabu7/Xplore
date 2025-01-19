@@ -6,7 +6,7 @@ const CulturalCard = ({eventDetails}) => {
     const {name, description, date, time, location, prizePool, fee, image, contacts, rules, registerLink} = eventDetails;
     const [modalOpen, setModalOpen] = useState(false);
   return (
-    <div class="max-w-sm bg-slate-200 border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 w-72 h-[40rem] flex flex-col">
+    <div class=" bg-slate-200 border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 w-72 h-[42rem] flex flex-col">
         <a href="#" className='flex-shrink-0 flex-0'>
             <img class="rounded-t-lg h-64 w-full" loading='lazy' src={image} alt="" />
         </a>
@@ -18,9 +18,11 @@ const CulturalCard = ({eventDetails}) => {
                 <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{description}</p>
             </div>
             <div className='flex flex-col gap-4'>
-                <RainbowButton className='w-full' onClick={() => {
-                    window.open(registerLink, "_blank")
-                }}>Register</RainbowButton>
+                {registerLink && (
+                    <RainbowButton className='w-full' onClick={() => {
+                        window.open(registerLink, "_blank")
+                    }}>Register</RainbowButton>    
+                )}
                 <ShinyButton className='w-full' onClick={() => setModalOpen(true)}>Details</ShinyButton>
             </div>
 
@@ -39,14 +41,24 @@ const CulturalCard = ({eventDetails}) => {
                     )}
 
                     <div className="mt-4 text-left flex flex-col gap-3">
-                        <div>
-                            <h3 className="text-base font-semibold">Date</h3>
-                            <p className="text-sm ">{date}</p>
-                        </div>
-                        <div>
-                            <h3 className="text-base font-semibold">Time</h3>
-                            <p className="text-sm">{time}</p>
-                        </div>
+                        {date && (
+                            <div>
+                                <h3 className="text-base font-semibold">Date</h3>
+                                <p className="text-sm ">{date}</p>
+                            </div>
+                        )}
+                        {time && (
+                            <div>
+                                <h3 className="text-base font-semibold">Time</h3>
+                                <p className="text-sm ">{time}</p>
+                            </div>
+                        )}
+                        {location && (
+                            <div>
+                                <h3 className="text-base font-semibold">Location</h3>
+                                <p className="text-sm ">{location}</p>
+                            </div>
+                        )}
                         {fee && (
                             <div>
                                 <h3 className="text-base font-semibold">Fee</h3>
