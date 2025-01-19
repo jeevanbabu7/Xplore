@@ -12,8 +12,8 @@ const Card = ({event}) => {
 
 
       <div className=" rounded-b-none lg:rounded-b-none lg:rounded-r pl-4 flex flex-col justify-between leading-normal w-72 gap-0">
-        <div className="mb-1">
-          <p className="text-white font-roadRage text-3xl">
+        <div className="mb-1 font-roadRage">
+          <p className="text-white  text-3xl">
             {name}
           </p>
         </div>
