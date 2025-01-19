@@ -1,6 +1,6 @@
-import FEJO from '../assets/images/Proshow/FEJO.jpg';
-import miles from '../assets/images/Proshow/miles.jpg';
-import sunburn from '../assets/images/Proshow/sunburn.jpg';
+import FEJO from '../assets/images/Proshow/FEJO.webp';
+import miles from '../assets/images/Proshow/miles.webp';
+import sunburn from '../assets/images/Proshow/sunburn.webp';
 export const proshowEvents = [
     {
         id: 4000,
