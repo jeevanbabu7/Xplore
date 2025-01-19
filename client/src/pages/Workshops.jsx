@@ -35,13 +35,13 @@ const Workshops = () => {
           background:
             "linear-gradient(45deg, rgba(75,0,130,0.6) 0%, rgba(0,0,0,1) 90%)",
         }}
-        className="w-full min-h-[75vh] md:min-h-[80vh] flex flex-wrap justify-center items-start gap-8 p-8 md:gap-16 md:px-16 lg:px-32"
+        className="w-full min-h-[75vh] md:min-h-[80vh] flex sm:flex-col md:flex-row flex-wrap justify-center sm:items-center sm:align-middle items-start gap-8 md:gap-16 md:px-16 lg:px-32 p-8"
       >
         {workshopData.map((event, index) => (
           <motion.div
             key={index}
-            className="w-full md:w-1/3 lg:w-1/4 flex-shrink-0 transform transition duration-300 hover:scale-105 hover:shadow-xl"
-            custom={index} 
+            className="w-full md:w-1/3 lg:w-1/4 flex-shrink-0 transform transition duration-300 hover:scale-105 hover:shadow-xl flex justify-center items-center"
+            custom={index}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.2 }}
@@ -51,6 +51,7 @@ const Workshops = () => {
           </motion.div>
         ))}
       </div>
+
     </>
   );
 };
