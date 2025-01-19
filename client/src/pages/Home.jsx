@@ -22,7 +22,7 @@ const Home = () => {
     <div className="h-screen" id="home">
       {/* Don't render the navbar here */}
       <ParallaxLayer />
-      <section className="z-50 ">
+      <section className="z-50 mt-32 md:mt-0">
         <ReactLenis root options={lenisOptions}>
           <div
             id="about"
