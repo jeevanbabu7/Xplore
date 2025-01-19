@@ -37,12 +37,12 @@ import solid_website from '../assets/images/workshops/solid_website.png'
 import solid from '../assets/images/workshops/solid _details.png'
 
 // cultural events
-import debate from '../assets/images/cultural/debate.jpg'
-import mimicry from '../assets/images/cultural/mimicry.jpg'
-import monoact from '../assets/images/cultural/monoact.jpg'
-import magic from '../assets/images/cultural/magic.jpg'
-import kalari from '../assets/images/cultural/kalari.jpg'
-import anchoring from '../assets/images/cultural/anchoring.jpg'
+import debate from '../assets/images/cultural/debate.webp'
+import mimicry from '../assets/images/cultural/mimicry.webp'
+import monoact from '../assets/images/cultural/monoact.webp'
+import magic from '../assets/images/cultural/magic.webp'
+import kalari from '../assets/images/cultural/kalari.webp'
+import anchoring from '../assets/images/cultural/anchoring.webp'
 
 export const eventData = [
     {   
