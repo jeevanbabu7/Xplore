@@ -334,7 +334,7 @@ export const culturalEventData = [
         id: 3002,
         name: "Anchoring Competition ",
         description: "Step into the spotlight and showcase your charm, confidence, and spontaneity in the ultimate anchoring challenge! 🎙 Grab the mic, engage the audience, and keep the energy alive with your unique hosting style.",
-        date: "6 feb 2025",
+        date: "7 feb 2025",
         time: "9 AM - 4 PM",
         location: "Update soon..",
         prizePool: '3k',
