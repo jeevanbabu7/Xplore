@@ -46,6 +46,8 @@ import anchoring from '../assets/images/cultural/anchoring.webp'
 import mehandi from '../assets/images/cultural/mehandi.webp'
 import face_painting from '../assets/images/cultural/face_painting.webp'
 import spot_photography from '../assets/images/cultural/spot_photography.webp'
+import pottery from '../assets/images/cultural/pottery.webp'
+import art_exhibition from '../assets/images/cultural/art_exhibition.webp'
 
 export const eventData = [
     {   
@@ -311,7 +313,7 @@ export const culturalEventData = [
     {
         id: 3001,
         name: "Monoact Competition",
-        description: "Unleash your acting brilliance in the Monoact Competition. Step onto the stage and captivate the audience with your expressions, voice, and creativity. This is your moment to bring characters to life, convey emotions, and narrate powerful stories—all by yourself",
+        description: "Unleash your acting brilliance in the Monoact Competition. Step onto the stage and captivate the audience with your expressions, voice, and creativity.",
         date: "6 February 2025",
         time: "9 AM - 4 PM",
         location: "Update soon..",
@@ -511,6 +513,34 @@ export const culturalEventData = [
 `,
         category: "cultural",
         registerLink: "https://tiqr.events/e/Spot-Photography-731"
+    },
+    {
+        id: 3010,
+        name: "POTTERY WORKSHOP",
+        description: "Join us for a POTTERY WORKSHOP  at XPLORE’24!  Experience the joy of working with clay in a fun, hands-on session for all skill levels.",
+        date: "8th feb 2025",
+        time: "9 AM - 4 PM",
+        location: "Update soon..",
+        prizePool: null,
+        fee: null, 
+        image: pottery,
+        contacts: [],
+        category: "cultural",
+        registerLink: "https://tiqr.events/e/Pottery-Workshop-730"
+    },
+    {
+        id: 3011,
+        name: "Art in Motion",
+        description: "Join the Celebration and sparkle  with art, inspiration, and connections.Immerse Yourself in Local Artistry Experience an eclectic mix of paintings, sculptures, photography, and more by talented local artists.",
+        date: null ,
+        time: null ,
+        location: "Update soon..",
+        prizePool: null,
+        fee: null, 
+        image: art_exhibition,
+        contacts: [],
+        category: "cultural",
+        registerLink: null
     },
     
 ];

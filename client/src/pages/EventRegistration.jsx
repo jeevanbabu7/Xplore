@@ -8,7 +8,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 const EventRegistration = () => {
   const {category} = useParams();
   const [filter, setFilter] = useState(category || 'all');
-  
+  const [loading, setLoading] = useState(true);
 
   const filteredContent = useMemo(() => {
     window.history.pushState(null, '', `/event-registration/${filter}`);

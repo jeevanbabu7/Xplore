@@ -5,10 +5,12 @@ import eventBanner from "../assets/images/event-banner.png";
 import Event from "../components/Event";
 import { eventData, culturalEventData } from "../utils/eventData.js";
 import CulturalCard from "../components/CulturalCard.jsx";
+import Loading from "../components/Loading.jsx";
 
 const Events = () => {
   const [eventType, setEventType] = useState("technical");
   const [filteredEvents, setFilteredEvents] = useState(eventData);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     setFilteredEvents(eventType === "cultural" ? culturalEventData : eventData);
@@ -73,6 +75,10 @@ const Events = () => {
           onClick={() => {
             setFilteredEvents(culturalEventData);
             setEventType("cultural");
+            setLoading(true);
+            setTimeout(() => {
+              setLoading(false);
+            }, 3000);
           }}
         >
           Cultural Events
@@ -95,6 +101,7 @@ const Events = () => {
           </motion.div>
         ))}
       </div>
+      {loading && <Loading />}
     </div>
   );
 };
