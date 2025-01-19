@@ -129,7 +129,7 @@ const Navbar = () => {
         </a> */}
         
         <img src='./REGISTER_NOW_header.png' className="w-32" onClick={() => {
-          navigate("/events")
+          navigate("/event-registration/all");
           setIsNavOpen(false);
         }}/>
             </div>
