@@ -80,11 +80,11 @@ const Events = () => {
       </div>
 
       {/* Event List */}
-      <div className="w-full min-h-screen flex flex-wrap justify-center gap-8 p-8 md:gap-16 md:px-16 lg:px-32">
+      <div className="w-full min-h-screen flex flex-wrap sm:flex-col md:flex-row sm:items-center md:items-start justify-center gap-8 p-8 md:gap-16 md:px-16 lg:px-32">
         {filteredEvents.map((event, index) => (
           <motion.div
             key={event.id}
-            className="w-full md:w-1/3 lg:w-1/4 flex-shrink-0"
+            className="w-full md:w-1/3 lg:w-1/4 flex-shrink-0 flex justify-center items-center"
             custom={index}
             initial="hidden"
             whileInView="visible"
