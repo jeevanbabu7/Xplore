@@ -1,5 +1,7 @@
 import React from "react";
 import { FaTwitter, FaDiscord, FaLinkedin } from 'react-icons/fa';
+import SocialIcons from "../components/SocialIcons";
+import { ToastContainer, toast } from "react-toastify";
 
 const GetDirections = () => {
   return (
@@ -56,20 +58,11 @@ const GetDirections = () => {
       </div>
 
       {/* Social Media Links */}
-      <div className="flex justify-center mt-auto w-full">
-        <a href="#" className="text-white hover:text-gray-400 mx-2 text-xl sm:text-xl md:text-2xl">
-          <FaTwitter />
-        </a>
-        <a href="#" className="text-white hover:text-gray-400 mx-2 text-xl sm:text-xl md:text-2xl">
-          <FaDiscord />
-        </a>
-        <a href="#" className="text-white hover:text-gray-400 mx-2 text-xl sm:text-xl md:text-2xl">
-          <FaLinkedin />
-        </a>
-      </div>
+      <SocialIcons />
+      <ToastContainer />
 
       {/* Footer */}
-      <footer className="text-center py-4 w-full bg-black text-gray-400">
+      <footer className="text-center w-full bg-black text-gray-400">
         <p className="text-sm sm:text-sm md:text-base">&copy; 2024 Tech Fest. All Rights Reserved.</p>
       </footer>
     </div>
