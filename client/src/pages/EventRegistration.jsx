@@ -3,10 +3,12 @@ import { AllEvents } from '../utils/events';
 import { IoIosClose } from "react-icons/io";
 import Event from '../components/Event';
 import CulturalCard from '../components/CulturalCard';
+import { useParams } from 'react-router-dom';
 
 const EventRegistration = () => {
-  const [filter, setFilter] = useState('all');
-
+  const {category} = useParams();
+  const [filter, setFilter] = useState(category || 'all');
+  
   const filteredContent = useMemo(() => {
     if (filter === 'all') {
       return AllEvents;

@@ -18,7 +18,8 @@ const AppRoutes = () => (
       <Route element={<Navbar />}>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/events" element={<EventRegistration />} />
+        <Route path="/events" element={<Events />} />
+        <Route path="/event-registration/:category" element={<EventRegistration />} />
         <Route path="/:type/:eventId" element={<Details />} />
         <Route path="/workshops" element={<Workshops />} />
         <Route path="/contact-us" element={<ContactPage/>} /> 
