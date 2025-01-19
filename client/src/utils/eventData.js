@@ -43,6 +43,9 @@ import monoact from '../assets/images/cultural/monoact.webp'
 import magic from '../assets/images/cultural/magic.webp'
 import kalari from '../assets/images/cultural/kalari.webp'
 import anchoring from '../assets/images/cultural/anchoring.webp'
+import mehandi from '../assets/images/cultural/mehandi.webp'
+import face_painting from '../assets/images/cultural/face_painting.webp'
+import spot_photography from '../assets/images/cultural/spot_photography.webp'
 
 export const eventData = [
     {   
@@ -436,6 +439,78 @@ export const culturalEventData = [
                 `,
         category: "cultural",
         registerLink: "https://tiqr.events/e/Debate-Competition-721"
+    },
+    {
+        id: 3007,
+        name: "Mehandi Competition",
+        description: "Step into the world of henna artistry and showcase your talent with intricate, mesmerizing designs. Blend tradition with creativity and let your art speak for itself",
+        date: "7th February 2025",
+        time: "9 AM - 4 PM",
+        location: "Update soon..",
+        prizePool: '2.5k',
+        fee: 100, 
+        image: mehandi,
+        contacts: [{name: 'Sandwana', phone: '+91 8113889870'}, {name: 'Afra', phone: '+91 6238 769860'}],
+        rules: `1. On-the-spot registrations are permitted.\n
+                2. Registration fee is 100.\n
+                3. Stickers, pens, and tattoos are not allowed.\n
+                4. Participants can apply mehendi on their own hand or someone else's hand.\n
+                5. No reference material will be allowed once the competition has begun.\n
+                6. Mehendi designs must be created on one hand, extending up to the elbow.\n
+                7. The time limit is 60 minutes and will be strictly adhered to.\n
+                8. Participants who are late will not be given extra time.\n
+                9. This is a single-round event. Designs will be judged based on neatness, creativity, originality, and intricacy.\n
+                10. The judge's decision will be final and binding.\n
+                11. All required materials will be provided at the venue.
+
+                `,
+        category: "cultural",
+        registerLink: "https://tiqr.events/e/Mehandi-Competition-729"
+    },
+    {
+        id: 3008,
+        name: "FACE PAINTING",
+        description: "XPLORE'24 is hosting a face painting competition encouraging participants to enhance their creativity and abilities.",
+        date: "6 feb 2025",
+        time: "9 AM - 4 PM",
+        location: "Update soon..",
+        prizePool: '3k',
+        fee: 70, 
+        image: face_painting,
+        contacts: [{name: 'Devika', phone: '+91 8848742789'}, {name: 'Afra', phone: '+91 9544918811'}],
+        rules: `1. The registration fee is 70.\n
+                2. It's a theme-based face painting competition.\n
+                3. A team can consist of 2 members.\n
+                4. Paints will be provided by the organizers at the time of the event.\n
+                5. Brushes have to be brought by the participants.\n
+                6. Time duration will be 60 minutes.\n
+                7. The theme will be given on the spot.`,
+        category: "cultural",
+        registerLink: "https://tiqr.events/e/Face-Painting-Competition-728"
+    },
+    {
+        id: 3009,
+        name: "SPOT PHOTOGRAPHY",
+        description: "Get ready for the ultimate photography challenge at Xplore'24! Showcase your creativity, composition, and talent behind the lens.",
+        date: "8th feb 2025",
+        time: "9 AM - 4 PM",
+        location: "Update soon..",
+        prizePool: '1.5k',
+        fee: 50, 
+        image: spot_photography,
+        contacts: [{name: 'Drishya ', phone: '+91 7907118594'}, {name: 'Shivani', phone: '+91 9995788316'}],
+        rules: `1. Format: Images must be in high-resolution JPEG/PNG format.\n
+                2. Editing: State the allowed level of editing (e.g., minor adjustments or no heavy manipulation).\n
+                3. Originality: Submissions must be the participant's original work, not plagiarized or previously published.\n
+                4. Photos should be taken on 8th February 2024.\n\n
+
+                Judging Criteria -\n
+                1. Relevance: Adherence to the competition theme.\n
+                2. Creativity: Uniqueness and originality of the photograph.\n
+                3. Technical Quality: Focus, exposure, composition, etc.
+`,
+        category: "cultural",
+        registerLink: "https://tiqr.events/e/Spot-Photography-731"
     },
     
 ];
