@@ -6,24 +6,32 @@ import Event from "../components/Event"
 import { eventData, culturalEventData, preEventData } from "../utils/eventData.js"
 import CulturalCard from "../components/CulturalCard.jsx"
 import Loading from "../components/Loading.jsx"
+import { useParams } from "react-router-dom"
 
 const Events = () => {
-  const [eventType, setEventType] = useState("technical")
   const [filteredEvents, setFilteredEvents] = useState(eventData)
   const [loading, setLoading] = useState(false)
-
+  const {category} = useParams();
+  const [eventType, setEventType] = useState(category)
   useEffect(() => {
     switch (eventType) {
       case "cultural":
         setFilteredEvents(culturalEventData)
         break
-      case "pre-events":
+      case "pre-event":
         setFilteredEvents(preEventData)
         break
       default:
         setFilteredEvents(eventData)
     }
   }, [eventType])
+
+  useEffect(() => {
+    if(window.location.pathname === '/events') {
+      window.history.pushState(null, '', `/events/${category}`);
+    }
+    }, [category, eventType])
+    
 
   const bannerAnimation = useSpring({
     from: { opacity: 0, transform: "scale(0.9)" },
@@ -78,7 +86,7 @@ const Events = () => {
               ? "bg-gradient-to-r from-red-600 to-red-800 shadow-lg"
               : "bg-gradient-to-r from-gray-700 to-gray-900 opacity-75 hover:opacity-100"
           }`}
-          onClick={() => handleButtonClick("pre-events")}
+          onClick={() => handleButtonClick("pre-event")}
         >
           Pre-Events
         </button>
@@ -116,8 +124,8 @@ const Events = () => {
             viewport={{ once: true, amount: 0.2 }}
             variants={cardVariants}
           >
-            {eventType === "cultural" ? (
-              <CulturalCard eventDetails={{ ...event, contacts: event.contacts || [] }} />
+            {(eventType === "cultural" || eventType == "pre-event")? (
+              <CulturalCard eventDetails={event} />
             ) : (
               <Event eventDetails={event} type={eventType} />
             )}

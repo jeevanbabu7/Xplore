@@ -70,25 +70,41 @@ import vistora from '../assets/images/cultural/dance/vistora.webp'
 import breaknbeat from '../assets/images/cultural/dance/breaknbeat.webp'
 
 export const eventData = [
-    {   
+    {
         id: 1001,
         name: "AR VR Expo",
+        eventName: null,
+        tagline: null,
         description: "Augmented Reality and Virtual Reality Expo",
         date: "2022-06-01",
+        fdate: null,
         time: "10:00",
         location: "CCF",
+        prizePool: null,
+        fee: null,
         image: event1,
-        category: "event"
+        contacts: [],
+        category: "event",
+        registerLink: null,
+        rules: null
     },
     {
         id: 1002,
         name: "AR VR Expo",
+        eventName: null,
+        tagline: null,
         description: "Augmented Reality and Virtual Reality Expo",
         date: "2022-06-01",
+        fdate: null,
         time: "10:00",
         location: "CCF",
+        prizePool: null,
+        fee: null,
         image: event1,
-        category: "event"
+        contacts: [],
+        category: "event",
+        registerLink: null,
+        rules: null
     }
 ];
 
@@ -778,7 +794,7 @@ export const culturalEventData = [
             { name: "Muhsina", phone: "9495347917" }
         ],
         category: "cultural",
-        registerLink: null,
+        registerLink: "https://tiqr.events/e/Dance-Competition-742",
         rules: `1. Each team should comprise a minimum of 6 members.\n
                 2. Open to all above 16 years.\n
                 3. The time limit of each performance is 20 minutes (including stage setting). Negative marking for exceeding the time limit.\n
@@ -927,7 +943,7 @@ export const culturalEventData = [
             { name: "Nayanthara", phone: "9778756085" }
         ],
         category: "cultural",
-        registerLink: "https://tiqr.events/e/Dance-Competition-742",
+        registerLink: "https://tiqr.events/e/DUET-DANCE-COMPETITION-746",
         rules: `1. Open only to students of our college.\n
                 2. Registration fee is 200 per team.\n
                 3. Team size: 2 participants (any gender combination).\n
@@ -956,7 +972,7 @@ export const culturalEventData = [
             { name: "Shivani", phone: "+91 99957 88316" }
         ],
         category: "cultural",
-        registerLink: null,
+        registerLink: "https://tiqr.events/e/Dance-Workshop-747",
         rules: null
     }
     
@@ -964,26 +980,42 @@ export const culturalEventData = [
 ];
 
 export const preEventData = [
-    // {
-    //   id: 2001,
-    //   name: "Coding Challenge",
-    //   description: "Test your coding skills in this pre-event challenge",
-    //   date: "2022-05-15",
-    //   time: "14:00",
-    //   location: "Online",
-    //   image: event1,
-    //   category: "pre-event",
-    // },
-    // {
-    //   id: 2002,
-    //   name: "Design Sprint",
-    //   description: "Participate in a rapid prototyping workshop",
-    //   date: "2022-05-20",
-    //   time: "09:00",
-    //   location: "Design Lab",
-    //   image: event1,
-    //   category: "pre-event",
-    // },
+    {
+        id: 2001,
+        name: "Coding Challenge",
+        eventName: null,
+        tagline: null,
+        description: "Test your coding skills in this pre-event challenge",
+        date: "2022-05-15",
+        fdate: null,
+        time: "14:00",
+        location: "Online",
+        prizePool: null,
+        fee: null,
+        image: event1,
+        contacts: [],
+        category: "pre-event",
+        registerLink: null,
+        rules: null
+    },    
+    {
+        id: 2002,
+        name: "Design Sprint",
+        eventName: null,
+        tagline: null,
+        description: "Participate in a rapid prototyping workshop",
+        date: "2022-05-20",
+        fdate: null,
+        time: "09:00",
+        location: "Design Lab",
+        prizePool: null,
+        fee: null,
+        image: event1,
+        contacts: [],
+        category: "pre-event",
+        registerLink: null,
+        rules: null
+    }    
   ];
 
 
