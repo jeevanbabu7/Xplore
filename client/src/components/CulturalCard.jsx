@@ -3,7 +3,10 @@ import { RainbowButton } from "./ui/rainbow-button.jsx";
 import { ShinyButton } from "./ui/shiny-button";
 import { FramerModal, ModalContent } from "./ui/Modal.jsx";
 const CulturalCard = ({eventDetails}) => {
+    
     const {name, description, date, time, location, prizePool, fee, image, contacts, rules, registerLink} = eventDetails;
+
+    
     const [modalOpen, setModalOpen] = useState(false);
   return (
     <div class=" bg-slate-200 border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 w-72 h-[42rem] flex flex-col">

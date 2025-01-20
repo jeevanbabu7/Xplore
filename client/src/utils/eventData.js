@@ -59,26 +59,52 @@ import guitar from '../assets/images/cultural/musical/guitar.webp'
 import light_music from '../assets/images/cultural/musical/light_music.webp'
 import malayalam_recitation from '../assets/images/cultural/musical/malayalam_recitation.webp'
 
+// dance 
+import dance_workshop  from '../assets/images/cultural/dance/dance_workshop.webp'
+import duet_dance from '../assets/images/cultural/dance/duet_dance.webp'
+import mime from '../assets/images/cultural/dance/mime.webp'
+import oppana from '../assets/images/cultural/dance/oppana.webp'
+import retro_dance from '../assets/images/cultural/dance/retro_dance.webp'
+import spot_dance from '../assets/images/cultural/dance/spot_dance.webp'
+import vistora from '../assets/images/cultural/dance/vistora.webp'
+import breaknbeat from '../assets/images/cultural/dance/breaknbeat.webp'
+
 export const eventData = [
-    {   
+    {
         id: 1001,
         name: "AR VR Expo",
+        eventName: null,
+        tagline: null,
         description: "Augmented Reality and Virtual Reality Expo",
         date: "2022-06-01",
+        fdate: null,
         time: "10:00",
         location: "CCF",
+        prizePool: null,
+        fee: null,
         image: event1,
-        category: "event"
+        contacts: [],
+        category: "event",
+        registerLink: null,
+        rules: null
     },
     {
         id: 1002,
         name: "AR VR Expo",
+        eventName: null,
+        tagline: null,
         description: "Augmented Reality and Virtual Reality Expo",
         date: "2022-06-01",
+        fdate: null,
         time: "10:00",
         location: "CCF",
+        prizePool: null,
+        fee: null,
         image: event1,
-        category: "event"
+        contacts: [],
+        category: "event",
+        registerLink: null,
+        rules: null
     }
 ];
 
@@ -720,32 +746,276 @@ export const culturalEventData = [
                 5. Participants are not allowed to refer to any notes or printed materials during the recitation.\n
                 6. Poems containing language that are offensive, hurtful to any caste, creed, religion, and community, or wholly inappropriate, will be rejected.\n
                 7. The decision of judges will be final.`
+    },
+    {
+        id: 3020,
+        name: "Fashion Show",
+        eventName: "VISTORA",
+        tagline: "The Fashion Gala",
+        description: "XPLORE'24 presents VISTORA, The Ultimate Fashion Gala.Join us for an unforgettable evening of fashion, beauty and entertainment at our upcoming fashion show",
+        date: "6/02/2025",
+        time: null,
+        location: "Main stage",
+        prizePool: "50k",
+        fee: 200,
+        image: vistora,
+        contacts: [
+            { name: "Arathi", phone: "7591929645" },
+            { name: "Samath", phone: "7306132850" }
+        ],
+        category: "cultural",
+        registerLink: "https://tiqr.events/e/Fashion-Parade-740",
+        rules: `1. Open theme.\n
+                2. A minimum of 6 and a maximum of 15 models per team are allowed.\n
+                3. Registration fee is 200 per head.\n
+                4. Background music and background video (if any) should be given prior to the event.\n
+                5. One participant cannot be part of two participating teams.\n
+                6. Time limit per team: 10 minutes empty to empty. An additional 1 minute, if required, will be provided for narration only.\n
+                7. Exceeding the time limit will lead to disqualification.\n
+                8. Explicit conveying of theme is prohibited.\n
+                9. Only registered members get certificates.\n
+                10. Makeup is not provided.\n
+                11. Indecent gestures and behaviour are not entertained and will lead to the disqualification of the team.`
+    },
+    {
+        id: 3021,
+        name: "Dance Competition",
+        eventName: "Break n Beat",
+        tagline: "",
+        description: "XPLORE'24 invites you to the ultimate dance competition. Step up, showcase your talent, and let your moves speak louder than words!",
+        date: "6/02/2025",
+        time: null,
+        location: "Main stage",
+        prizePool: "25k",
+        fee: 200,
+        image: breaknbeat,
+        contacts: [
+            { name: "Shivani", phone: "9995788316" },
+            { name: "Muhsina", phone: "9495347917" }
+        ],
+        category: "cultural",
+        registerLink: "https://tiqr.events/e/Dance-Competition-742",
+        rules: `1. Each team should comprise a minimum of 6 members.\n
+                2. Open to all above 16 years.\n
+                3. The time limit of each performance is 20 minutes (including stage setting). Negative marking for exceeding the time limit.\n
+                4. Choice of song is open to participants.\n
+                5. The participants are requested to bring their form in MP3 format.\n
+                6. No properties will be provided by the coordinators. Participants can carry their own props.\n
+                7. Dance performance should not convey any indecent gestures.\n
+                8. Green room would be given for changing purposes.\n
+                9. The participants will be judged on the basis of their rhythm, formation, synchronization, expression, costume, makeup, setup, and overall effects.\n
+                10. Decision of the judges will be final and binding.\n
+                11. Soundtrack should be handed over 30 mins prior to the event.\n
+                12. Fire, water, heavy objects, and indecent behavior or dressing can lead to disqualification.`
+    },
+    {
+        id: 3022,
+        name: "MIME",
+        eventName: "",
+        tagline: "",
+        description: "Join us for the MIME COMPETITION at XPLORE’24! Where participants will showcase their storytelling through silent, yet powerful performances.",
+        date: "06/02/2025",
+        time: null,
+        location: "Main auditorium",
+        prizePool: "9k",
+        fee: 1000,
+        image: mime,
+        contacts: [
+            { name: "Abhay", phone: "6282288256" },
+            { name: "Haritha", phone: "9605107278" }
+        ],
+        category: "cultural",
+        registerLink: "https://tiqr.events/e/MIME-Competition-744",
+        rules: `1. A team may consist of a minimum of 5 and maximum of 10 members (including pianist).\n
+                2. The registration fee is 1000 per team.\n
+                3. One member cannot be part of more than one participating team.\n
+                4. Time limit is 5 to 15 minutes including stage setting.\n
+                5. General rules of mime will be followed.\n
+                6. Use of instruments in the background is permitted.\n
+                7. Recordings are also allowed (to be submitted in MP3 or audio format) prior to the event.\n
+                8. Weightage will be given to theme and costume.\n
+                9. Judgement will be based on:\n
+                   - Energy\n
+                   - Theme\n
+                   - Synchronization\n
+                   - Definition and clarity\n
+                   - Expressions\n
+                   - Formations`
+    },
+    {
+        id: 3023,
+        name: "Oppana",
+        eventName: "",
+        tagline: "",
+        description: "Xplore '24 Presents: Oppana Showdow. Step into the spotlight and showcase your rhythm and energy in the ultimate Oppana challenge! With vibrant moves and powerful beats, this is your moment to shine",
+        date: "07/02/2025",
+        fdate: "7th February 2025",
+        time: null,
+        location: "Main auditorium",
+        prizePool: "15k",
+        fee: "100",
+        image: oppana,
+        contacts: [
+            { name: "Arathi", phone: "9048259633" },
+            { name: "Samath", phone: "7306132850" }
+        ],
+        category: "cultural",
+        registerLink: "https://tiqr.events/e/Oppana-Showdown-745",
+        rules: `1. The maximum number of participants is 12, including up to 3 external singers.\n
+                2. A registration fee of ₹100 per participant is required.\n
+                3. Recorded songs are not permitted for the performance.\n
+                4. The participating team is responsible for setting up and removing all props and sets immediately after their performance.\n
+                5. The time limit for stage setup is 3 minutes, and the performance time limit is 10 minutes.\n
+                6. Judgment will be based on rhythm, formation, expression, costumes, makeup, coordination, and overall effects.\n
+                7. For further guidelines, please contact the event coordinators.`
+    },
+    {
+        id: 3024,
+        name: "Retro Dance",
+        eventName: "Retrobeat",
+        tagline: "",
+        description: "Get ready to flashback to the funky era! Announcing the Retro Dance competition at Xplore'24! Showcase your best retro moves and compete for exciting prizes!",
+        date: "08/02/2025",
+        fdate: "8th February 2025",
+        time: null,
+        location: "Main auditorium",
+        prizePool: "15k",
+        fee: "150",
+        image: retro_dance,
+        contacts: [
+            { name: "Neha", phone: "9847799288" },
+            { name: "Shivani", phone: "9995788316" }
+        ],
+        category: "cultural",
+        registerLink: "https://tiqr.events/e/Retro-Dance-743",
+        rules: `1. Each team should comprise of a minimum of 6 members.\n
+                2. Registration fee is 150 per member.\n
+                3. Time limit is 20 minutes for each performance (including stage setting). Negative marking will be given for exceeding the time limit.\n
+                4. Choice of songs is open to the participants, but the song should be selected from the range between 1980 to 2010. If the song selected is out of this range, the team will be disqualified.\n
+                5. The participants are requested to bring their soundtrack in MP3 format and it should be submitted prior to the event to the coordinators.\n
+                6. The participants will be judged on the basis of their rhythm, formation, synchronization, expressions, costumes, makeup, and overall effects.\n
+                7. No properties will be provided by coordinators. Participants should bring their own properties.\n
+                8. Decision of the judges will be final.\n
+                9. The coordinators are not responsible for any issues related to USB/CO.`
+    },
+    {
+        id: 3025,
+        name: "Spot Choreography",
+        eventName: "Sync or Swim",
+        tagline: "",
+        description: "We are thrilled to announce the Spot Choreography performance at Xplore'24! This is a unique opportunity for dancers and choreographers to showcase their talent, creativity, and skills.",
+        date: "08/02/2025",
+        fdate: "8th February 2025",
+        time: null,
+        location: "Open Air Auditorium",
+        prizePool: "3k",
+        fee: "150",
+        image: spot_dance,
+        contacts: [
+            { name: "Shivani", phone: "9995788316" },
+            { name: "Nandana", phone: "9544918811" }
+        ],
+        category: "cultural",
+        registerLink: "https://tiqr.events/e/Spot-Choreography-741",
+        rules: `1. The event is open to all.\n
+                2. The registration fee is 150.\n
+                3. Classical dance is not permitted.\n
+                4. The maximum time allotted is 3 minutes. Three songs will be played (1 minute for each song).\n
+                5. The performance will be evaluated based on choreography, presentation, rhythm, and expression.\n
+                6. The decision of judges and coordinators will be final and binding.\n
+                7. Fire, water, heavy objects, and indecent behavior can lead to disqualification.`
+    },
+    {
+        id: 3026,
+        name: "Duet Dance Competition",
+        eventName: "Twist & Turn",
+        tagline: "Time to twist, time to turn!",
+        description: "XPLORE'24 presents Twist & Turn, where every move flows and every spin sparks creativity.",
+        date: "07/02/2025",
+        fdate: "7th February 2025",
+        time: null,
+        location: "Main Auditorium",
+        prizePool: "5k",
+        fee: "200",
+        image: duet_dance,
+        contacts: [
+            { name: "Vismaya", phone: "9188440511" },
+            { name: "Nayanthara", phone: "9778756085" }
+        ],
+        category: "cultural",
+        registerLink: "https://tiqr.events/e/DUET-DANCE-COMPETITION-746",
+        rules: `1. Open only to students of our college.\n
+                2. Registration fee is 200 per team.\n
+                3. Team size: 2 participants (any gender combination).\n
+                4. Any dance style is allowed.\n
+                5. Performance limit: 5 minutes.\n
+                6. Submit MP3 soundtrack via pen drive to the Stage/Sound coordinator prior to the event.\n
+                7. Hazardous items (fire, water, colors, oil, etc.) are banned.\n
+                8. Props are allowed if they are safe and non-damaging.\n
+                9. Judging criteria include creativity, synchronization, expressions, and overall impact.\n
+                10. Advance registration is mandatory, no last-minute entries.`
+    },
+    {
+        id: 3027,
+        name: "Dance Workshop",
+        eventName: null,
+        tagline: null,
+        description: "Unleash your moves and dive into the rhythm with Sarangi Shyam at our open style dance workshop, as a part of Xplore'24! Get ready to break free, express yourself, and dance like never before.",
+        date: "02/02/2025",
+        fdate: "2nd February 2025",
+        time: null,
+        location: "Will update through WhatsApp group",
+        prizePool: null,
+        fee: "150",
+        image: dance_workshop,
+        contacts: [
+            { name: "Shivani", phone: "+91 99957 88316" }
+        ],
+        category: "cultural",
+        registerLink: "https://tiqr.events/e/Dance-Workshop-747",
+        rules: null
     }
     
-
+    
 ];
 
 export const preEventData = [
-    // {
-    //   id: 2001,
-    //   name: "Coding Challenge",
-    //   description: "Test your coding skills in this pre-event challenge",
-    //   date: "2022-05-15",
-    //   time: "14:00",
-    //   location: "Online",
-    //   image: event1,
-    //   category: "pre-event",
-    // },
-    // {
-    //   id: 2002,
-    //   name: "Design Sprint",
-    //   description: "Participate in a rapid prototyping workshop",
-    //   date: "2022-05-20",
-    //   time: "09:00",
-    //   location: "Design Lab",
-    //   image: event1,
-    //   category: "pre-event",
-    // },
+    {
+        id: 2001,
+        name: "Coding Challenge",
+        eventName: null,
+        tagline: null,
+        description: "Test your coding skills in this pre-event challenge",
+        date: "2022-05-15",
+        fdate: null,
+        time: "14:00",
+        location: "Online",
+        prizePool: null,
+        fee: null,
+        image: event1,
+        contacts: [],
+        category: "pre-event",
+        registerLink: null,
+        rules: null
+    },    
+    {
+        id: 2002,
+        name: "Design Sprint",
+        eventName: null,
+        tagline: null,
+        description: "Participate in a rapid prototyping workshop",
+        date: "2022-05-20",
+        fdate: null,
+        time: "09:00",
+        location: "Design Lab",
+        prizePool: null,
+        fee: null,
+        image: event1,
+        contacts: [],
+        category: "pre-event",
+        registerLink: null,
+        rules: null
+    }    
   ];
 
 

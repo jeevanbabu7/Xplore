@@ -6,24 +6,32 @@ import Event from "../components/Event"
 import { eventData, culturalEventData, preEventData } from "../utils/eventData.js"
 import CulturalCard from "../components/CulturalCard.jsx"
 import Loading from "../components/Loading.jsx"
+import { useParams } from "react-router-dom"
 
 const Events = () => {
-  const [eventType, setEventType] = useState("technical")
   const [filteredEvents, setFilteredEvents] = useState(eventData)
   const [loading, setLoading] = useState(false)
-
+  const {category} = useParams();
+  const [eventType, setEventType] = useState(category)
   useEffect(() => {
     switch (eventType) {
       case "cultural":
         setFilteredEvents(culturalEventData)
         break
-      case "pre-events":
+      case "pre-event":
         setFilteredEvents(preEventData)
         break
       default:
         setFilteredEvents(eventData)
     }
   }, [eventType])
+
+  useEffect(() => {
+    if(window.location.pathname === '/events') {
+      window.history.pushState(null, '', `/events/${category}`);
+    }
+    }, [category, eventType])
+    
 
   const bannerAnimation = useSpring({
     from: { opacity: 0, transform: "scale(0.9)" },
@@ -71,39 +79,38 @@ const Events = () => {
       ></animated.section>
 
       {/* Event Type Buttons */}
-      <div className="flex flex-wrap justify-center gap-4 sm:gap-6 my-8 px-4">
-  <button
-    className={`px-4 sm:px-6 py-2 sm:py-3 text-sm sm:text-base rounded-full text-white font-bold transition-all duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white ${
-      eventType === "pre-events"
-        ? "bg-gradient-to-r from-red-600 to-red-800 shadow-lg"
-        : "bg-gradient-to-r from-gray-700 to-gray-900 opacity-75 hover:opacity-100"
-    }`}
-    onClick={() => handleButtonClick("pre-events")}
-  >
-    Pre-Events
-  </button>
-  <button
-    className={`px-4 sm:px-6 py-2 sm:py-3 text-sm sm:text-base rounded-full text-white font-bold transition-all duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white ${
-      eventType === "technical"
-        ? "bg-gradient-to-r from-red-600 to-red-800 shadow-lg"
-        : "bg-gradient-to-r from-gray-700 to-gray-900 opacity-75 hover:opacity-100"
-    }`}
-    onClick={() => handleButtonClick("technical")}
-  >
-    Technical Events
-  </button>
-  <button
-    className={`px-4 sm:px-6 py-2 sm:py-3 text-sm sm:text-base rounded-full text-white font-bold transition-all duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white ${
-      eventType === "cultural"
-        ? "bg-gradient-to-r from-red-600 to-red-800 shadow-lg"
-        : "bg-gradient-to-r from-gray-700 to-gray-900 opacity-75 hover:opacity-100"
-    }`}
-    onClick={() => handleButtonClick("cultural")}
-  >
-    Cultural Events
-  </button>
-</div>
-
+      <div className="flex flex-wrap justify-center space-x-4 sm:space-x-8 my-8 px-4">
+        <button
+          className={`px-6 py-3 rounded-full text-white font-bold transition-all duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white ${
+            eventType === "pre-events"
+              ? "bg-gradient-to-r from-red-600 to-red-800 shadow-lg"
+              : "bg-gradient-to-r from-gray-700 to-gray-900 opacity-75 hover:opacity-100"
+          }`}
+          onClick={() => handleButtonClick("pre-event")}
+        >
+          Pre-Events
+        </button>
+        <button
+          className={`px-6 py-3 rounded-full text-white font-bold transition-all duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white ${
+            eventType === "technical"
+              ? "bg-gradient-to-r from-red-600 to-red-800 shadow-lg"
+              : "bg-gradient-to-r from-gray-700 to-gray-900 opacity-75 hover:opacity-100"
+          }`}
+          onClick={() => handleButtonClick("technical")}
+        >
+          Technical Events
+        </button>
+        <button
+          className={`px-6 py-3 rounded-full text-white font-bold transition-all duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white ${
+            eventType === "cultural"
+              ? "bg-gradient-to-r from-red-600 to-red-800 shadow-lg"
+              : "bg-gradient-to-r from-gray-700 to-gray-900 opacity-75 hover:opacity-100"
+          }`}
+          onClick={() => handleButtonClick("cultural")}
+        >
+          Cultural Events
+        </button>
+      </div>
 
       {/* Event List */}
       <div className="w-full min-h-screen flex flex-wrap sm:flex-col md:flex-row sm:items-center md:items-start justify-center gap-8 p-8 md:gap-16 md:px-16 lg:px-32">
@@ -117,8 +124,8 @@ const Events = () => {
             viewport={{ once: true, amount: 0.2 }}
             variants={cardVariants}
           >
-            {eventType === "cultural" ? (
-              <CulturalCard eventDetails={{ ...event, contacts: event.contacts || [] }} />
+            {(eventType === "cultural" || eventType == "pre-event")? (
+              <CulturalCard eventDetails={event} />
             ) : (
               <Event eventDetails={event} type={eventType} />
             )}
