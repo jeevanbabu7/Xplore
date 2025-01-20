@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { RainbowButton } from "./ui/rainbow-button.jsx";
 import { ShinyButton } from "./ui/shiny-button";
 import { FramerModal, ModalContent } from "./ui/Modal.jsx";
@@ -8,6 +8,13 @@ const CulturalCard = ({eventDetails}) => {
 
     
     const [modalOpen, setModalOpen] = useState(false);
+    useEffect(() => {
+        if (modalOpen) {
+          document.body.style.overflow = "hidden";
+        } else {
+          document.body.style.overflow = "auto";
+        }
+      }, [modalOpen]);
   return (
     <div class=" bg-slate-200 border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 w-72 h-[42rem] flex flex-col">
         <a href="#" className='flex-shrink-0 flex-0'>
@@ -31,7 +38,7 @@ const CulturalCard = ({eventDetails}) => {
 
             <FramerModal open={modalOpen} setOpen={setModalOpen}>
                 <ModalContent>
-                    <div className="flex flex-col space-y-3 text-center sm:text-left h-[70vh] overflow-y-auto">
+                    <div className="flex flex-col space-y-3 text-center sm:text-left h-[70vh] overflow-y-auto overscroll-contain">
                     {rules && (
                         <>
                             <h2 className="text-lg font-semibold leading-none tracking-tight">Guidelines</h2>
