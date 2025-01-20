@@ -1,26 +1,35 @@
-import React, { useState, useEffect } from "react";
-import { useSpring, animated } from "@react-spring/web";
-import { motion } from "framer-motion";
-import eventBanner from "../assets/images/event-banner.png";
-import Event from "../components/Event";
-import { eventData, culturalEventData } from "../utils/eventData.js";
-import CulturalCard from "../components/CulturalCard.jsx";
-import Loading from "../components/Loading.jsx";
+import React, { useState, useEffect } from "react"
+import { useSpring, animated } from "@react-spring/web"
+import { motion } from "framer-motion"
+import eventBanner from "../assets/images/event-banner.png"
+import Event from "../components/Event"
+import { eventData, culturalEventData, preEventData } from "../utils/eventData.js"
+import CulturalCard from "../components/CulturalCard.jsx"
+import Loading from "../components/Loading.jsx"
 
 const Events = () => {
-  const [eventType, setEventType] = useState("technical");
-  const [filteredEvents, setFilteredEvents] = useState(eventData);
-  const [loading, setLoading] = useState(false);
+  const [eventType, setEventType] = useState("technical")
+  const [filteredEvents, setFilteredEvents] = useState(eventData)
+  const [loading, setLoading] = useState(false)
 
   useEffect(() => {
-    setFilteredEvents(eventType === "cultural" ? culturalEventData : eventData);
-  }, [eventType]);
+    switch (eventType) {
+      case "cultural":
+        setFilteredEvents(culturalEventData)
+        break
+      case "pre-events":
+        setFilteredEvents(preEventData)
+        break
+      default:
+        setFilteredEvents(eventData)
+    }
+  }, [eventType])
 
   const bannerAnimation = useSpring({
     from: { opacity: 0, transform: "scale(0.9)" },
     to: { opacity: 1, transform: "scale(1)" },
     config: { tension: 100, friction: 20 },
-  });
+  })
 
   const cardVariants = {
     hidden: { opacity: 0, y: 50 },
@@ -33,9 +42,20 @@ const Events = () => {
         ease: "easeInOut",
       },
     }),
-  };
+  }
 
-  const gradientBackground = "linear-gradient(159deg, rgba(253,1,48,1) 0%, rgba(200,1,38,1) 0%, rgba(173,1,33,1) 0%, rgba(160,1,31,1) 0%, rgba(149,1,29,1) 0%, rgba(141,1,27,1) 0%, rgba(126,1,24,1) 0%, rgba(89,0,17,1) 0%, rgba(140,1,27,1) 0%, rgba(62,1,12,1) 0%, rgba(90,1,18,1) 0%, rgba(90,1,18,1) 0%, rgba(91,1,18,1) 0%, rgba(71,1,14,1) 21%, rgba(36,0,7,1) 36%, rgba(0,0,0,1) 55%, rgba(0,0,0,1) 91%)";
+  const gradientBackground =
+    "linear-gradient(159deg, rgba(253,1,48,1) 0%, rgba(200,1,38,1) 0%, rgba(173,1,33,1) 0%, rgba(160,1,31,1) 0%, rgba(149,1,29,1) 0%, rgba(141,1,27,1) 0%, rgba(126,1,24,1) 0%, rgba(89,0,17,1) 0%, rgba(140,1,27,1) 0%, rgba(62,1,12,1) 0%, rgba(90,1,18,1) 0%, rgba(90,1,18,1) 0%, rgba(91,1,18,1) 0%, rgba(71,1,14,1) 21%, rgba(36,0,7,1) 36%, rgba(0,0,0,1) 55%, rgba(0,0,0,1) 91%)"
+
+  const handleButtonClick = (type) => {
+    setEventType(type)
+    if (type === "cultural") {
+      setLoading(true)
+      setTimeout(() => {
+        setLoading(false)
+      }, 3000)
+    }
+  }
 
   return (
     <div style={{ background: gradientBackground }}>
@@ -45,41 +65,40 @@ const Events = () => {
         style={{
           ...bannerAnimation,
           backgroundImage: `url(${eventBanner})`,
-          boxShadow: "0px 8px 20px rgba(0, 0, 0, 0.5)", // Deeper and larger shadow
-          borderBottom: "5px solid rgba(0, 0, 0, 0.2)",  // Optional bottom border
+          boxShadow: "0px 8px 20px rgba(0, 0, 0, 0.5)",
+          borderBottom: "5px solid rgba(0, 0, 0, 0.2)",
         }}
       ></animated.section>
 
-
       {/* Event Type Buttons */}
-      <div className="flex justify-center space-x-8 my-8 px-4">
+      <div className="flex flex-wrap justify-center space-x-4 sm:space-x-8 my-8 px-4">
         <button
           className={`px-6 py-3 rounded-full text-white font-bold transition-all duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white ${
-            eventType === "technical" 
-              ? "bg-gradient-to-r from-red-600 to-red-800 shadow-lg" 
+            eventType === "pre-events"
+              ? "bg-gradient-to-r from-red-600 to-red-800 shadow-lg"
               : "bg-gradient-to-r from-gray-700 to-gray-900 opacity-75 hover:opacity-100"
           }`}
-          onClick={() => {
-            setFilteredEvents(eventData);
-            setEventType("technical");
-          }}
+          onClick={() => handleButtonClick("pre-events")}
+        >
+          Pre-Events
+        </button>
+        <button
+          className={`px-6 py-3 rounded-full text-white font-bold transition-all duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white ${
+            eventType === "technical"
+              ? "bg-gradient-to-r from-red-600 to-red-800 shadow-lg"
+              : "bg-gradient-to-r from-gray-700 to-gray-900 opacity-75 hover:opacity-100"
+          }`}
+          onClick={() => handleButtonClick("technical")}
         >
           Technical Events
         </button>
         <button
           className={`px-6 py-3 rounded-full text-white font-bold transition-all duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white ${
-            eventType === "cultural" 
-              ? "bg-gradient-to-r from-red-600 to-red-800 shadow-lg" 
+            eventType === "cultural"
+              ? "bg-gradient-to-r from-red-600 to-red-800 shadow-lg"
               : "bg-gradient-to-r from-gray-700 to-gray-900 opacity-75 hover:opacity-100"
           }`}
-          onClick={() => {
-            setFilteredEvents(culturalEventData);
-            setEventType("cultural");
-            setLoading(true);
-            setTimeout(() => {
-              setLoading(false);
-            }, 3000);
-          }}
+          onClick={() => handleButtonClick("cultural")}
         >
           Cultural Events
         </button>
@@ -97,14 +116,18 @@ const Events = () => {
             viewport={{ once: true, amount: 0.2 }}
             variants={cardVariants}
           >
-            {(eventType === "cultural" ? (<CulturalCard eventDetails={event}/>): <Event eventDetails={event} type={eventType} />)}
+            {eventType === "cultural" ? (
+              <CulturalCard eventDetails={{ ...event, contacts: event.contacts || [] }} />
+            ) : (
+              <Event eventDetails={event} type={eventType} />
+            )}
           </motion.div>
         ))}
       </div>
       {loading && <Loading />}
     </div>
-  );
-};
+  )
+}
 
-export default Events;
+export default Events
 
