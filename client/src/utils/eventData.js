@@ -545,5 +545,28 @@ export const culturalEventData = [
     
 ];
 
+export const preEventData = [
+    // {
+    //   id: 2001,
+    //   name: "Coding Challenge",
+    //   description: "Test your coding skills in this pre-event challenge",
+    //   date: "2022-05-15",
+    //   time: "14:00",
+    //   location: "Online",
+    //   image: event1,
+    //   category: "pre-event",
+    // },
+    // {
+    //   id: 2002,
+    //   name: "Design Sprint",
+    //   description: "Participate in a rapid prototyping workshop",
+    //   date: "2022-05-20",
+    //   time: "09:00",
+    //   location: "Design Lab",
+    //   image: event1,
+    //   category: "pre-event",
+    // },
+  ];
+
 
   
