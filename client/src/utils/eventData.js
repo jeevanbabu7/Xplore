@@ -931,7 +931,7 @@ export const culturalEventData = [
         eventName: "Twist & Turn",
         tagline: "Time to twist, time to turn!",
         description: "XPLORE'24 presents Twist & Turn, where every move flows and every spin sparks creativity.",
-        date: "07/02/2025",
+        date: "06/02/2025",
         fdate: "7th February 2025",
         time: null,
         location: "Main Auditorium",
