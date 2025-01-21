@@ -955,6 +955,12 @@ export const culturalEventData = [
                 9. Judging criteria include creativity, synchronization, expressions, and overall impact.\n
                 10. Advance registration is mandatory, no last-minute entries.`
     },
+    
+    
+    
+];
+
+export const preEventData = [
     {
         id: 3027,
         name: "Dance Workshop",
@@ -974,48 +980,7 @@ export const culturalEventData = [
         category: "cultural",
         registerLink: "https://tiqr.events/e/Dance-Workshop-747",
         rules: null
-    }
-    
-    
-];
-
-export const preEventData = [
-    {
-        id: 2001,
-        name: "Coding Challenge",
-        eventName: null,
-        tagline: null,
-        description: "Test your coding skills in this pre-event challenge",
-        date: "2022-05-15",
-        fdate: null,
-        time: "14:00",
-        location: "Online",
-        prizePool: null,
-        fee: null,
-        image: event1,
-        contacts: [],
-        category: "pre-event",
-        registerLink: null,
-        rules: null
-    },    
-    {
-        id: 2002,
-        name: "Design Sprint",
-        eventName: null,
-        tagline: null,
-        description: "Participate in a rapid prototyping workshop",
-        date: "2022-05-20",
-        fdate: null,
-        time: "09:00",
-        location: "Design Lab",
-        prizePool: null,
-        fee: null,
-        image: event1,
-        contacts: [],
-        category: "pre-event",
-        registerLink: null,
-        rules: null
-    }    
+    }   
   ];
 
 

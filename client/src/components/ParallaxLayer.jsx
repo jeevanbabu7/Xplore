@@ -169,26 +169,20 @@ const ParallaxLayer = () => {
 
         {/* Bottom Section */}
         <div
-          className="relative flex overflow-hidden w-full backdrop-blur-3xl pb-96 md:pb-72 "
-          style={{
-            // maskImage: "linear-gradient(to right, transparent, black 20%, black 80%, transparent)",
-            // WebkitMaskImage: "linear-gradient(to right, transparent, black 20%, black 80%, transparent)",
-            scrollBehavior: 'smooth'
-          }}
+          className=" h-72 relative flex overflow-hidden w-full backdrop-blur-3xl pb-96 md:pb-96"
+          style={{ scrollBehavior: 'smooth' }}
         >
-          <ul
-            ref={containerRef}
-            className="flex animate-infinite-scroll space-x-36 p-4"
-          >
+          <ul ref={containerRef} className="flex animate-infinite-scroll space-x-36 p-10 ">
             {proshowEvents.map((event, index) => (
               <li key={index} className="flex-shrink-0">
-                <div className="flex-grow h-52 md:52  flex items-center justify-center backdrop-blur-2xl z-0">
+                <div className="h-72 flex items-center justify-center backdrop-blur-2xl">
                   <Card event={event} />
                 </div>
               </li>
             ))}
           </ul>
         </div>
+
 
       </motion.div>
 

@@ -26,7 +26,8 @@ const AmbassadorForm = () => {
     ambassadorId: generateRandomID()
   });
   const [loading, setLoading] = useState(false);
-
+  console.log(formData.ambassadorId);
+  
   const sendEmail = async (to, subject, html) => {
     try {
            

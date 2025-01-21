@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import AboutPage from "./About";
 import ParallaxLayer from "../components/ParallaxLayer";
@@ -24,10 +24,13 @@ const Home = () => {
   setTimeout(() => {
     setLoading(false);
   }, 2000);
+  
   return (
     <div className="h-screen" id="home">
       {/* Don't render the navbar here */}
-      <ParallaxLayer />
+      <div className="h-screen sm:mb-0 md:mb-36">
+        <ParallaxLayer />
+      </div>
       <section className="z-50 mt-32 md:mt-0">
         <ReactLenis root options={lenisOptions}>
           <div
