@@ -3,6 +3,7 @@ import { RainbowButton } from "./ui/rainbow-button.jsx";
 import { ShinyButton } from "./ui/shiny-button";
 import { FramerModal, ModalContent } from "./ui/Modal.jsx";
 import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 const CulturalCard = ({eventDetails}) => {
     
     const {name, description, date, time, location, prizePool, fee, image, contacts, rules, registerLink} = eventDetails;
