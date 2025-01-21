@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { RainbowButton } from "./ui/rainbow-button.jsx";
 import { ShinyButton } from "./ui/shiny-button";
 import { FramerModal, ModalContent } from "./ui/Modal.jsx";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 const CulturalCard = ({eventDetails}) => {
     
     const {name, description, date, time, location, prizePool, fee, image, contacts, rules, registerLink} = eventDetails;
@@ -16,16 +17,16 @@ const CulturalCard = ({eventDetails}) => {
         }
       }, [modalOpen]);
   return (
-    <div class=" bg-slate-200 border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 w-72 h-[42rem] flex flex-col">
-        <a href="#" className='flex-shrink-0 flex-0'>
-            <img class="rounded-t-lg h-64 w-full" loading='lazy' src={image} alt="" />
-        </a>
-        <div class="p-5 flex flex-col justify-between flex-1">
+    <div className=" bg-slate-200 border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 w-72 h-[42rem] flex flex-col">
+        
+        <LazyLoadImage className="rounded-t-lg w-full h-64 w-full" loading='lazy' src={image} alt="" effect="blur" />
+        
+        <div className="p-5 flex flex-col justify-between flex-1">
             <div>
                 <a href="#">
-                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{name}</h5>
+                    <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{name}</h5>
                 </a>
-                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{description}</p>
+                <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">{description}</p>
             </div>
             <div className='flex flex-col gap-4'>
                 {registerLink && (
