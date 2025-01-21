@@ -13,9 +13,9 @@ const Home = () => {
   const navigate = useNavigate();
 
   const lenisOptions = {
-    lerp: 0.1,
+    lerp: 0.2,
     duration: 1.5,
-    smoothTouch: false,
+    smoothTouch: true,
     smooth: true,
   };
 
@@ -49,7 +49,7 @@ const Home = () => {
             default_velocity={5}
             className="font-display text-center text-4xl font-bold tracking-[-0.02em] drop-shadow-sm md:text-7xl md:leading-[5rem] md:tracking-[-0.03em] md:drop-shadow-lg bg-black"
           />
-          <div id="events">
+          <div id="events" className="overflow-auto">
             <Events />
           </div>
           <div id="workshops">
