@@ -3,6 +3,7 @@ import { useSpring, animated } from "@react-spring/web";
 import viewBtn from "../assets/images/view-btn.png";
 import event from "../assets/images/event.png";
 import { useNavigate } from "react-router-dom";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const Event = ({ eventDetails, type }) => {
   const { name, description, date, time, location, image } = eventDetails;
@@ -43,7 +44,7 @@ const Event = ({ eventDetails, type }) => {
           alt={`${name} event`}
           className="w-full h-full object-cover rounded-lg"
         /> */}
-      <div
+      {/* <div
           className="w-full h-full text-white flex items-center justify-center font-sans text-lg text-center rounded-3xl"
           style={{
             clipPath: 'polygon(0 0, 99% 0, 100% 72%, 45% 73%, 27% 100%, 0 100%)',
@@ -53,7 +54,23 @@ const Event = ({ eventDetails, type }) => {
             border: '2px solid #D5D2D2',
             opacity: 0.75,
           }}
-        ></div>
+        ></div> */}
+        <div
+      className="w-full h-full text-white flex items-center justify-center font-sans text-lg text-center rounded-3xl"
+      style={{
+        clipPath: 'polygon(0 0, 99% 0, 100% 72%, 45% 73%, 27% 100%, 0 100%)',
+        border: '2px solid #D5D2D2',
+        opacity: 0.75,
+      }}
+    >
+      <LazyLoadImage
+        alt="Lazy Loaded Background"
+        effect="blur"
+        src={image}
+        className="w-full h-full object-cover rounded-3xl"
+      />
+      
+    </div>
         <img
           src={viewBtn}
           alt="View event details button"

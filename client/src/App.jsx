@@ -6,6 +6,7 @@ import About from "./pages/About";
 // import ContactUs from "./pages/ContactUs";
 import "./styles/globals.css";
 import AppRoutes from "./routes/AppRoutes";
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 const App = () => {
   return (

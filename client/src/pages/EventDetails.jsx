@@ -5,6 +5,7 @@ import { eventData, workshopData } from "../utils/eventData";
 import workshopBanner from '../assets/images/workshop-banner.png';
 import SocialIcons from "../components/SocialIcons";
 import { ToastContainer, toast } from "react-toastify";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const EventDetails = () => {
     const { eventId, type } = useParams();
@@ -97,10 +98,11 @@ const EventDetails = () => {
                     style={imageAnimation}
                     className="flex-shrink-0 w-full md:w-[50%] h-auto rounded-lg shadow-lg mt-6 md:mt-0"
                 >
-                    <img
+                    <LazyLoadImage
                         src={item.imageDetails}
                         alt={item.name}
                         className="w-full h-auto rounded-lg shadow-xl object-cover"
+                        effect="blur"
                     />
                 </animated.div>
             </div>
