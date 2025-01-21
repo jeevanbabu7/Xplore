@@ -6,7 +6,7 @@ import workshopBanner from '../assets/images/workshop-banner.png';
 import SocialIcons from "../components/SocialIcons";
 import { ToastContainer, toast } from "react-toastify";
 import { LazyLoadImage } from "react-lazy-load-image-component";
-
+import 'react-lazy-load-image-component/src/effects/blur.css';
 const EventDetails = () => {
     const { eventId, type } = useParams();
 
