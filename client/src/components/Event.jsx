@@ -4,7 +4,7 @@ import viewBtn from "../assets/images/view-btn.png";
 import event from "../assets/images/event.png";
 import { useNavigate } from "react-router-dom";
 import { LazyLoadImage } from "react-lazy-load-image-component";
-import 'react-lazy-load-image-component/src/effects/blur.css';
+
 const Event = ({ eventDetails, type }) => {
   const { name, description, date, time, location, image } = eventDetails;
   const navigate = useNavigate();
