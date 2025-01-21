@@ -1,6 +1,8 @@
 import FEJO from '../assets/images/Proshow/FEJO.webp';
 import miles from '../assets/images/Proshow/miles.webp';
 import sunburn from '../assets/images/Proshow/sunburn.webp';
+import drone_show from '../assets/images/Proshow/drone_show.webp';
+import robo_war from '../assets/images/Proshow/robo_war.webp';
 export const proshowEvents = [
     {
         id: 4000,
@@ -31,6 +33,32 @@ export const proshowEvents = [
     {
         id: 4002,
         name: "Sunburn",
+        description: "Showcase your dance skills in various styles.",
+        date: "2025-02-07",
+        time: "18:00",
+        location: "Main Auditorium",
+        image: sunburn,
+        category: "proshow",
+        first: "Get ready to groove and create unforgettable memories! Gather your squad and prepare for the ultimate musical experience as 𝗦𝗨𝗡𝗕𝗨𝗥𝗡 takes the stage at 𝗫𝗽𝗹𝗼𝗿𝗲'𝟮𝟰 on 𝟳𝘁𝗵 𝗙𝗲𝗯 𝟮𝟬𝟮𝟱!",
+        middle: "Feel the energy, lose yourself in the rhythm, and dance like nobody’s watching! Trust us, this is where the magic happens, and YOU are the star of the night. ",
+        last: "Join us for a night that will redefine fun and leave you craving more. 𝗦𝘂𝗻𝗯𝘂𝗿𝗻 𝗮𝘁 𝗫𝗽𝗹𝗼𝗿𝗲'𝟮𝟰 – It’s time to shine!"
+    },
+    {
+        id: 4003,
+        name: "Robo war",
+        description: "Showcase your dance skills in various styles.",
+        date: "2025-02-07",
+        time: "18:00",
+        location: "Main Auditorium",
+        image: robo_war,
+        category: "proshow",
+        first: "Get ready to groove and create unforgettable memories! Gather your squad and prepare for the ultimate musical experience as 𝗦𝗨𝗡𝗕𝗨𝗥𝗡 takes the stage at 𝗫𝗽𝗹𝗼𝗿𝗲'𝟮𝟰 on 𝟳𝘁𝗵 𝗙𝗲𝗯 𝟮𝟬𝟮𝟱!",
+        middle: "Feel the energy, lose yourself in the rhythm, and dance like nobody’s watching! Trust us, this is where the magic happens, and YOU are the star of the night. ",
+        last: "Join us for a night that will redefine fun and leave you craving more. 𝗦𝘂𝗻𝗯𝘂𝗿𝗻 𝗮𝘁 𝗫𝗽𝗹𝗼𝗿𝗲'𝟮𝟰 – It’s time to shine!"
+    },
+    {
+        id: 4004,
+        name: "Drone show",
         description: "Showcase your dance skills in various styles.",
         date: "2025-02-07",
         time: "18:00",
