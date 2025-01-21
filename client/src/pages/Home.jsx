@@ -26,12 +26,12 @@ const Home = () => {
   }, 2000);
   
   return (
-    <div className="h-screen" id="home">
+    <div  id="home">
       {/* Don't render the navbar here */}
       <div className="h-screen sm:mb-0 md:mb-36">
         <ParallaxLayer />
       </div>
-      <section className="z-50 mt-32 md:mt-0">
+      <section className="z-50 mt-32 md:mt-0 h-fit">
         <ReactLenis root options={lenisOptions}>
           <div
             id="about"
@@ -49,7 +49,7 @@ const Home = () => {
             default_velocity={5}
             className="font-display text-center text-4xl font-bold tracking-[-0.02em] drop-shadow-sm md:text-7xl md:leading-[5rem] md:tracking-[-0.03em] md:drop-shadow-lg bg-black"
           />
-          <div id="events" className="overflow-auto">
+          <div id="events" className="h-fit">
             <Events />
           </div>
           <div id="workshops">

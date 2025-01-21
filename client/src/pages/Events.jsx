@@ -66,7 +66,7 @@ const Events = () => {
   }
 
   return (
-    <div style={{ background: gradientBackground }} >
+    <>
       {/* Animated Banner Section */}
       <animated.section
         className="w-full min-h-[150px] md:min-h-[200px] bg-cover bg-center bg-no-repeat"
@@ -79,7 +79,7 @@ const Events = () => {
       ></animated.section>
 
       {/* Event Type Buttons */}
-      <div className="flex flex-wrap justify-center space-x-4 sm:space-x-8 my-8 gap-4 overflow-auto">
+      <div className=" flex flex-wrap justify-center space-x-4 sm:space-x-8 my-8 gap-4 ">
         <button
           className={`px-6 py-3 rounded-full text-white font-bold transition-all duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white ${
             eventType === "pre-events"
@@ -113,7 +113,7 @@ const Events = () => {
       </div>
 
       {/* Event List */}
-      <div className="w-full h-fit min-h-screen flex flex-wrap sm:flex-col md:flex-row sm:items-center md:items-start justify-center gap-8 p-8 md:gap-16 md:px-16 lg:px-32 overflow-auto">
+      <div className="w-full h-fit min-h-screen flex flex-wrap sm:flex-col md:flex-row sm:items-center md:items-start justify-center gap-8 p-8 md:gap-16 md:px-16 lg:px-32">
         {filteredEvents.map((event, index) => (
           <div
             key={event.id}
@@ -133,7 +133,7 @@ const Events = () => {
         ))}
       </div>
       {loading && <Loading />}
-    </div>
+    </>
   )
 }
 
